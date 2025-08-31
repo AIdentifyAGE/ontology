@@ -17,7 +17,6 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge">
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ohd/releases/2024-06-21/ohd.owl"/>
         <rdfs:comment>Base Ontology for use in AIdentifyAGE Project</rdfs:comment>
     </owl:Ontology>
     
@@ -931,6 +930,24 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FillingDataProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FillingDataProperties">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOptionDataProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Material -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Material">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FillingDataProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Filling"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportDataProperties -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ReportDataProperties">
@@ -943,6 +960,14 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothDataProperties -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothDataProperties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOptionDataProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOptionDataProperties">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -1139,6 +1164,12 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_12237 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_12237"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_12823 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_12823">
@@ -1155,6 +1186,12 @@ subclasses: Secondary incisor tooth, Primary incisor tooth
         <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/OHD_0000307"/>
         <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_25624 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_25624"/>
     
 
 
@@ -1179,6 +1216,12 @@ is-a: Dentition
 subclasses: Secondary mandibular dentition, Primary mandibular dentition</obo:IAO_0000116>
         <rdfs:label>Mandibular dentition</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55622 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55622"/>
     
 
 
@@ -3304,6 +3347,12 @@ subclasses: Cement of right upper lateral secondary incisor tooth, Cement of lef
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55737 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55737"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55740 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55740">
@@ -3327,6 +3376,30 @@ is-a: Dentine of upper lateral secondary incisor tooth
 constitutional part of: Left upper lateral secondary incisor tooth</obo:IAO_0000116>
         <rdfs:label>Dentine of left upper lateral secondary incisor tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55742 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55742"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55743 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55743"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55744 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55744"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55745 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55745"/>
     
 
 
@@ -3528,6 +3601,12 @@ subclasses: Cement of left upper central secondary incisor tooth, Cement of righ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55753 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55753"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55758 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55758">
@@ -3585,6 +3664,36 @@ is-a: Cement
 subclasses: Cement of left lower central secondary incisor tooth, Cement of right lower central secondary incisor tooth</obo:IAO_0000116>
         <rdfs:label>Cement of lower central secondary incisor tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55761 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55761"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55764 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55764"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55765 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55765"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55766 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55766"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55767 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55767"/>
     
 
 
@@ -3809,6 +3918,36 @@ is-a: Cement
 subclasses: Cement of left lower lateral secondary incisor tooth, Cement of right lower lateral secondary incisor tooth</obo:IAO_0000116>
         <rdfs:label>Cement of lower lateral secondary incisor tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55777 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55777"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55780 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55780"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55781 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55781"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55782 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55782"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55783 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55783"/>
     
 
 
@@ -4676,6 +4815,30 @@ constitutional part of: Left upper central secondary incisor tooth</obo:IAO_0000
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55824 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55824"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55825 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55825"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55826 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55826"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55827 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55827"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55832 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55832">
@@ -4776,6 +4939,12 @@ subclasses: Dentine of right upper secondary canine tooth, Dentine of left upper
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55837 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55837"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55840 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55840">
@@ -4823,6 +4992,30 @@ constitutional part of: Left upper secondary canine tooth
 regional part: Crown pulp of left upper canine tooth, Root pulp of left upper canine tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left upper canine tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55842 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55842"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55843 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55843"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55844 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55844"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55845 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55845"/>
     
 
 
@@ -5010,6 +5203,12 @@ subclasses: Cement of right lower secondary canine tooth, Cement of left lower s
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55853 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55853"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55854 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55854">
@@ -5057,6 +5256,30 @@ constitutional part of: Left lower secondary canine tooth
 regional part: Crown pulp of left lower canine tooth, Root pulp of left lower canine tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left lower canine tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55858 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55858"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55859 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55859"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55860 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55860"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55861 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55861"/>
     
 
 
@@ -5284,6 +5507,12 @@ subclasses: Cement of left upper first secondary premolar tooth, Cement of right
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55875 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55875"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55876 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55876">
@@ -5331,6 +5560,30 @@ constitutional part of: Left upper first secondary premolar tooth
 regional part: Crown pulp of left upper first premolar tooth, Root pulp of left upper first premolar tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left upper first premolar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55880 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55880"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55881 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55881"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55882 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55882"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55883 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55883"/>
     
 
 
@@ -5558,6 +5811,12 @@ subclasses: Cement of left upper second secondary premolar tooth, Cement of righ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55893 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55893"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55894 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55894">
@@ -5605,6 +5864,30 @@ constitutional part of: Left upper second secondary premolar tooth
 regional part: Crown pulp of left upper second premolar tooth, Root pulp of left upper second premolar tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left upper second premolar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55898 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55898"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55899 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55899"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55900 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55900"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55901 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55901"/>
     
 
 
@@ -5832,6 +6115,12 @@ subclasses: Cement of right lower first secondary premolar tooth, Cement of left
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55913 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55913"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55914 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55914">
@@ -5879,6 +6168,30 @@ constitutional part of: Left lower first secondary premolar tooth
 regional part: Crown pulp of left lower first premolar tooth, Root pulp of left lower first premolar tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left lower first premolar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55918 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55918"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55919 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55919"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55920 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55920"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55921 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55921"/>
     
 
 
@@ -6106,6 +6419,12 @@ subclasses: Cement of left lower second secondary premolar tooth, Cement of righ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55931 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55931"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55932 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55932">
@@ -6153,6 +6472,30 @@ regional part: Crown pulp of left lower second premolar tooth, Root pulp of left
 constitutional part of: Left lower second secondary premolar tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left lower second premolar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55936 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55936"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55937 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55937"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55938 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55938"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55940 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55940"/>
     
 
 
@@ -6380,6 +6723,12 @@ subclasses: Cement of left upper first secondary molar tooth, Cement of right up
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55963 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55963"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55964 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55964">
@@ -6427,6 +6776,30 @@ constitutional part of: Left upper first secondary molar tooth
 regional part: Crown pulp of left upper first molar tooth, Root pulp of left upper first molar tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left upper first molar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55969 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55969"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55970 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55970"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55973 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55973"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55974 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55974"/>
     
 
 
@@ -6654,6 +7027,12 @@ subclasses: Cement of left upper second secondary molar tooth, Cement of right u
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_55987 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55987"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_55990 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55990">
@@ -6701,6 +7080,30 @@ constitutional part of: Left upper second secondary molar tooth
 regional part: Crown pulp of left upper second molar tooth, Root pulp of left upper second molar tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left upper second molar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55995 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55995"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55996 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55996"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55997 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55997"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_55998 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_55998"/>
     
 
 
@@ -6928,6 +7331,12 @@ subclasses: Cement of left upper third secondary molar tooth, Cement of right up
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_56016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56016"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_56017 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56017">
@@ -6975,6 +7384,30 @@ constitutional part of: Left upper third secondary molar tooth
 regional part: Crown pulp of left upper third molar tooth, Root pulp of left upper third molar tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left upper third molar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56021"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56022"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56023"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56024"/>
     
 
 
@@ -7190,6 +7623,12 @@ subclasses: Cement of left lower first secondary molar tooth, Cement of right lo
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_56034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56034"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_56035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56035">
@@ -7237,6 +7676,30 @@ regional part: Crown pulp of left lower first molar tooth, Root pulp of left low
 constitutional part of: Left lower first secondary molar tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left lower first molar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56039"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56040"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56041"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56042 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56042"/>
     
 
 
@@ -7464,6 +7927,12 @@ subclasses: Cement of left lower second secondary molar tooth, Cement of right l
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_56052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56052"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_56053 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56053">
@@ -7511,6 +7980,30 @@ constitutional part of: Left lower second secondary molar tooth
 regional part: Crown pulp of left lower second molar tooth, Root pulp of left lower second molar tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left lower second molar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56057"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56058"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56059"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56060"/>
     
 
 
@@ -7738,6 +8231,12 @@ subclasses: Cement of right lower third secondary molar tooth, Cement of left lo
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_56070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56070"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_56071 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56071">
@@ -7785,6 +8284,30 @@ constitutional part of: Left lower third secondary molar tooth
 regional part: Crown pulp of left lower third molar tooth, Root pulp of left lower third molar tooth</obo:IAO_0000116>
         <rdfs:label>Dental pulp of left lower third molar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56075 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56075"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56076"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56077"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56078"/>
     
 
 
@@ -8767,6 +9290,906 @@ is-a: Cavity of lower first molar tooth
 constitutional part of: Left lower first secondary molar tooth</obo:IAO_0000116>
         <rdfs:label>Cavity of left lower first molar tooth</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56178 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56178"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56179 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56179"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56180 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56180"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56181 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56181"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56184 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56184"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56185 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56185"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56186 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56186"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56187 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56187"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56190 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56190"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56191 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56191"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56192 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56192"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56193"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56196 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56196"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56197 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56197"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56198 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56198"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56199"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56202 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56202"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56203 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56203"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56204 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56204"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56205 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56205"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56213 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56213"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56214 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56214"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56215 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56215"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56216 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56216"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56219 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56219"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56220 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56220"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56221 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56221"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56222 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56222"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56225 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56225"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56226 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56226"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56227 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56227"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56228 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56228"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56231 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56231"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56232 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56232"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56233 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56233"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56234 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56234"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56237 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56237"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56238 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56238"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56239 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56239"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56240"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56251 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56251"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56252 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56252"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56253 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56253"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56254"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56255 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56255"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56256 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56256"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56257 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56257"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56258 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56258"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56259 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56259"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56260 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56260"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56273 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56273"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56274 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56274"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56275 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56275"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56276 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56276"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56277 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56277"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56278 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56278"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56279 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56279"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56280 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56280"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56281 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56281"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56282 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56282"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56283 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56283"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56284 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56284"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56285 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56285"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56286 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56286"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56287 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56287"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56288 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56288"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56289 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56289"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56290 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56290"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56291 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56291"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56292 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56292"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56300 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56300"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56301 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56301"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56302 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56302"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56303 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56303"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56304 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56304"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56305 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56305"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56306 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56306"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56307 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56307"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56308 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56308"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56309 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56309"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56315 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56315"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56316 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56316"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56317 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56317"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56318 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56318"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56319 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56319"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56320 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56320"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56321 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56321"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56322 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56322"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56323 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56323"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56324 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56324"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56333 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56333"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56334 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56334"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56335 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56335"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56336 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56336"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56337 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56337"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56338 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56338"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56339 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56339"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56340 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56340"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56341 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56341"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56342 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56342"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56348 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56348"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56349 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56349"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56350 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56350"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56351 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56351"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56352 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56352"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56353 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56353"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56354 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56354"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56355 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56355"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56356 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56356"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56357 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56357"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56363 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56363"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56364 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56364"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56365 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56365"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56366 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56366"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56367 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56367"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56368 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56368"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56369 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56369"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56370 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56370"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56371 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56371"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56372 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56372"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56378 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56378"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56379 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56379"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56380 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56380"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56381 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56381"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56382 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56382"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56383 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56383"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56384 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56384"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56385 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56385"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56386 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56386"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56387 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56387"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56393 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56393"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56394 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56394"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56395 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56395"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56396 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56396"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56397 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56397"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56398 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56398"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56399 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56399"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56400 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56400"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56401 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56401"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56402 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56402"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56408 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56408"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56409 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56409"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56410 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56410"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56411 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56411"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56412 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56412"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56413 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56413"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56414 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56414"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56415 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56415"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56416 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56416"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56417 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56417"/>
     
 
 
@@ -13239,9 +14662,795 @@ member of: Set of mandibular periodontia</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_56744 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56744"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56745 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56745"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56746 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56746"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56747 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56747"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56748 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56748"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56749 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56749"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56750 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56750"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56751 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56751"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56754 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56754"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56755 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56755"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56756 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56756"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56757 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56757"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56783 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56783"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56784 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56784"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56785 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56785"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56787 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56787"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56793 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56793"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56794 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56794"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56795 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56795"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56796 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56796"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56806 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56806"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56807 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56807"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56809 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56809"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56810 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56810"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56811 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56811"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56812 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56812"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56813 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56813"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56814 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56814"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_56833 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56833"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56834 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56834"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56835 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56835"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56836 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56836"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56837 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56837"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56838 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56838"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56840 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56840"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56842 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56842"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56847 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56847"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56848 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56848"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56855 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56855"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56856 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56856"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56857 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56857"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56858 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56858"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56859 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56859"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56860 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56860"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56864 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56864"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56865 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56865"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56866 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56866"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56867 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56867"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56868 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56868"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56869 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56869"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56875 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56875"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56876 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56876"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56877 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56877"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56878 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56878"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56879 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56879"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56880 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56880"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56881 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56881"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56882 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56882"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56883 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56883"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56884 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56884"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56889 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56889"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56890 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56890"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56891 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56891"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56892 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56892"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56893 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56893"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56894 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56894"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56895 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56895"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56896 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56896"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56901 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56901"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56902 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56902"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56903 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56903"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56904 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56904"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56905 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56905"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56906 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56906"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56907 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56907"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56908 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56908"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56931 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56931"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56933 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56933"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56934 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56934"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56935 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56935"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56938 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56938"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56940 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56940"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56942 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56942"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56943 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56943"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56948 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56948"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56949 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56949"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56950 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56950"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56951 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56951"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56954 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56954"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56955 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56955"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56956 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56956"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56957 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56957"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56963 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56963"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56964 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56964"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56965 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56965"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56966 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56966"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56969 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56969"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56970 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56970"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56971 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56971"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56972 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56972"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56979 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56979"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56980 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56980"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56981 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56981"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56982 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56982"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56985 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56985"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56986 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56986"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56987 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56987"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56988 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56988"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56991 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56991"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56992 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56992"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56993 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56993"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_56994 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_56994"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57002"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57004"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57009"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57012"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57014"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57015"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57023"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57024"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57025"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57026"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57029"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57034"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57035"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57037"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57038"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57041"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57042 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57042"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57043 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57043"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57044"/>
     
 
 
@@ -13954,9 +16163,255 @@ constitutional part of: Left upper first secondary molar tooth</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FMA_57500 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57500"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57501 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57501"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57502 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57502"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57503 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57503"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57506 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57506"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57507 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57507"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57508 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57508"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57509 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57509"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57515 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57515"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57516 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57516"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57517 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57517"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57518 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57518"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57519 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57519"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57520 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57520"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57524 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57524"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57525 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57525"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57526 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57526"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57527 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57527"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57528 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57528"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FMA_57529 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57529"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57658 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57658"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57659 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57659"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57660 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57660"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57661 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57661"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57663 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57663"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57664 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57664"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57665 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57665"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57666 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57666"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57667 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57667"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57668 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57668"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57669 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57669"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57670 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57670"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57671 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57671"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57672 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57672"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57938 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57938"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57939 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57939"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57940 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57940"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57941 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57941"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57954 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57954"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57955 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57955"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57958 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57958"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_57959 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_57959"/>
     
 
 
@@ -13998,6 +16453,12 @@ subclasses: Physical anatomical entity, Non-physical anatomical entity
         <rdfs:comment>Organismal continuant entity which is enclosed by the bona fide boundary of an organism or is an attribute of its structural organization. Examples: cell, heart, head, peritoneal cavity, apex of lung, anatomical term, sagittal plane.</rdfs:comment>
         <rdfs:label>Anatomical entity</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FMA_63863 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FMA_63863"/>
     
 
 
@@ -15032,7 +17493,6 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothNumbering"/>
-        <rdfs:label>FDI tooth number</rdfs:label>
     </owl:Class>
     
 
@@ -15186,7 +17646,6 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothNumbering"/>
-        <rdfs:label xml:lang="en">Palmer Notation</rdfs:label>
     </owl:Class>
     
 
@@ -15570,9 +18029,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000101">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_18"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55696"/>
         <rdfs:label xml:lang="en">1</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_18 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_18"/>
     
 
 
@@ -15580,9 +18046,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000102">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_17"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55697"/>
         <rdfs:label xml:lang="en">2</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_17 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_17"/>
     
 
 
@@ -15590,9 +18063,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000103">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_16"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55698"/>
         <rdfs:label xml:lang="en">3</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_16 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_16"/>
     
 
 
@@ -15600,9 +18080,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000104">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_15"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55688"/>
         <rdfs:label xml:lang="en">4</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_15 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_15"/>
     
 
 
@@ -15610,9 +18097,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000105">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_14"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55689"/>
         <rdfs:label xml:lang="en">5</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_14 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_14"/>
     
 
 
@@ -15620,9 +18114,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000106">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_13"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55798"/>
         <rdfs:label xml:lang="en">6</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_13 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_13"/>
     
 
 
@@ -15630,9 +18131,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000107">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_12"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55680"/>
         <rdfs:label xml:lang="en">7</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_12 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_12"/>
     
 
 
@@ -15640,9 +18148,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000108">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_11"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55681"/>
         <rdfs:label xml:lang="en">8</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_11 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_11"/>
     
 
 
@@ -15650,9 +18165,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000109">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_21"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55682"/>
         <rdfs:label xml:lang="en">9</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_21 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_21"/>
     
 
 
@@ -15660,9 +18182,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000110">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_22"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55683"/>
         <rdfs:label xml:lang="en">10</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_22 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_22"/>
     
 
 
@@ -15670,9 +18199,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000111">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_23"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55799"/>
         <rdfs:label xml:lang="en">11</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_23 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_23"/>
     
 
 
@@ -15680,9 +18216,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000112">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_24"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55690"/>
         <rdfs:label xml:lang="en">12</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_24 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_24"/>
     
 
 
@@ -15690,9 +18233,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000113">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_25"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55691"/>
         <rdfs:label xml:lang="en">13</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_25 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_25"/>
     
 
 
@@ -15700,9 +18250,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000114">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_26"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55699"/>
         <rdfs:label xml:lang="en">14</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_26 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_26"/>
     
 
 
@@ -15710,9 +18267,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000115">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_27"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55700"/>
         <rdfs:label xml:lang="en">15</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_27 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_27"/>
     
 
 
@@ -15720,9 +18284,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000116">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_28"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55701"/>
         <rdfs:label xml:lang="en">16</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_28 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_28"/>
     
 
 
@@ -15730,9 +18301,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000117">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_38"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55702"/>
         <rdfs:label xml:lang="en">17</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_38 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_38"/>
     
 
 
@@ -15740,9 +18318,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000118">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_37"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55703"/>
         <rdfs:label xml:lang="en">18</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_37 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_37"/>
     
 
 
@@ -15750,9 +18335,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000119">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_36"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55704"/>
         <rdfs:label xml:lang="en">19</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_36 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_36"/>
     
 
 
@@ -15760,9 +18352,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000120">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_35"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55692"/>
         <rdfs:label xml:lang="en">20</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_35 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_35"/>
     
 
 
@@ -15770,9 +18369,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000121">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_34"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55693"/>
         <rdfs:label xml:lang="en">21</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_34 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_34"/>
     
 
 
@@ -15780,9 +18386,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000122">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_33"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55687"/>
         <rdfs:label xml:lang="en">22</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_33 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_33"/>
     
 
 
@@ -15790,9 +18403,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000123">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_32"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57141"/>
         <rdfs:label xml:lang="en">23</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_32 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_32"/>
     
 
 
@@ -15800,9 +18420,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000124">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_31"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57143"/>
         <rdfs:label xml:lang="en">24</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_31 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_31"/>
     
 
 
@@ -15810,9 +18437,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000125">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_41"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57142"/>
         <rdfs:label xml:lang="en">25</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_41 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_41"/>
     
 
 
@@ -15820,9 +18454,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000126">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_42"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_57140"/>
         <rdfs:label xml:lang="en">26</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_42 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_42"/>
     
 
 
@@ -15830,9 +18471,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000127">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_43"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55686"/>
         <rdfs:label xml:lang="en">27</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_43 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_43"/>
     
 
 
@@ -15840,9 +18488,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000128">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_44"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55694"/>
         <rdfs:label xml:lang="en">28</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_44 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_44"/>
     
 
 
@@ -15850,9 +18505,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000129">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_45"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55695"/>
         <rdfs:label xml:lang="en">29</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_45 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_45"/>
     
 
 
@@ -15860,9 +18522,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000130">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_46"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55705"/>
         <rdfs:label xml:lang="en">30</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_46 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_46"/>
     
 
 
@@ -15870,9 +18539,16 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000131">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_47"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55706"/>
         <rdfs:label xml:lang="en">31</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_47 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_47"/>
     
 
 
@@ -15880,8 +18556,1570 @@ physical state: Solid</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OHD_0000132">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_48"/>
         <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55707"/>
         <rdfs:label xml:lang="en">32</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_48 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_48"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#A">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_55"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_55 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_55"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#B">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_54"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_54 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_54"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#C -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#C">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_53"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_53 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_53"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#D -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#D">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_52"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_52 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_52"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#E -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#E">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_51"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_51 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_51"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#F">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_61"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_61 -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_61"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55681"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55680"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55798"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55689"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55688"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55698"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <obo:IAO_0000136 rdf:resource="http://purl.obolibrary.org/obo/FMA_55697"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_37">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_38">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_41 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_41">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_42">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_43">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_46">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_47 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_47">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_51">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_52 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_52">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_53">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_54 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_54">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_55">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_61 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_61">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_62 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_62">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#G"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#G -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#G"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_63 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_63">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#H"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#H -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#H"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_64">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#I"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#I -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#I"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_65">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#J"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#J -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#J"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_71 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_71">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#O"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#O -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#O"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_72 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_72">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#N"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#N -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#N"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_73 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_73">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#M"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#M -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#M"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_74 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_74">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#L"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#L -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#L"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_75">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#K"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#K -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#K"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_81 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_81">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#P"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#P -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#P"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_82 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_82">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Q"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Q -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Q"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_83 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_83">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#R"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#R -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#R"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#S"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#S -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#S"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_85 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI_85">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#FDI"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#T"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#T -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#T"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#G">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#H -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#H">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#I">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#J -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#J">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#K -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#K">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#L -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#L">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#M -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#M">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#N -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#N">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#O -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#O">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#P -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#P">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Q -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Q">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#R -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#R">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#S -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#S">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#T -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#T">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OHD_0000100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#+8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#-8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#01+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#01+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#01- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#01-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#02+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#02+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#02- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#02-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#03+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#03+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#03- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#03-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#04+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#04+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#04- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#04-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#05+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#05+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#05- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#05-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#1+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#1+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#1- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#1-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#1⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#1⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#1⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#1⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#2+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#2+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#2- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#2-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#2⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#2⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#2⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#2⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#3+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#3+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#3- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#3-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#3⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#3⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#3⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#3⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#4+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#4+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#4- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#4-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#4⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#4⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#4⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#4⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#5+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#5+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#5- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#5-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#5⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#5⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#5⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#5⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#6+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#6+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#6- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#6-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#6⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#6⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#6⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#6⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#7+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#7+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#7- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#7-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#7⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#7⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#7⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#7⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#8+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#8+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#8- -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#8-">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Haderup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#8⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#8⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#8⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#8⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#A⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#A⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#A⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#A⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#B⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#B⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#B⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#B⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#C⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#C⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#C⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#C⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#D⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#D⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#D⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#D⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#E⏋ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#E⏋">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#E⏌ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#E⏌">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾C -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾C">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾D -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾D">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾E -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾E">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎾8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿C -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿C">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿D -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿D">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿E -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿E">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#⎿8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PalmerNotation"/>
     </owl:NamedIndividual>
     
 
