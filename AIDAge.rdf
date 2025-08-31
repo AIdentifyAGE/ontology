@@ -1516,6 +1516,15 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#builtFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#builtFrom">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/mls#Dataset"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#collectedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#collectedBy">
