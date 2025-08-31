@@ -1,0 +1,645 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://snomed.info/sct/900000000000207008#"
+     xml:base="http://snomed.info/sct/900000000000207008"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://snomed.info/sct/900000000000207008"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://snomed.info/id/260686004 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/260686004">
+        <rdfs:subPropertyOf rdf:resource="http://snomed.info/id/762705008"/>
+        <rdfs:label xml:lang="en">Method (attribute)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Method</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/363704007 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/363704007">
+        <rdfs:subPropertyOf rdf:resource="http://snomed.info/id/762705008"/>
+        <rdfs:label xml:lang="en">Procedure site (attribute)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Procedure site</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/405813007 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/405813007">
+        <rdfs:subPropertyOf rdf:resource="http://snomed.info/id/363704007"/>
+        <rdfs:label xml:lang="en">Procedure site - Direct (attribute)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Procedure site - Direct</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/609096000 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/609096000">
+        <rdfs:subPropertyOf rdf:resource="http://snomed.info/id/762705008"/>
+        <rdfs:label xml:lang="en">Role group (attribute)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Role group</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/733928003 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/733928003">
+        <rdfs:subPropertyOf rdf:resource="http://snomed.info/id/762705008"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:label xml:lang="en">All or part of (attribute)</rdfs:label>
+        <skos:prefLabel xml:lang="en">All or part of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/738774007 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/738774007">
+        <rdfs:subPropertyOf rdf:resource="http://snomed.info/id/762705008"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:label xml:lang="en">Is modification of (attribute)</rdfs:label>
+        <skos:definition xml:lang="en">This attribute indicates that the concept is a structural modification of another concept, and that the substance&apos;s intrinsic physicochemical properties remain unchanged.</skos:definition>
+        <skos:prefLabel xml:lang="en">Is modification of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://snomed.info/id/762705008 -->
+
+    <owl:ObjectProperty rdf:about="http://snomed.info/id/762705008">
+        <rdfs:label xml:lang="en">Concept model object attribute (attribute)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Concept model object attribute</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://snomed.info/id/118690002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/118690002">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/609096000"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://snomed.info/id/363704007"/>
+                                <owl:someValuesFrom rdf:resource="http://snomed.info/id/69536005"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Procedure on head (procedure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Procedure on head</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/123037004 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/123037004">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/138875005"/>
+        <rdfs:label xml:lang="en">Body structure (body structure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Body structures</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Body structure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/123850002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/123850002">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/69536005"/>
+        <rdfs:label xml:lang="en">Head part (body structure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Head part</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/128262006 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/128262006">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/38866009"/>
+        <rdfs:label xml:lang="en">Upper body structure (body structure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Upper body</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Upper body structure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/128927009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/128927009">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/609096000"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://snomed.info/id/260686004"/>
+                                <owl:someValuesFrom rdf:resource="http://snomed.info/id/129264002"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Procedure by method (procedure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Procedure by method</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/129264002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/129264002">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/362981000"/>
+        <rdfs:label xml:lang="en">Action (qualifier value)</rdfs:label>
+        <skos:altLabel xml:lang="en">Clinical action</skos:altLabel>
+        <skos:altLabel xml:lang="en">Clinical actions</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Action</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/129265001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/129265001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/129264002"/>
+        <rdfs:label xml:lang="en">Evaluation - action (qualifier value)</rdfs:label>
+        <skos:altLabel xml:lang="en">Assessment</skos:altLabel>
+        <skos:altLabel xml:lang="en">Evaluation</skos:altLabel>
+        <skos:altLabel xml:lang="en">Patient evaluation - action</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Evaluation - action</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/138875005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/138875005">
+        <rdfs:label xml:lang="en">SNOMED CT Concept (SNOMED RT+CTV3)</rdfs:label>
+        <skos:altLabel xml:lang="en">SNOMED CT has been created by combining SNOMED RT and a computer-based nomenclature and classification known as Read Codes Version 3, which was created on behalf of the U.K. Department of Health.</skos:altLabel>
+        <skos:altLabel xml:lang="en">SNOMED Clinical Terms version: 20250601 [R] (June 2025 Release)</skos:altLabel>
+        <skos:altLabel xml:lang="en">© 2002-2025 International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. &quot;SNOMED&quot; and &quot;SNOMED CT&quot; are registered trademarks of the IHTSDO.</skos:altLabel>
+        <skos:prefLabel xml:lang="en">SNOMED CT Concept</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/16177004 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/16177004">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/609096000"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://snomed.info/id/363704007"/>
+                                <owl:someValuesFrom rdf:resource="http://snomed.info/id/69536005"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Orthodontic procedure (procedure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Orthodontic procedure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/278110001 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/278110001">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/360037004"/>
+        <rdfs:label xml:lang="en">Radiographic imaging - action (qualifier value)</rdfs:label>
+        <skos:altLabel xml:lang="en">Radiographic imaging</skos:altLabel>
+        <skos:altLabel xml:lang="en">Radiology techniques</skos:altLabel>
+        <skos:definition xml:lang="en-gb">A broad term that encompasses several types of imaging studies that use ionising radiation for visualisation of internal parts of the body using X-ray techniques, for example computed tomography.</skos:definition>
+        <skos:definition xml:lang="en-us">A broad term that encompasses several types of imaging studies that use ionizing radiation for visualization of internal parts of the body using X-ray techniques, for example computed tomography.</skos:definition>
+        <skos:prefLabel xml:lang="en">Radiographic imaging - action</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/360037004 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/360037004">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/129265001"/>
+        <rdfs:label xml:lang="en">Imaging - action (qualifier value)</rdfs:label>
+        <skos:altLabel xml:lang="en">Imaging method</skos:altLabel>
+        <skos:altLabel xml:lang="en">Imaging modality</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Imaging - action</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/362958002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/362958002">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/609096000"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://snomed.info/id/363704007"/>
+                                <owl:someValuesFrom rdf:resource="http://snomed.info/id/442083009"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Procedure by site (procedure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Procedure by site</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/362981000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/362981000">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/138875005"/>
+        <rdfs:label xml:lang="en">Qualifier value (qualifier value)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Qualifier value</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/363679005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/363679005">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/609096000"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://snomed.info/id/260686004"/>
+                                <owl:someValuesFrom rdf:resource="http://snomed.info/id/360037004"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Imaging (procedure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Clinical imaging</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Imaging</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/363680008 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/363680008">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/609096000"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://snomed.info/id/260686004"/>
+                                <owl:someValuesFrom rdf:resource="http://snomed.info/id/278110001"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Radiographic imaging procedure (procedure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Diagnostic imaging procedure using X-rays</skos:altLabel>
+        <skos:altLabel xml:lang="en">Diagnostic radiography</skos:altLabel>
+        <skos:altLabel xml:lang="en">Roentgenography</skos:altLabel>
+        <skos:altLabel xml:lang="en">X-ray</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Radiographic imaging procedure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/386053000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/386053000">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/609096000"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://snomed.info/id/260686004"/>
+                                <owl:someValuesFrom rdf:resource="http://snomed.info/id/129265001"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Evaluation procedure (procedure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Assessment</skos:altLabel>
+        <skos:altLabel xml:lang="en">Investigations</skos:altLabel>
+        <skos:definition xml:lang="en">Determination of a value, conclusion, or inference by evaluating evidence</skos:definition>
+        <skos:prefLabel xml:lang="en">Evaluation procedure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/38866009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/38866009">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/52530000"/>
+        <rdfs:label xml:lang="en">Body part structure (body structure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Anatomic part</skos:altLabel>
+        <skos:altLabel xml:lang="en">Body part</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Body part structure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/406121007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/406121007">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/123850002"/>
+        <rdfs:label xml:lang="en">Structure of subregion of head (body structure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Structure of subregion of head</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/441875004 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/441875004">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/609096000"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://snomed.info/id/260686004"/>
+                                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/360037004"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://snomed.info/id/405813007"/>
+                                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/69536005"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Imaging of head (procedure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Imaging of head</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/442083009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/442083009">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/123037004"/>
+        <rdfs:label xml:lang="en">Anatomical or acquired body structure (body structure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Anatomical or acquired body structure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/52530000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/52530000">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/91723000"/>
+        <rdfs:label xml:lang="en">Body region structure (body structure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Anatomic region</skos:altLabel>
+        <skos:altLabel xml:lang="en">Body region</skos:altLabel>
+        <skos:altLabel xml:lang="en">Topographic region</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Body region structure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/661005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/661005">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/406121007"/>
+        <rdfs:label xml:lang="en">Jaw region structure (body structure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Jaw</skos:altLabel>
+        <skos:altLabel xml:lang="en">Jaw region</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Jaw region structure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/69536005 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/69536005">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/774007"/>
+        <rdfs:label xml:lang="en">Head structure (body structure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Head</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Head structure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/70104002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/70104002">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/128262006"/>
+        <rdfs:label xml:lang="en">Upper body part structure (body structure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Upper body part</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Upper body part structure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/71369009 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/71369009">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/16177004"/>
+        <rdfs:label xml:lang="en">Orthodontic service (procedure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Orthodontic service</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/71388002 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/71388002">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/138875005"/>
+        <rdfs:label xml:lang="en">Procedure (procedure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Procedure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/771329004 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/771329004">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/71388002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/609096000"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://snomed.info/id/363704007"/>
+                                <owl:someValuesFrom rdf:resource="http://snomed.info/id/52530000"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Procedure on body region (procedure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Procedure on body region</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/774007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/774007">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/70104002"/>
+        <rdfs:label xml:lang="en">Structure of head and/or neck (body structure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Head and neck structure</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Structure of head and/or neck</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/89846007 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/89846007">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://snomed.info/id/71369009"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://snomed.info/id/609096000"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://snomed.info/id/260686004"/>
+                                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/278110001"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://snomed.info/id/405813007"/>
+                                        <owl:someValuesFrom rdf:resource="http://snomed.info/id/661005"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Orthopantogram (procedure)</rdfs:label>
+        <skos:altLabel xml:lang="en">Dental panoramic X-ray</skos:altLabel>
+        <skos:altLabel xml:lang="en">OPG - Orthopantomogram</skos:altLabel>
+        <skos:altLabel xml:lang="en">OPT - Orthopantomogram</skos:altLabel>
+        <skos:altLabel xml:lang="en">Orthopantograph</skos:altLabel>
+        <skos:altLabel xml:lang="en">Panoral X-ray</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Orthopantogram</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://snomed.info/id/91723000 -->
+
+    <owl:Class rdf:about="http://snomed.info/id/91723000">
+        <rdfs:subClassOf rdf:resource="http://snomed.info/id/442083009"/>
+        <rdfs:label xml:lang="en">Anatomical structure (body structure)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Anatomical structure</skos:prefLabel>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+
