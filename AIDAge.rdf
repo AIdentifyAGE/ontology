@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/untitled-ontology-6/"
+     xml:base="http://www.semanticweb.org/untitled-ontology-6/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge">
+        <rdfs:comment>Base Ontology for use in AIdentifyAGE Project</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasScore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment>Represents a score a given TeethSet has</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasTreatment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasTreatment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#isTreatmentOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>Represents which treatments are present in a given OPG</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#isTreatmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#isTreatmentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment>Represents which treatments are present in a given OPG</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionPlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionPlace">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Braces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Braces">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OrthodonticAppliances"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CaninesSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CaninesSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionDateTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionDateTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionPlace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectionPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#DemirjianMetric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#DemirjianMetric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ScoringMetric"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MoorreesFanningHuntMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Filling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Filling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Implant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Implant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#IncisorsSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#IncisorsSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MissingTooth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MissingTooth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MolarsSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MolarsSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MoorreesFanningHuntMetric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MoorreesFanningHuntMetric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ScoringMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents an Orthopantomogram (OPG). It consists in a panoramic X-Ray picture of a person&apos;s mouth (oral cavity and complete set of teeth)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OrthodonticAppliances -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OrthodonticAppliances">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PremolarsSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PremolarsSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Restoration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Restoration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#RootCanal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#RootCanal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ScoringMetric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ScoringMetric">
+        <rdfs:comment>Represents the Scoring Metric applied to a given teeth (or set of teeth) to estimate a persons age</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ThirdMolarsSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ThirdMolarsSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption">
+        <rdfs:comment>Contains all the possible dentistry/medical dentistry treatment options that can be present in a person</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CaninesSet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#IncisorsSet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MolarsSet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PremolarsSet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ThirdMolarsSet"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ScoringMetric"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Filling"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Implant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OrthodonticAppliances"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Restoration"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#RootCanal"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
