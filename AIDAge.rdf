@@ -141,14 +141,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Canine -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Canine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData">
@@ -157,19 +149,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#DeciduousSet -->
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#DemirjianScoringSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#DeciduousSet">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#DemirjianMetric -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#DemirjianMetric">
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#DemirjianScoringSystem">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ScoringSystem"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MoorreesFanningHuntMetric"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MoorreesFanningHuntScoringSystem"/>
     </owl:Class>
     
 
@@ -214,14 +198,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Incisor -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Incisor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Index -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Index"/>
@@ -236,39 +212,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Mixed -->
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MoorreesFanningHuntScoringSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Mixed">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasTeethSet"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#DeciduousSet"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#hasTeethSet"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PermanentSet"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Molar -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Molar">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothType"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MoorreesFanningHuntMetric -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MoorreesFanningHuntMetric">
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#MoorreesFanningHuntScoringSystem">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ScoringSystem"/>
     </owl:Class>
     
@@ -308,22 +254,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OrthodonticAppliances">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PermanentSet -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#PermanentSet">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Premolar -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#Premolar">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothType"/>
     </owl:Class>
     
 
@@ -392,9 +322,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothType -->
+    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothType">
+    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI">
         <rdfs:comment>Represents each existing Tooth Type</rdfs:comment>
     </owl:Class>
     
@@ -404,14 +334,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption">
         <rdfs:comment>Represents all the possible dentistry/medical dentistry treatment options that can be present in a person</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#XRayType -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#XRayType">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
     </owl:Class>
     
 
@@ -435,24 +357,11 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ApplicantName"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ForensicCaseNumber"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ForensicExpert"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPGImageFile"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPGTakenDateTime"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ProvidedBirthDate"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#RequestingEntity"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#XRayType"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#CollectedData"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#OPG"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ScoringSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TeethSet"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#ToothTypeFDI"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/renat/ontologies/2025/4/AIDAge#TreatmentOption"/>
         </owl:members>
     </rdf:Description>
