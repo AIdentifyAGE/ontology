@@ -18,9 +18,10 @@
      xmlns:example="http://example.com/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://aidentifyage.com/ontologies/AIDAge">
+    <owl:Ontology rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ohd.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/iao-main.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/obi/2025-10-14/obi.owl"/>
         <owl:imports rdf:resource="http://purl.org/dc/terms"/>
         <owl:imports rdf:resource="http://snomed.info/sct/900000000000207008"/>
         <owl:imports rdf:resource="http://www.w3.org/2016/03/mls#"/>
@@ -849,7 +850,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://aidentifyage.com/ontologies/AIDAge#builtFrom -->
 
     <owl:ObjectProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#builtFrom">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/mls#Dataset"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
     </owl:ObjectProperty>
     
@@ -886,7 +886,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://aidentifyage.com/ontologies/AIDAge#contains_radiographic_imaging -->
 
     <owl:ObjectProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#contains_radiographic_imaging">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/mls#Dataset"/>
         <rdfs:range rdf:resource="http://snomed.info/id/363680008"/>
     </owl:ObjectProperty>
     
@@ -1044,8 +1043,8 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#hasToothStage">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://aidentifyage.com/ontologies/AIDAge#CoefficientMaturityData"/>
         <rdfs:domain rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DataReferenceStudy"/>
-        <rdfs:domain rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MaturityData"/>
         <rdfs:domain rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringMethod"/>
         <rdfs:range rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ToothStage"/>
     </owl:ObjectProperty>
@@ -1066,8 +1065,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#has_Scoring_System">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://aidentifyage.com/ontologies/AIDAge#Score"/>
-        <rdfs:range rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringSystem"/>
+        <rdfs:range rdf:resource="http://aidentifyage.com/ontologies/AIDAge#Stage"/>
     </owl:ObjectProperty>
     
 
@@ -1095,6 +1093,15 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#is_TreatmentOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#hasInferenceRun -->
+
+    <owl:ObjectProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#hasInferenceRun">
+        <rdfs:domain rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#AIDentalAgeAsessment"/>
+        <rdfs:range rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#InferenceRun"/>
     </owl:ObjectProperty>
     
 
@@ -1812,6 +1819,15 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
+    <!-- http://aidentifyage.com/ontologies/AIDAge#degreeOfProbability -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#degreeOfProbability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://aidentifyage.com/ontologies/AIDAge#finalAgeAssessment -->
 
     <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#finalAgeAssessment">
@@ -1981,14 +1997,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#probability -->
-
-    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#probability">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://aidentifyage.com/ontologies/AIDAge#providedBirthDate -->
 
     <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#providedBirthDate">
@@ -2084,6 +2092,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#standardDev">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>Standard Deviation</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2105,6 +2114,103 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIDAge#totalMaturityScore">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#chronologicalAge -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#chronologicalAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#highestMinimumProbableAge -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#highestMinimumProbableAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#lowerQuartile -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#lowerQuartile">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#maxAge -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#maxAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#median -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#median">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#medianAge -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#medianAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#minAge -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#minAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#populationAffinity -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#populationAffinity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#probabilityGivenAge -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#probabilityGivenAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#relevantAgeLimits -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#relevantAgeLimits">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#standardError -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#standardError">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#upperQuartile -->
+
+    <owl:DatatypeProperty rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#upperQuartile">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -2144,89 +2250,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#AboveBelow -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeClassification"/>
-        <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIDAge#Confidence"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#AboveBelow10 -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow10">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#AboveBelow12 -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow12">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#AboveBelow14 -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow14">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#AboveBelow16 -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow16">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#AboveBelow18 -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow18">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#AboveBelow21 -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow21">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeClassification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#AgeAssessment -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#AgeAssessment">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReportData"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#AgeClassification -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#AgeClassification">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReportData"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#BoneScoringSystem -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#BoneScoringSystem">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringSystem"/>
-        <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DentalScoringSystem"/>
-        <rdfs:label>Bone Scoring System</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://aidentifyage.com/ontologies/AIDAge#Braces -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#Braces">
@@ -2243,11 +2266,19 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#Confidence -->
+    <!-- http://aidentifyage.com/ontologies/AIDAge#CoefficientMaturityData -->
 
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#Confidence">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeAssessment"/>
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeClassification"/>
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#CoefficientMaturityData">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ToothStage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a reference study entry related to maturity scores</terms:description>
+        <rdfs:label xml:lang="en">Coefficient Maturity Data</rdfs:label>
     </owl:Class>
     
 
@@ -2263,6 +2294,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://aidentifyage.com/ontologies/AIDAge#DataReferenceStudy -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#DataReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
@@ -2272,66 +2304,60 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ageRange"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#confidence"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#legalAgeThreshold"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#maximumProbableAge"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#meanAge"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#minimumProbableAge"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#probability"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#standardDev"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#lowerQuartile"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#maxAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#median"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#minAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#upperQuartile"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/sex"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Represent a data entry from a reference study</skos:definition>
+        <terms:description xml:lang="en">Represent a data entry from a reference study</terms:description>
+        <rdfs:label xml:lang="en">Data Reference Study</rdfs:label>
     </owl:Class>
     
 
@@ -2339,7 +2365,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://aidentifyage.com/ontologies/AIDAge#DemirjianCoefficientMaturityData -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#DemirjianCoefficientMaturityData">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MaturityData"/>
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#CoefficientMaturityData"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#maturityScore"/>
@@ -2360,6 +2386,8 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description>Represents a reference study entry related to maturity scores (e.g. reference studies that use the demirjian tooth development stages)</terms:description>
+        <rdfs:label xml:lang="en">Demirjian Coefficient Maturity Data</rdfs:label>
     </owl:Class>
     
 
@@ -2376,12 +2404,15 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://aidentifyage.com/ontologies/AIDAge#DemirjianMaturityScoring -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#DemirjianMaturityScoring">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasMaturityData"/>
                 <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DemirjianCoefficientMaturityData"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents a given maturity reference table from where tooth maturity scores are retrieved</terms:description>
+        <rdfs:label xml:lang="en">Demirjian Maturity Scoring</rdfs:label>
     </owl:Class>
     
 
@@ -2414,16 +2445,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIDAge#LeeReferenceStudyResult"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#DemirjianScoringSystem -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#DemirjianScoringSystem">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DentalScoringSystem"/>
-        <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntScoringSystem"/>
-        <rdfs:label>Demirjian Scoring System</rdfs:label>
     </owl:Class>
     
 
@@ -2464,33 +2485,61 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ageRange"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#confidence"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#degreeOfProbability"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#finalAgeAssessment"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#legalAgeThreshold"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#maximumProbableAge"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#minimumProbableAge"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#mostLikelyAge"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#mostProbableAge"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#standardDev"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2502,46 +2551,45 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#minimumProbableAge"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#chronologicalAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#mostLikelyAge"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#highestMinimumProbableAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#mostProbableAge"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#medianAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#probability"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#populationAffinity"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#reportedAge"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#probabilityGivenAge"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#standardDev"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#relevantAgeLimits"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age</skos:definition>
+        <terms:description xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on tradicional methods</terms:description>
+        <rdfs:label xml:lang="en">Dental Age Assessment</rdfs:label>
     </owl:Class>
     
 
@@ -2550,6 +2598,13 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#DentalMaturityScore">
         <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasMaturityScore"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DemirjianMaturityScoring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#maturityDataUsed"/>
@@ -2564,15 +2619,8 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringStage"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#DentalScoringSystem -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#DentalScoringSystem">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringSystem"/>
-        <rdfs:label>Dental Scoring System</rdfs:label>
+        <terms:description xml:lang="en">Represents the sum of the maturity scores of all evaluated teeth</terms:description>
+        <rdfs:label xml:lang="en">Dental Maturity Score</rdfs:label>
     </owl:Class>
     
 
@@ -2581,6 +2629,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#FDI">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <terms:description xml:lang="en">Represents the FDI Tooth Naming Scheme</terms:description>
     </owl:Class>
     
 
@@ -2621,7 +2670,8 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ForensicIndividualCasePerson"/>
-        <skos:definition xml:lang="en">Represents a forensic expert performing a medico-legal examination for age assessment purposes</skos:definition>
+        <terms:description xml:lang="en">Represents a forensic expert performing a medico-legal examination for age assessment purposes</terms:description>
+        <rdfs:label xml:lang="en">Forensic Expert Person</rdfs:label>
     </owl:Class>
     
 
@@ -2659,7 +2709,8 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Represents an individual undergoing a medico-legal examination for age assessment purposes</skos:definition>
+        <terms:description xml:lang="en">Forensic Individual Case Person</terms:description>
+        <terms:description xml:lang="en">Represents an individual undergoing a medico-legal examination for age assessment purposes</terms:description>
     </owl:Class>
     
 
@@ -2705,6 +2756,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#Haderup">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <terms:description xml:lang="en">Represents the Haderup Tooth Naming Scheme</terms:description>
     </owl:Class>
     
 
@@ -2757,14 +2809,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://aidentifyage.com/ontologies/AIDAge#Index -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#Index"/>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#IntervalRange -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#IntervalRange">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeAssessment"/>
-    </owl:Class>
     
 
 
@@ -2843,32 +2887,10 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#MaturityData -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#MaturityData">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ToothStage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#MeanAge -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#MeanAge">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeAssessment"/>
-    </owl:Class>
-    
-
-
     <!-- http://aidentifyage.com/ontologies/AIDAge#MedicalLegalExamData -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#MedicalLegalExamData">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#collectedBy"/>
@@ -2916,14 +2938,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#MinimunAge -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#MinimunAge">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#AgeAssessment"/>
-    </owl:Class>
-    
-
-
     <!-- http://aidentifyage.com/ontologies/AIDAge#MissingTooth -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#MissingTooth">
@@ -2943,15 +2957,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntToothStage"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntScoringSystem -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#MoorreesFanningHuntScoringSystem">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#DentalScoringSystem"/>
-        <rdfs:label>Moorrees Fanning Hunt Scoring System</rdfs:label>
     </owl:Class>
     
 
@@ -3006,6 +3011,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://aidentifyage.com/ontologies/AIDAge#OrganizationProcess -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#OrganizationProcess">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#foaf"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#organizationProcessID"/>
@@ -3037,6 +3043,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#PalmerNotation">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <terms:description>Represents the Palmer Tooth Notation Scheme</terms:description>
     </owl:Class>
     
 
@@ -3052,6 +3059,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasData"/>
@@ -3072,7 +3080,8 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition>Represents a group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</skos:definition>
+        <terms:description xml:lang="en">Represents a group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</terms:description>
+        <rdfs:label xml:lang="en">Reference Study</rdfs:label>
     </owl:Class>
     
 
@@ -3080,6 +3089,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://aidentifyage.com/ontologies/AIDAge#ReferenceStudyResult -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudyResult">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasReferenceStudy"/>
@@ -3096,66 +3106,24 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ageRange"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#confidence"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#legalAgeThreshold"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#maximumProbableAge"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#meanAge"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#minimumProbableAge"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#probability"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#standardDev"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/sex"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Represents the application of a reference study (group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data) to a given set of tooth development stages</skos:definition>
+        <terms:description xml:lang="en">Represents the application of a reference study (group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data) to a given set of tooth development stages</terms:description>
+        <rdfs:label xml:lang="en">Reference Study Result</rdfs:label>
     </owl:Class>
     
 
@@ -3177,7 +3145,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Represents the necessary information present in the official report</rdfs:comment>
+        <terms:description xml:lang="en">Represents a final legal medicine report for judicial purposes</terms:description>
         <rdfs:label>Report Data</rdfs:label>
     </owl:Class>
     
@@ -3192,52 +3160,19 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#Score -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#Score">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#has_Scoring_System"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringSystem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#scoreValue"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#ScoreAssessment -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#ScoreAssessment">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#Score"/>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#ScoreClassification -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#ScoreClassification">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#Score"/>
-    </owl:Class>
-    
-
-
     <!-- http://aidentifyage.com/ontologies/AIDAge#ScoringMethod -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#ScoringMethod">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasToothStage"/>
                 <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ToothStage"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:description xml:lang="en">Objectively defined step of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity.
+I.e. represents a set of ToothStage</terms:description>
+        <rdfs:label xml:lang="en">Scoring Method</rdfs:label>
     </owl:Class>
     
 
@@ -3246,18 +3181,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#ScoringStage">
         <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoringMethod"/>
-        <skos:definition xml:lang="en">Objectively defined step of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity.
-I.e. represents a set of ToothStage</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#ScoringSystem -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#ScoringSystem">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-        <rdfs:comment>Represents the Scoring System applied to a given teeth (or tooth set) to estimate a persons age</rdfs:comment>
-        <rdfs:label>Scoring System</rdfs:label>
+        <terms:description xml:lang="en">Represents the aggregation of a set of Tooth Stages for tooth stage methods that do not rely on maturity dental scores</terms:description>
     </owl:Class>
     
 
@@ -3265,6 +3189,9 @@ I.e. represents a set of ToothStage</skos:definition>
     <!-- http://aidentifyage.com/ontologies/AIDAge#Stage -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#Stage">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <terms:description xml:lang="en">Represents the Scoring System applied to a given teeth (or tooth set) to estimate a persons dental age</terms:description>
+        <rdfs:label>Stage</rdfs:label>
         <skos:definition xml:lang="en">Formal phase within a process or life cycle, delimited by objective entry and exit criteria, characterized by specific purposes, activities, and outcomes</skos:definition>
     </owl:Class>
     
@@ -3273,6 +3200,7 @@ I.e. represents a set of ToothStage</skos:definition>
     <!-- http://aidentifyage.com/ontologies/AIDAge#TeethSet -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#TeethSet">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000165"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasTooth"/>
@@ -3288,6 +3216,7 @@ I.e. represents a set of ToothStage</skos:definition>
     <!-- http://aidentifyage.com/ontologies/AIDAge#ToothStage -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#ToothStage">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000938"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#hasStage"/>
@@ -3310,16 +3239,9 @@ I.e. represents a set of ToothStage</skos:definition>
     <!-- http://aidentifyage.com/ontologies/AIDAge#TreatmentOption -->
 
     <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#TreatmentOption">
-        <rdfs:comment>Represents all the possible dentistry/medical dentistry treatment options that can be present in a person</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <terms:description xml:lang="en">Represents all the possible dentistry/medical dentistry treatment options that can be present in person&apos;s teeth</terms:description>
         <rdfs:label>Treatment Option</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://aidentifyage.com/ontologies/AIDAge#UsedModelRef -->
-
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#UsedModelRef">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ScoreClassification"/>
     </owl:Class>
     
 
@@ -3348,10 +3270,191 @@ I.e. represents a set of ToothStage</skos:definition>
     
 
 
-    <!-- http://aidentifyage.com/ontologies/AIDAge#mlschema -->
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#AIDentalAgeAsessment -->
 
-    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIDAge#mlschema">
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#AIDentalAgeAsessment">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ReportData"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#confidence"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#finalAgeAssessment"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#mostProbableAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#probabilityGivenAge"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on AI/ML methods</terms:description>
+        <rdfs:label xml:lang="en">AI Dental Age Assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#AIRegDentalAgeAssessement -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#AIRegDentalAgeAssessement">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#AIDentalAgeAsessment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#ageRange"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#degreeOfProbability"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#maximumProbableAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#minimumProbableAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#mostLikelyAge"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#standardDev"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#chronologicalAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#highestMinimumProbableAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#medianAge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#populationAffinity"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#relevantAgeLimits"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#AIThresholdDentalAgeAssessment"/>
+        <terms:description xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age, using AI/ML methods to perform regression tasks</terms:description>
+        <rdfs:label xml:lang="en">AI Reg Dental Age Assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#AIThresholdDentalAgeAssessment -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#AIThresholdDentalAgeAssessment">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#AIDentalAgeAsessment"/>
+        <terms:description xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on AI/ML methods for defining accurate legal age thresholds</terms:description>
+        <rdfs:label xml:lang="en">AI Threshold Dental Age Assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#DataCollection -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#DataCollection">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#contains_legal_exam_data"/>
+                <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MedicalLegalExamData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description>Represents a set of Legal Medical Exams Data</terms:description>
+        <rdfs:label xml:lang="en">Data Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#InferenceRun -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#InferenceRun">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/mls#Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/mls#hasInput"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/mls#hasInput"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/mls#Model"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/mls#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#ModelOutput"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Inference Run</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#MLSchema -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#MLSchema">
         <rdfs:label>MLSchema</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://aidentifyage.com/ontologies/AIdentifyAGE#ModelOutput -->
+
+    <owl:Class rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#ModelOutput">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/mls#InformationEntity"/>
+        <rdfs:label>Model Output</rdfs:label>
     </owl:Class>
     
 
@@ -3373,19 +3476,6 @@ I.e. represents a set of ToothStage</skos:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition xml:lang="en">Hard structure composed of dentine and pulp, usually covered partially with enamel and cementum, anchored in the alveolar bone, serving in mastication, phonetics, and aesthetics</skos:definition>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000100 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000100">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://aidentifyage.com/ontologies/AIDAge#contains_legal_exam_data"/>
-                <owl:someValuesFrom rdf:resource="http://aidentifyage.com/ontologies/AIDAge#MedicalLegalExamData"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </rdf:Description>
     
 
@@ -3481,33 +3571,27 @@ I.e. represents a set of ToothStage</skos:definition>
     
 
 
-    <!-- http://www.w3.org/ns/mls#Dataset -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/mls#Dataset"/>
-    
-
-
     <!-- http://www.w3.org/ns/mls#InformationEntity -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/mls#InformationEntity">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#mlschema"/>
-    </owl:Class>
+    <rdf:Description rdf:about="http://www.w3.org/ns/mls#InformationEntity">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#MLSchema"/>
+    </rdf:Description>
     
 
 
     <!-- http://www.w3.org/ns/mls#Process -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/mls#Process">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#mlschema"/>
-    </owl:Class>
+    <rdf:Description rdf:about="http://www.w3.org/ns/mls#Process">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#MLSchema"/>
+    </rdf:Description>
     
 
 
     <!-- http://www.w3.org/ns/mls#Quality -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/mls#Quality">
-        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIDAge#mlschema"/>
-    </owl:Class>
+    <rdf:Description rdf:about="http://www.w3.org/ns/mls#Quality">
+        <rdfs:subClassOf rdf:resource="http://aidentifyage.com/ontologies/AIdentifyAGE#MLSchema"/>
+    </rdf:Description>
     
 
 
@@ -6568,32 +6652,10 @@ I.e. represents a set of ToothStage</skos:definition>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow10"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow12"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow14"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow16"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow18"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#AboveBelow21"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#Confidence"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#Confidence"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#IntervalRange"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#MeanAge"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#MinimunAge"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#CoefficientMaturityData"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#DataReferenceStudy"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#DemirjianMaturityScoring"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#DentalAgeAssessment"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#MaturityData"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudyResult"/>
             <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#ScoringMethod"/>
@@ -6633,9 +6695,13 @@ I.e. represents a set of ToothStage</skos:definition>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#IntervalRange"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#MeanAge"/>
-            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#MinimunAge"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIDAge#ReferenceStudy"/>
+            <rdf:Description rdf:about="http://aidentifyage.com/ontologies/AIdentifyAGE#DataCollection"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000118"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000251"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002582"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0002584"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0003327"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
