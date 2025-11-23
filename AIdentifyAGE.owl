@@ -33,8 +33,20 @@
     <Import>http://www.w3.org/2016/03/mls#</Import>
     <Import>http://xmlns.com/foaf/0.1/</Import>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Renato Marcelo
+Ana Rodrigues
+Cristiana Palmela Pereira
+Alexandre Francisco
+Cátia Vaz</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
         <Literal>Base Ontology for use in AIdentifyAGE Project</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>1.0.0-beta</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances"/>
@@ -7139,12 +7151,12 @@ I.e. represents a set of ToothStage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147486524"/>
+        <AnonymousIndividual nodeID="_:genid2147486218"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147486525"/>
+        <AnonymousIndividual nodeID="_:genid2147486219"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>

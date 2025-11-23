@@ -27,7 +27,13 @@
         <owl:imports rdf:resource="http://snomed.info/sct/900000000000207008"/>
         <owl:imports rdf:resource="http://www.w3.org/2016/03/mls#"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
-        <rdfs:comment>Base Ontology for use in AIdentifyAGE Project</rdfs:comment>
+        <terms:contributor>Renato Marcelo
+Ana Rodrigues
+Cristiana Palmela Pereira
+Alexandre Francisco
+Cátia Vaz</terms:contributor>
+        <terms:description>Base Ontology for use in AIdentifyAGE Project</terms:description>
+        <owl:versionInfo>1.0.0-beta</owl:versionInfo>
     </owl:Ontology>
     
 
