@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://aidentifyage.github.io/aidentifyage-ontology/AIdentifyAGE"
+     xml:base="https://aidentifyage.github.io/ontology/AIdentifyAGE"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://aidentifyage.github.io/aidentifyage-ontology/AIdentifyAGE">
+     ontologyIRI="https://aidentifyage.github.io/ontology/AIdentifyAGE">
     <Prefix name="" IRI="http://www.semanticweb.org/untitled-ontology-6/"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="ns" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
@@ -46,7 +46,7 @@ Cátia Vaz</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal>1.0.0-beta</Literal>
+        <Literal>v1.0.0-beta</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances"/>
