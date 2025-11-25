@@ -19,22 +19,22 @@
 @prefix AIdentifyAGE: <https://aidentifyage.github.io/aidentifyage-ontology/AIdentifyAGE#> .
 @base <http://www.semanticweb.org/untitled-ontology-6/> .
 
-<https://aidentifyage.github.io/ontology/AIdentifyAGE> rdf:type owl:Ontology ;
-                                                        owl:imports <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/MLSchema.ttl> ,
-                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/dc_terms_subset.owl> ,
-                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/foaf_subset.owl> ,
-                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/iao_subset.owl> ,
-                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/obi_subset.owl> ,
-                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/ohd_subset.owl> ,
-                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/snomed_subset.owl> ;
-                                                        terms:contributor """Renato Marcelo
+<https://aidentifyage.github.io/ontology> rdf:type owl:Ontology ;
+                                           owl:imports <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/MLSchema.ttl> ,
+                                                       <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/dc_terms_subset.owl> ,
+                                                       <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/foaf_subset.owl> ,
+                                                       <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/iao_subset.owl> ,
+                                                       <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/obi_subset.owl> ,
+                                                       <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/ohd_subset.owl> ,
+                                                       <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/snomed_subset.owl> ;
+                                           terms:contributor """Renato Marcelo
 Ana Rodrigues
 Cristiana Palmela Pereira
 Alexandre Francisco
 Cátia Vaz""" ;
-                                                        terms:description "The AIdentifyAGE ontology provides a comprehensive vocabulary description for forensic age assessment using dental biological markers, promoting the transparent assessment processes in forensic odontology and age diagnostics. It formalizes expert knowledge according to IOFOS, AGFAD, ABFO, ADA and ISO standards, ensuring semantic interoperability and ethical AI integration. This ontology is a work in progress developed under the AIdentifyAGE project (FCT Grant 2024.07444.IACDC), within the national investment RE-C05-i08 – More Digital Science, measure RE-C05-i08.M04 – Support to R&D projects for advanced cybersecurity, artificial intelligence and data science systems in public administration. This work is being developed in collaboration with researchers from the University of Lisbon (Portugal), the University of Münster (Germany), and the University of Zagreb (Croatia), within the framework of the AIdentifyAGE international consortium., Base Ontology for use in AIdentifyAGE Project"@en ;
-                                                        terms:issued "25/11/2025" ;
-                                                        owl:versionInfo "v1.0.1-beta" .
+                                           terms:description "The AIdentifyAGE ontology provides a comprehensive vocabulary description for forensic age assessment using dental biological markers, promoting the transparent assessment processes in forensic odontology and age diagnostics. It formalizes expert knowledge according to IOFOS, AGFAD, ABFO, ADA and ISO standards, ensuring semantic interoperability and ethical AI integration. This ontology is a work in progress developed under the AIdentifyAGE project (FCT Grant 2024.07444.IACDC), within the national investment RE-C05-i08 – More Digital Science, measure RE-C05-i08.M04 – Support to R&D projects for advanced cybersecurity, artificial intelligence and data science systems in public administration. This work is being developed in collaboration with researchers from the University of Lisbon (Portugal), the University of Münster (Germany), and the University of Zagreb (Croatia), within the framework of the AIdentifyAGE international consortium., Base Ontology for use in AIdentifyAGE Project"@en ;
+                                           terms:issued "25/11/2025" ;
+                                           owl:versionInfo "v1.0.1-beta" .
 
 #################################################################
 #    Annotation properties
@@ -840,7 +840,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 prov:wasDerivedFrom rdf:type owl:AnnotationProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#synonym
+###  https://aidentifyage.github.io/ontology#synonym
 :synonym rdf:type owl:AnnotationProperty .
 
 
@@ -1535,142 +1535,142 @@ obo:member_of rdf:type owl:ObjectProperty .
 <http://www.w3.org/ns/mls#hasOutput> rdf:type owl:ObjectProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#builtFrom
+###  https://aidentifyage.github.io/ontology#builtFrom
 :builtFrom rdf:type owl:ObjectProperty ;
            rdfs:range obo:IAO_0000100 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#collectedBy
+###  https://aidentifyage.github.io/ontology#collectedBy
 :collectedBy rdf:type owl:ObjectProperty ;
              rdfs:domain :MedicalLegalExamData ;
              rdfs:range :ForensicExpertPerson .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#containsData
+###  https://aidentifyage.github.io/ontology#containsData
 :containsData rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :ReportData ;
               rdfs:range :MedicalLegalExamData .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#contains_legal_exam_data
+###  https://aidentifyage.github.io/ontology#contains_legal_exam_data
 :contains_legal_exam_data rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf owl:topObjectProperty ;
                           rdfs:range :MedicalLegalExamData .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#contains_radiographic_imaging
+###  https://aidentifyage.github.io/ontology#contains_radiographic_imaging
 :contains_radiographic_imaging rdf:type owl:ObjectProperty ;
                                rdfs:range <http://snomed.info/id/363680008> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasData
+###  https://aidentifyage.github.io/ontology#hasData
 :hasData rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :ReferenceStudy ;
          rdfs:range :DataReferenceStudy .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasDevelopmentStage
+###  https://aidentifyage.github.io/ontology#hasDevelopmentStage
 :hasDevelopmentStage rdf:type owl:ObjectProperty ;
                      rdfs:domain :ToothStage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasIndividual
+###  https://aidentifyage.github.io/ontology#hasIndividual
 :hasIndividual rdf:type owl:ObjectProperty ;
                rdfs:domain :MedicalLegalExamData ;
                rdfs:range :ForensicIndividualCasePerson .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasInferenceRun
+###  https://aidentifyage.github.io/ontology#hasInferenceRun
 :hasInferenceRun rdf:type owl:ObjectProperty ;
                  rdfs:domain :AIDentalAgeAsessment ;
                  rdfs:range :InferenceRun .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasMaturityConversionMapping
+###  https://aidentifyage.github.io/ontology#hasMaturityConversionMapping
 :hasMaturityConversionMapping rdf:type owl:ObjectProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasMaturityData
+###  https://aidentifyage.github.io/ontology#hasMaturityData
 :hasMaturityData rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :DemirjianMaturityScoring ;
                  rdfs:range :DemirjianCoefficientMaturityData .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasMaturityScore
+###  https://aidentifyage.github.io/ontology#hasMaturityScore
 :hasMaturityScore rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain :DentalMaturityScore ;
                   rdfs:range :DemirjianMaturityScoring .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasMaturityScoreMapping
+###  https://aidentifyage.github.io/ontology#hasMaturityScoreMapping
 :hasMaturityScoreMapping rdf:type owl:ObjectProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasPair
+###  https://aidentifyage.github.io/ontology#hasPair
 :hasPair rdf:type owl:ObjectProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasRadiographicImaging
+###  https://aidentifyage.github.io/ontology#hasRadiographicImaging
 :hasRadiographicImaging rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf owl:topObjectProperty ;
                         rdfs:domain :MedicalLegalExamData .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasReferenceStudy
+###  https://aidentifyage.github.io/ontology#hasReferenceStudy
 :hasReferenceStudy rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
                    rdfs:domain :ReferenceStudyResult ;
                    rdfs:range :ReferenceStudy .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasReferenceStudyResult
+###  https://aidentifyage.github.io/ontology#hasReferenceStudyResult
 :hasReferenceStudyResult rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:domain :DentalAgeAssessment ;
                          rdfs:range :ReferenceStudyResult .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasRequestingEntity
+###  https://aidentifyage.github.io/ontology#hasRequestingEntity
 :hasRequestingEntity rdf:type owl:ObjectProperty ;
                      rdfs:domain :MedicalLegalExamData .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoreResult
+###  https://aidentifyage.github.io/ontology#hasScoreResult
 :hasScoreResult rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain :ReportData .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoreStudy
+###  https://aidentifyage.github.io/ontology#hasScoreStudy
 :hasScoreStudy rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring
+###  https://aidentifyage.github.io/ontology#hasScoring
 :hasScoring rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :ReferenceStudyResult ;
             rdfs:range :ScoringMethod .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasStage
+###  https://aidentifyage.github.io/ontology#hasStage
 :hasStage rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
           rdfs:domain :ToothStage ;
           rdfs:range :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasTooth
+###  https://aidentifyage.github.io/ontology#hasTooth
 :hasTooth rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
           rdfs:domain :TeethSet .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasToothStage
+###  https://aidentifyage.github.io/ontology#hasToothStage
 :hasToothStage rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain :CoefficientMaturityData ,
@@ -1679,33 +1679,33 @@ obo:member_of rdf:type owl:ObjectProperty .
                rdfs:range :ToothStage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasTreatment
+###  https://aidentifyage.github.io/ontology#hasTreatment
 :hasTreatment rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               owl:inverseOf :is_TreatmentOf ;
               rdfs:range :TreatmentOption .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#has_Scoring_System
+###  https://aidentifyage.github.io/ontology#has_Scoring_System
 :has_Scoring_System rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
                     rdfs:range :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#has_TeethSet
+###  https://aidentifyage.github.io/ontology#has_TeethSet
 :has_TeethSet rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :OPG ;
               rdfs:range :TeethSet .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#has_role
+###  https://aidentifyage.github.io/ontology#has_role
 :has_role rdf:type owl:ObjectProperty ;
           rdfs:domain foaf:Person ;
           rdfs:range obo:BFO_0000023 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#is_TreatmentOf
+###  https://aidentifyage.github.io/ontology#is_TreatmentOf
 :is_TreatmentOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty .
 
@@ -1729,58 +1729,58 @@ foaf:sex rdf:type owl:DatatypeProperty ;
          rdfs:label "sex" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ageInterval
+###  https://aidentifyage.github.io/ontology#ageInterval
 :ageInterval rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:range rdfs:Literal .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ageRange
+###  https://aidentifyage.github.io/ontology#ageRange
 :ageRange rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#author
+###  https://aidentifyage.github.io/ontology#author
 :author rdf:type owl:DatatypeProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#chronologicalAge
+###  https://aidentifyage.github.io/ontology#chronologicalAge
 :chronologicalAge rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf owl:topDataProperty ;
                   rdfs:range xsd:float .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#confidence
+###  https://aidentifyage.github.io/ontology#confidence
 :confidence rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#degreeOfProbability
+###  https://aidentifyage.github.io/ontology#degreeOfProbability
 :degreeOfProbability rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty ;
                      rdfs:range rdfs:Literal .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#finalAgeAssessment
+###  https://aidentifyage.github.io/ontology#finalAgeAssessment
 :finalAgeAssessment rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#forensicCaseNumber
+###  https://aidentifyage.github.io/ontology#forensicCaseNumber
 :forensicCaseNumber rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
                     rdfs:range xsd:string ;
                     rdfs:label "Forensic Case Number" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#forensicExaminationDatetime
+###  https://aidentifyage.github.io/ontology#forensicExaminationDatetime
 :forensicExaminationDatetime rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf owl:topDataProperty ;
                              rdfs:range xsd:dateTime ;
                              rdfs:label "Forensic Examination DateTime" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#forensicExpertID
+###  https://aidentifyage.github.io/ontology#forensicExpertID
 :forensicExpertID rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf owl:topDataProperty ;
                   rdfs:domain :ForensicExpertPerson ;
@@ -1788,26 +1788,26 @@ foaf:sex rdf:type owl:DatatypeProperty ;
                   rdfs:label "Forensic Expert ID" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#highestMinimumProbableAge
+###  https://aidentifyage.github.io/ontology#highestMinimumProbableAge
 :highestMinimumProbableAge rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#legalAgeThreshold
+###  https://aidentifyage.github.io/ontology#legalAgeThreshold
 :legalAgeThreshold rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#locationName
+###  https://aidentifyage.github.io/ontology#locationName
 :locationName rdf:type owl:DatatypeProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#lowerQuartile
+###  https://aidentifyage.github.io/ontology#lowerQuartile
 :lowerQuartile rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#material
+###  https://aidentifyage.github.io/ontology#material
 :material rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
           rdfs:domain :Filling ;
@@ -1815,133 +1815,133 @@ foaf:sex rdf:type owl:DatatypeProperty ;
           rdfs:label "Filling Material" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#maturityDataUsed
+###  https://aidentifyage.github.io/ontology#maturityDataUsed
 :maturityDataUsed rdf:type owl:DatatypeProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#maturityScore
+###  https://aidentifyage.github.io/ontology#maturityScore
 :maturityScore rdf:type owl:DatatypeProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#maxAge
+###  https://aidentifyage.github.io/ontology#maxAge
 :maxAge rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#maximumProbableAge
+###  https://aidentifyage.github.io/ontology#maximumProbableAge
 :maximumProbableAge rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#meanAge
+###  https://aidentifyage.github.io/ontology#meanAge
 :meanAge rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#median
+###  https://aidentifyage.github.io/ontology#median
 :median rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#medianAge
+###  https://aidentifyage.github.io/ontology#medianAge
 :medianAge rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#minAge
+###  https://aidentifyage.github.io/ontology#minAge
 :minAge rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#minimumProbableAge
+###  https://aidentifyage.github.io/ontology#minimumProbableAge
 :minimumProbableAge rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#mostLikelyAge
+###  https://aidentifyage.github.io/ontology#mostLikelyAge
 :mostLikelyAge rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#mostProbableAge
+###  https://aidentifyage.github.io/ontology#mostProbableAge
 :mostProbableAge rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#organizationProcessID
+###  https://aidentifyage.github.io/ontology#organizationProcessID
 :organizationProcessID rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:domain :OrganizationProcess ;
                        rdfs:range xsd:string .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#pairKey
+###  https://aidentifyage.github.io/ontology#pairKey
 :pairKey rdf:type owl:DatatypeProperty ;
          rdfs:range rdfs:Literal .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#pairValue
+###  https://aidentifyage.github.io/ontology#pairValue
 :pairValue rdf:type owl:DatatypeProperty ;
            rdfs:range rdfs:Literal .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#populationAffinity
+###  https://aidentifyage.github.io/ontology#populationAffinity
 :populationAffinity rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#predictedAge
+###  https://aidentifyage.github.io/ontology#predictedAge
 :predictedAge rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:range xsd:positiveInteger .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#predictedMaxAge
+###  https://aidentifyage.github.io/ontology#predictedMaxAge
 :predictedMaxAge rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:range xsd:positiveInteger .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#predictedMinAge
+###  https://aidentifyage.github.io/ontology#predictedMinAge
 :predictedMinAge rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:range xsd:positiveInteger .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#probabilityGivenAge
+###  https://aidentifyage.github.io/ontology#probabilityGivenAge
 :probabilityGivenAge rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#providedBirthDate
+###  https://aidentifyage.github.io/ontology#providedBirthDate
 :providedBirthDate rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain :ForensicIndividualCasePerson ;
                    rdfs:range xsd:dateTime .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#radiographicImageURI
+###  https://aidentifyage.github.io/ontology#radiographicImageURI
 :radiographicImageURI rdf:type owl:DatatypeProperty ;
                       rdfs:range terms:URI .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#radiographicTakenDatetime
+###  https://aidentifyage.github.io/ontology#radiographicTakenDatetime
 :radiographicTakenDatetime rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf owl:topDataProperty ;
                            rdfs:range xsd:dateTime .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#referenceStudyURI
+###  https://aidentifyage.github.io/ontology#referenceStudyURI
 :referenceStudyURI rdf:type owl:DatatypeProperty ;
                    rdfs:range terms:URI .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#relevantAgeLimits
+###  https://aidentifyage.github.io/ontology#relevantAgeLimits
 :relevantAgeLimits rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#reportDatetime
+###  https://aidentifyage.github.io/ontology#reportDatetime
 :reportDatetime rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
                 rdfs:domain :ReportData ;
@@ -1949,62 +1949,62 @@ foaf:sex rdf:type owl:DatatypeProperty ;
                 rdfs:label "Report DateTime" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#reportedAge
+###  https://aidentifyage.github.io/ontology#reportedAge
 :reportedAge rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#requestingEntityName
+###  https://aidentifyage.github.io/ontology#requestingEntityName
 :requestingEntityName rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
                       rdfs:range xsd:string .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#rootType
+###  https://aidentifyage.github.io/ontology#rootType
 :rootType rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
           rdfs:range xsd:integer ;
           rdfs:label "Root Type" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#scoreValue
+###  https://aidentifyage.github.io/ontology#scoreValue
 :scoreValue rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdfs:label "Score Value" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#stageSystemUsed
+###  https://aidentifyage.github.io/ontology#stageSystemUsed
 :stageSystemUsed rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:string .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#standardDev
+###  https://aidentifyage.github.io/ontology#standardDev
 :standardDev rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:range xsd:float ;
              rdfs:label "Standard Deviation" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#standardError
+###  https://aidentifyage.github.io/ontology#standardError
 :standardError rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#studyYear
+###  https://aidentifyage.github.io/ontology#studyYear
 :studyYear rdf:type owl:DatatypeProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#toothLabel
+###  https://aidentifyage.github.io/ontology#toothLabel
 :toothLabel rdf:type owl:DatatypeProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#totalMaturityScore
+###  https://aidentifyage.github.io/ontology#totalMaturityScore
 :totalMaturityScore rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
                     rdfs:range xsd:positiveInteger .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#upperQuartile
+###  https://aidentifyage.github.io/ontology#upperQuartile
 :upperQuartile rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty .
 
@@ -2169,7 +2169,7 @@ foaf:Agent rdf:type owl:Class ;
 foaf:Person rdf:type owl:Class .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#AIDentalAgeAsessment
+###  https://aidentifyage.github.io/ontology#AIDentalAgeAsessment
 :AIDentalAgeAsessment rdf:type owl:Class ;
                       rdfs:subClassOf :ReportData ,
                                       [ rdf:type owl:Restriction ;
@@ -2194,7 +2194,7 @@ foaf:Person rdf:type owl:Class .
                       rdfs:label "AI Dental Age Assessment"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#AIRegDentalAgeAssessement
+###  https://aidentifyage.github.io/ontology#AIRegDentalAgeAssessement
 :AIRegDentalAgeAssessement rdf:type owl:Class ;
                            rdfs:subClassOf :AIDentalAgeAsessment ,
                                            [ rdf:type owl:Restriction ;
@@ -2252,19 +2252,19 @@ foaf:Person rdf:type owl:Class .
                            rdfs:label "AI Reg Dental Age Assessment"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#AIThresholdDentalAgeAssessment
+###  https://aidentifyage.github.io/ontology#AIThresholdDentalAgeAssessment
 :AIThresholdDentalAgeAssessment rdf:type owl:Class ;
                                 rdfs:subClassOf :AIDentalAgeAsessment ;
                                 terms:description "Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on AI/ML methods for defining accurate legal age thresholds"@en ;
                                 rdfs:label "AI Threshold Dental Age Assessment"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Braces
+###  https://aidentifyage.github.io/ontology#Braces
 :Braces rdf:type owl:Class ;
         rdfs:subClassOf <http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#CoefficientMaturityData
+###  https://aidentifyage.github.io/ontology#CoefficientMaturityData
 :CoefficientMaturityData rdf:type owl:Class ;
                          rdfs:subClassOf obo:IAO_0000027 ,
                                          [ rdf:type owl:Restriction ;
@@ -2276,12 +2276,12 @@ foaf:Person rdf:type owl:Class .
                          rdfs:label "Coefficient Maturity Data"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DCTerms
+###  https://aidentifyage.github.io/ontology#DCTerms
 :DCTerms rdf:type owl:Class ;
          rdfs:label "DCTerms" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DataCollection
+###  https://aidentifyage.github.io/ontology#DataCollection
 :DataCollection rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000100 ,
                                 [ rdf:type owl:Restriction ;
@@ -2293,7 +2293,7 @@ foaf:Person rdf:type owl:Class .
                 rdfs:label "Data Collection"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DataReferenceStudy
+###  https://aidentifyage.github.io/ontology#DataReferenceStudy
 :DataReferenceStudy rdf:type owl:Class ;
                     rdfs:subClassOf obo:IAO_0000027 ,
                                     [ rdf:type owl:Restriction ;
@@ -2343,7 +2343,7 @@ foaf:Person rdf:type owl:Class .
                     rdfs:label "Data Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianCoefficientMaturityData
+###  https://aidentifyage.github.io/ontology#DemirjianCoefficientMaturityData
 :DemirjianCoefficientMaturityData rdf:type owl:Class ;
                                   rdfs:subClassOf :CoefficientMaturityData ,
                                                   [ rdf:type owl:Restriction ;
@@ -2364,7 +2364,7 @@ foaf:Person rdf:type owl:Class .
                                   rdfs:label "Demirjian Coefficient Maturity Data"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianMaturityScoring
+###  https://aidentifyage.github.io/ontology#DemirjianMaturityScoring
 :DemirjianMaturityScoring rdf:type owl:Class ;
                           rdfs:subClassOf obo:IAO_0000100 ,
                                           [ rdf:type owl:Restriction ;
@@ -2375,7 +2375,7 @@ foaf:Person rdf:type owl:Class .
                           rdfs:label "Demirjian Maturity Scoring"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianReferenceStudy
+###  https://aidentifyage.github.io/ontology#DemirjianReferenceStudy
 :DemirjianReferenceStudy rdf:type owl:Class ;
                          rdfs:subClassOf :ReferenceStudy ,
                                          [ rdf:type owl:Restriction ;
@@ -2386,12 +2386,12 @@ foaf:Person rdf:type owl:Class .
                          rdfs:label "Demirjian Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStages
+###  https://aidentifyage.github.io/ontology#DemirjianStages
 :DemirjianStages rdf:type owl:Class ;
                  rdfs:subClassOf :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianToothStage
+###  https://aidentifyage.github.io/ontology#DemirjianToothStage
 :DemirjianToothStage rdf:type owl:Class ;
                      rdfs:subClassOf :ToothStage ,
                                      [ rdf:type owl:Restriction ;
@@ -2402,7 +2402,7 @@ foaf:Person rdf:type owl:Class .
                      rdfs:label "Demirjian Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DentalAgeAssessment
+###  https://aidentifyage.github.io/ontology#DentalAgeAssessment
 :DentalAgeAssessment rdf:type owl:Class ;
                      rdfs:subClassOf :ReportData ,
                                      [ rdf:type owl:Restriction ;
@@ -2485,7 +2485,7 @@ foaf:Person rdf:type owl:Class .
                      rdfs:label "Dental Age Assessment"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DentalMaturityScore
+###  https://aidentifyage.github.io/ontology#DentalMaturityScore
 :DentalMaturityScore rdf:type owl:Class ;
                      rdfs:subClassOf :ScoringMethod ,
                                      [ rdf:type owl:Restriction ;
@@ -2511,13 +2511,13 @@ foaf:Person rdf:type owl:Class .
                      rdfs:label "Dental Maturity Score"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI
+###  https://aidentifyage.github.io/ontology#FDI
 :FDI rdf:type owl:Class ;
      rdfs:subClassOf obo:IAO_0000009 ;
      terms:description "Represents the FDI Tooth Naming Scheme"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Filling
+###  https://aidentifyage.github.io/ontology#Filling
 :Filling rdf:type owl:Class ;
          rdfs:subClassOf :TreatmentOption ,
                          [ rdf:type owl:Restriction ;
@@ -2527,13 +2527,13 @@ foaf:Person rdf:type owl:Class .
                          ] .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FixedProstodonticRehabilitation
+###  https://aidentifyage.github.io/ontology#FixedProstodonticRehabilitation
 :FixedProstodonticRehabilitation rdf:type owl:Class ;
                                  rdfs:subClassOf :TreatmentOption ;
                                  rdfs:label "Fixed Prostodontic Rehabilitation" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ForensicExpertPerson
+###  https://aidentifyage.github.io/ontology#ForensicExpertPerson
 :ForensicExpertPerson rdf:type owl:Class ;
                       rdfs:subClassOf foaf:Person ,
                                       [ rdf:type owl:Restriction ;
@@ -2549,13 +2549,13 @@ foaf:Person rdf:type owl:Class .
                       rdfs:label "Forensic Expert Person"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ForensicExpertRole
+###  https://aidentifyage.github.io/ontology#ForensicExpertRole
 :ForensicExpertRole rdf:type owl:Class ;
                     rdfs:subClassOf obo:BFO_0000023 ;
                     owl:disjointWith :ForensicIndividualCaseRole .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ForensicIndividualCasePerson
+###  https://aidentifyage.github.io/ontology#ForensicIndividualCasePerson
 :ForensicIndividualCasePerson rdf:type owl:Class ;
                               rdfs:subClassOf foaf:Person ,
                                               [ rdf:type owl:Restriction ;
@@ -2586,12 +2586,12 @@ foaf:Person rdf:type owl:Class .
                               rdfs:label "Forensic Individual Case Person"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ForensicIndividualCaseRole
+###  https://aidentifyage.github.io/ontology#ForensicIndividualCaseRole
 :ForensicIndividualCaseRole rdf:type owl:Class ;
                             rdfs:subClassOf obo:BFO_0000023 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GarnReferenceStudy
+###  https://aidentifyage.github.io/ontology#GarnReferenceStudy
 :GarnReferenceStudy rdf:type owl:Class ;
                     rdfs:subClassOf :ReferenceStudy ,
                                     [ rdf:type owl:Restriction ;
@@ -2602,7 +2602,7 @@ foaf:Person rdf:type owl:Class .
                     rdfs:label "Garn Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GarnScoring
+###  https://aidentifyage.github.io/ontology#GarnScoring
 :GarnScoring rdf:type owl:Class ;
              rdfs:subClassOf :ScoringStage ,
                              [ rdf:type owl:Restriction ;
@@ -2611,12 +2611,12 @@ foaf:Person rdf:type owl:Class .
                              ] .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GarnStages
+###  https://aidentifyage.github.io/ontology#GarnStages
 :GarnStages rdf:type owl:Class ;
             rdfs:subClassOf :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GarnToothStage
+###  https://aidentifyage.github.io/ontology#GarnToothStage
 :GarnToothStage rdf:type owl:Class ;
                 rdfs:subClassOf :ToothStage ,
                                 [ rdf:type owl:Restriction ;
@@ -2627,7 +2627,7 @@ foaf:Person rdf:type owl:Class .
                 rdfs:label "Garn Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GleiserReferenceStudy
+###  https://aidentifyage.github.io/ontology#GleiserReferenceStudy
 :GleiserReferenceStudy rdf:type owl:Class ;
                        rdfs:subClassOf :ReferenceStudy ,
                                        [ rdf:type owl:Restriction ;
@@ -2638,7 +2638,7 @@ foaf:Person rdf:type owl:Class .
                        rdfs:label "Gleiser Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GleiserScoring
+###  https://aidentifyage.github.io/ontology#GleiserScoring
 :GleiserScoring rdf:type owl:Class ;
                 rdfs:subClassOf :ScoringStage ,
                                 [ rdf:type owl:Restriction ;
@@ -2647,12 +2647,12 @@ foaf:Person rdf:type owl:Class .
                                 ] .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GleiserStages
+###  https://aidentifyage.github.io/ontology#GleiserStages
 :GleiserStages rdf:type owl:Class ;
                rdfs:subClassOf :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GleiserToothStage
+###  https://aidentifyage.github.io/ontology#GleiserToothStage
 :GleiserToothStage rdf:type owl:Class ;
                    rdfs:subClassOf :ToothStage ,
                                    [ rdf:type owl:Restriction ;
@@ -2663,7 +2663,7 @@ foaf:Person rdf:type owl:Class .
                    rdfs:label "Gleiser Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#HaavikkoReferenceStudy
+###  https://aidentifyage.github.io/ontology#HaavikkoReferenceStudy
 :HaavikkoReferenceStudy rdf:type owl:Class ;
                         rdfs:subClassOf :ReferenceStudy ,
                                         [ rdf:type owl:Restriction ;
@@ -2674,13 +2674,13 @@ foaf:Person rdf:type owl:Class .
                         rdfs:label "Haviikoo Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Haderup
+###  https://aidentifyage.github.io/ontology#Haderup
 :Haderup rdf:type owl:Class ;
          rdfs:subClassOf obo:IAO_0000009 ;
          terms:description "Represents the Haderup Tooth Naming Scheme"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#HavvikkoScoring
+###  https://aidentifyage.github.io/ontology#HavvikkoScoring
 :HavvikkoScoring rdf:type owl:Class ;
                  rdfs:subClassOf :ScoringStage ,
                                  [ rdf:type owl:Restriction ;
@@ -2689,12 +2689,12 @@ foaf:Person rdf:type owl:Class .
                                  ] .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#HavvikkoStages
+###  https://aidentifyage.github.io/ontology#HavvikkoStages
 :HavvikkoStages rdf:type owl:Class ;
                 rdfs:subClassOf :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#HavvikkoToothStage
+###  https://aidentifyage.github.io/ontology#HavvikkoToothStage
 :HavvikkoToothStage rdf:type owl:Class ;
                     rdfs:subClassOf :ToothStage ,
                                     [ rdf:type owl:Restriction ;
@@ -2705,12 +2705,12 @@ foaf:Person rdf:type owl:Class .
                     rdfs:label "Havvikko Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Implant
+###  https://aidentifyage.github.io/ontology#Implant
 :Implant rdf:type owl:Class ;
          rdfs:subClassOf :TreatmentOption .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#InferenceRun
+###  https://aidentifyage.github.io/ontology#InferenceRun
 :InferenceRun rdf:type owl:Class ;
               rdfs:subClassOf <http://www.w3.org/ns/mls#Process> ,
                               [ rdf:type owl:Restriction ;
@@ -2729,7 +2729,7 @@ foaf:Person rdf:type owl:Class .
               rdfs:label "Inference Run" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#KullmanReferenceStudy
+###  https://aidentifyage.github.io/ontology#KullmanReferenceStudy
 :KullmanReferenceStudy rdf:type owl:Class ;
                        rdfs:subClassOf :ReferenceStudy ,
                                        [ rdf:type owl:Restriction ;
@@ -2740,7 +2740,7 @@ foaf:Person rdf:type owl:Class .
                        rdfs:label "Kullman Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#KullmanScoring
+###  https://aidentifyage.github.io/ontology#KullmanScoring
 :KullmanScoring rdf:type owl:Class ;
                 rdfs:subClassOf :ScoringStage ,
                                 [ rdf:type owl:Restriction ;
@@ -2749,12 +2749,12 @@ foaf:Person rdf:type owl:Class .
                                 ] .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#KullmanStages
+###  https://aidentifyage.github.io/ontology#KullmanStages
 :KullmanStages rdf:type owl:Class ;
                rdfs:subClassOf :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#KullmanToothStage
+###  https://aidentifyage.github.io/ontology#KullmanToothStage
 :KullmanToothStage rdf:type owl:Class ;
                    rdfs:subClassOf :ToothStage ,
                                    [ rdf:type owl:Restriction ;
@@ -2765,12 +2765,12 @@ foaf:Person rdf:type owl:Class .
                    rdfs:label "Kullman Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MLSchema
+###  https://aidentifyage.github.io/ontology#MLSchema
 :MLSchema rdf:type owl:Class ;
           rdfs:label "MLSchema" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData
+###  https://aidentifyage.github.io/ontology#MedicalLegalExamData
 :MedicalLegalExamData rdf:type owl:Class ;
                       rdfs:subClassOf obo:OGMS_0000123 ,
                                       [ rdf:type owl:Restriction ;
@@ -2806,7 +2806,7 @@ foaf:Person rdf:type owl:Class .
                       rdfs:label "LegalMedicalExamData" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MincerReferenceStudy
+###  https://aidentifyage.github.io/ontology#MincerReferenceStudy
 :MincerReferenceStudy rdf:type owl:Class ;
                       rdfs:subClassOf :ReferenceStudy ,
                                       [ rdf:type owl:Restriction ;
@@ -2817,7 +2817,7 @@ foaf:Person rdf:type owl:Class .
                       rdfs:label "Mincer Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MincerScoring
+###  https://aidentifyage.github.io/ontology#MincerScoring
 :MincerScoring rdf:type owl:Class ;
                rdfs:subClassOf :ScoringStage ,
                                [ rdf:type owl:Restriction ;
@@ -2826,12 +2826,12 @@ foaf:Person rdf:type owl:Class .
                                ] .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MincerStages
+###  https://aidentifyage.github.io/ontology#MincerStages
 :MincerStages rdf:type owl:Class ;
               rdfs:subClassOf :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MincerToothStage
+###  https://aidentifyage.github.io/ontology#MincerToothStage
 :MincerToothStage rdf:type owl:Class ;
                   rdfs:subClassOf :ToothStage ,
                                   [ rdf:type owl:Restriction ;
@@ -2842,20 +2842,20 @@ foaf:Person rdf:type owl:Class .
                   rdfs:label "Mincer Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MissingTooth
+###  https://aidentifyage.github.io/ontology#MissingTooth
 :MissingTooth rdf:type owl:Class ;
               rdfs:subClassOf :TreatmentOption ;
               rdfs:label "Missing Tooth" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ModelOutput
+###  https://aidentifyage.github.io/ontology#ModelOutput
 :ModelOutput rdf:type owl:Class ;
              rdfs:subClassOf <http://www.w3.org/ns/mls#InformationEntity> ;
              terms:description "Represents an output given by a Machine Learning (ML) model after performing an Inference Run"@en ;
              rdfs:label "Model Output" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MoorreesFanningHuntReferenceStudy
+###  https://aidentifyage.github.io/ontology#MoorreesFanningHuntReferenceStudy
 :MoorreesFanningHuntReferenceStudy rdf:type owl:Class ;
                                    rdfs:subClassOf :ReferenceStudy ,
                                                    [ rdf:type owl:Restriction ;
@@ -2866,7 +2866,7 @@ foaf:Person rdf:type owl:Class .
                                    rdfs:label "Moorrees, Fanning and Hunt Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MoorreesFanningHuntScoring
+###  https://aidentifyage.github.io/ontology#MoorreesFanningHuntScoring
 :MoorreesFanningHuntScoring rdf:type owl:Class ;
                             rdfs:subClassOf :ScoringStage ,
                                             [ rdf:type owl:Restriction ;
@@ -2875,12 +2875,12 @@ foaf:Person rdf:type owl:Class .
                                             ] .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MoorreesFanningHuntStages
+###  https://aidentifyage.github.io/ontology#MoorreesFanningHuntStages
 :MoorreesFanningHuntStages rdf:type owl:Class ;
                            rdfs:subClassOf :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MoorreesFanningHuntToothStage
+###  https://aidentifyage.github.io/ontology#MoorreesFanningHuntToothStage
 :MoorreesFanningHuntToothStage rdf:type owl:Class ;
                                rdfs:subClassOf :ToothStage ,
                                                [ rdf:type owl:Restriction ;
@@ -2891,7 +2891,7 @@ foaf:Person rdf:type owl:Class .
                                rdfs:label "Moorrees, Fanning and Hunt Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#NollaReferenceStudy
+###  https://aidentifyage.github.io/ontology#NollaReferenceStudy
 :NollaReferenceStudy rdf:type owl:Class ;
                      rdfs:subClassOf :ReferenceStudy ,
                                      [ rdf:type owl:Restriction ;
@@ -2902,7 +2902,7 @@ foaf:Person rdf:type owl:Class .
                      rdfs:label "Nolla Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#NollaScoring
+###  https://aidentifyage.github.io/ontology#NollaScoring
 :NollaScoring rdf:type owl:Class ;
               rdfs:subClassOf :ScoringStage ,
                               [ rdf:type owl:Restriction ;
@@ -2911,12 +2911,12 @@ foaf:Person rdf:type owl:Class .
                               ] .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#NollaStages
+###  https://aidentifyage.github.io/ontology#NollaStages
 :NollaStages rdf:type owl:Class ;
              rdfs:subClassOf :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#NollaToothStage
+###  https://aidentifyage.github.io/ontology#NollaToothStage
 :NollaToothStage rdf:type owl:Class ;
                  rdfs:subClassOf :ToothStage ,
                                  [ rdf:type owl:Restriction ;
@@ -2927,7 +2927,7 @@ foaf:Person rdf:type owl:Class .
                  rdfs:label "Nolla Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#OPG
+###  https://aidentifyage.github.io/ontology#OPG
 :OPG rdf:type owl:Class ;
      rdfs:subClassOf <http://snomed.info/id/363680008> ,
                      [ rdf:type owl:Restriction ;
@@ -2938,7 +2938,7 @@ foaf:Person rdf:type owl:Class .
      rdfs:comment "Represents an Orthopantomogram (OPG). It consists in a panoramic X-Ray picture of a person's mouth (oral cavity and complete set of teeth)" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#OrganizationProcess
+###  https://aidentifyage.github.io/ontology#OrganizationProcess
 :OrganizationProcess rdf:type owl:Class ;
                      rdfs:subClassOf :foaf ,
                                      [ rdf:type owl:Restriction ;
@@ -2953,18 +2953,18 @@ foaf:Person rdf:type owl:Class .
                                      ] .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerNotation
+###  https://aidentifyage.github.io/ontology#PalmerNotation
 :PalmerNotation rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000009 ;
                 terms:description "Represents the Palmer Tooth Notation Scheme" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#RadiographicImagingLegalMedicalExamData
+###  https://aidentifyage.github.io/ontology#RadiographicImagingLegalMedicalExamData
 :RadiographicImagingLegalMedicalExamData rdf:type owl:Class ;
                                          rdfs:subClassOf :MedicalLegalExamData .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy
+###  https://aidentifyage.github.io/ontology#ReferenceStudy
 :ReferenceStudy rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000100 ,
                                 [ rdf:type owl:Restriction ;
@@ -2989,7 +2989,7 @@ foaf:Person rdf:type owl:Class .
                 rdfs:label "Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudyResult
+###  https://aidentifyage.github.io/ontology#ReferenceStudyResult
 :ReferenceStudyResult rdf:type owl:Class ;
                       rdfs:subClassOf obo:IAO_0000109 ,
                                       [ rdf:type owl:Restriction ;
@@ -3013,7 +3013,7 @@ foaf:Person rdf:type owl:Class .
                       rdfs:label "Reference Study Result"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ReportData
+###  https://aidentifyage.github.io/ontology#ReportData
 :ReportData rdf:type owl:Class ;
             rdfs:subClassOf obo:IAO_0000030 ,
                             [ rdf:type owl:Restriction ;
@@ -3029,7 +3029,7 @@ foaf:Person rdf:type owl:Class .
             rdfs:label "Report Data" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringMethod
+###  https://aidentifyage.github.io/ontology#ScoringMethod
 :ScoringMethod rdf:type owl:Class ;
                rdfs:subClassOf obo:IAO_0000104 ,
                                [ rdf:type owl:Restriction ;
@@ -3041,13 +3041,13 @@ I.e. represents a set of ToothStage"""@en ;
                rdfs:label "Scoring Method"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringStage
+###  https://aidentifyage.github.io/ontology#ScoringStage
 :ScoringStage rdf:type owl:Class ;
               rdfs:subClassOf :ScoringMethod ;
               terms:description "Represents the aggregation of a set of Tooth Stages for tooth stage methods that do not rely on maturity dental scores"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Stage
+###  https://aidentifyage.github.io/ontology#Stage
 :Stage rdf:type owl:Class ;
        rdfs:subClassOf obo:IAO_0000104 ;
        terms:description "Represents the Scoring System applied to a given teeth (or tooth set) to estimate a persons dental age"@en ;
@@ -3055,7 +3055,7 @@ I.e. represents a set of ToothStage"""@en ;
        skos:definition "Formal phase within a process or life cycle, delimited by objective entry and exit criteria, characterized by specific purposes, activities, and outcomes"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#TeethSet
+###  https://aidentifyage.github.io/ontology#TeethSet
 :TeethSet rdf:type owl:Class ;
           rdfs:subClassOf obo:UBERON_0000165 ,
                           [ rdf:type owl:Restriction ;
@@ -3066,7 +3066,7 @@ I.e. represents a set of ToothStage"""@en ;
           rdfs:label "Teeth Set" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ToothStage
+###  https://aidentifyage.github.io/ontology#ToothStage
 :ToothStage rdf:type owl:Class ;
             rdfs:subClassOf obo:OBI_0000938 ,
                             [ rdf:type owl:Restriction ;
@@ -3083,14 +3083,14 @@ I.e. represents a set of ToothStage"""@en ;
             rdfs:label "Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption
+###  https://aidentifyage.github.io/ontology#TreatmentOption
 :TreatmentOption rdf:type owl:Class ;
                  rdfs:subClassOf obo:IAO_0000104 ;
                  terms:description "Represents all the possible dentistry/medical dentistry treatment options that can be present in person's teeth"@en ;
                  rdfs:label "Treatment Option" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#WillemsReferenceStudy
+###  https://aidentifyage.github.io/ontology#WillemsReferenceStudy
 :WillemsReferenceStudy rdf:type owl:Class ;
                        rdfs:subClassOf :ReferenceStudy ,
                                        [ rdf:type owl:Restriction ;
@@ -3101,7 +3101,7 @@ I.e. represents a set of ToothStage"""@en ;
                        rdfs:label "Willems Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#WillemsScoring
+###  https://aidentifyage.github.io/ontology#WillemsScoring
 :WillemsScoring rdf:type owl:Class ;
                 rdfs:subClassOf :ScoringStage ,
                                 [ rdf:type owl:Restriction ;
@@ -3110,12 +3110,12 @@ I.e. represents a set of ToothStage"""@en ;
                                 ] .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#WillemsStages
+###  https://aidentifyage.github.io/ontology#WillemsStages
 :WillemsStages rdf:type owl:Class ;
                rdfs:subClassOf :Stage .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#WillemsToothStage
+###  https://aidentifyage.github.io/ontology#WillemsToothStage
 :WillemsToothStage rdf:type owl:Class ;
                    rdfs:subClassOf :ToothStage ,
                                    [ rdf:type owl:Restriction ;
@@ -3126,17 +3126,17 @@ I.e. represents a set of ToothStage"""@en ;
                    rdfs:label "Willems Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#foaf
+###  https://aidentifyage.github.io/ontology#foaf
 :foaf rdf:type owl:Class ;
       rdfs:label "FOAF" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#mixedMandibularDentition
+###  https://aidentifyage.github.io/ontology#mixedMandibularDentition
 :mixedMandibularDentition rdf:type owl:Class ;
                           rdfs:subClassOf obo:FMA_269584 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#mixedMaxiliarDentition
+###  https://aidentifyage.github.io/ontology#mixedMaxiliarDentition
 :mixedMaxiliarDentition rdf:type owl:Class ;
                         rdfs:subClassOf obo:FMA_269582 .
 
@@ -3280,7 +3280,7 @@ obo:OHD_0000101 rdf:type owl:NamedIndividual ;
                 rdfs:label "1"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_18
+###  https://aidentifyage.github.io/ontology#FDI_18
 
 ###  http://purl.obolibrary.org/obo/OHD_0000102
 obo:OHD_0000102 rdf:type owl:NamedIndividual ;
@@ -3289,7 +3289,7 @@ obo:OHD_0000102 rdf:type owl:NamedIndividual ;
                 rdfs:label "2"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_17
+###  https://aidentifyage.github.io/ontology#FDI_17
 
 ###  http://purl.obolibrary.org/obo/OHD_0000103
 obo:OHD_0000103 rdf:type owl:NamedIndividual ;
@@ -3298,7 +3298,7 @@ obo:OHD_0000103 rdf:type owl:NamedIndividual ;
                 rdfs:label "3"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_16
+###  https://aidentifyage.github.io/ontology#FDI_16
 
 ###  http://purl.obolibrary.org/obo/OHD_0000104
 obo:OHD_0000104 rdf:type owl:NamedIndividual ;
@@ -3307,7 +3307,7 @@ obo:OHD_0000104 rdf:type owl:NamedIndividual ;
                 rdfs:label "4"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_15
+###  https://aidentifyage.github.io/ontology#FDI_15
 
 ###  http://purl.obolibrary.org/obo/OHD_0000105
 obo:OHD_0000105 rdf:type owl:NamedIndividual ;
@@ -3316,7 +3316,7 @@ obo:OHD_0000105 rdf:type owl:NamedIndividual ;
                 rdfs:label "5"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_14
+###  https://aidentifyage.github.io/ontology#FDI_14
 
 ###  http://purl.obolibrary.org/obo/OHD_0000106
 obo:OHD_0000106 rdf:type owl:NamedIndividual ;
@@ -3325,7 +3325,7 @@ obo:OHD_0000106 rdf:type owl:NamedIndividual ;
                 rdfs:label "6"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_13
+###  https://aidentifyage.github.io/ontology#FDI_13
 
 ###  http://purl.obolibrary.org/obo/OHD_0000107
 obo:OHD_0000107 rdf:type owl:NamedIndividual ;
@@ -3334,7 +3334,7 @@ obo:OHD_0000107 rdf:type owl:NamedIndividual ;
                 rdfs:label "7"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_12
+###  https://aidentifyage.github.io/ontology#FDI_12
 
 ###  http://purl.obolibrary.org/obo/OHD_0000108
 obo:OHD_0000108 rdf:type owl:NamedIndividual ;
@@ -3343,7 +3343,7 @@ obo:OHD_0000108 rdf:type owl:NamedIndividual ;
                 rdfs:label "8"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_11
+###  https://aidentifyage.github.io/ontology#FDI_11
 
 ###  http://purl.obolibrary.org/obo/OHD_0000109
 obo:OHD_0000109 rdf:type owl:NamedIndividual ;
@@ -3352,7 +3352,7 @@ obo:OHD_0000109 rdf:type owl:NamedIndividual ;
                 rdfs:label "9"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_21
+###  https://aidentifyage.github.io/ontology#FDI_21
 
 ###  http://purl.obolibrary.org/obo/OHD_0000110
 obo:OHD_0000110 rdf:type owl:NamedIndividual ;
@@ -3361,7 +3361,7 @@ obo:OHD_0000110 rdf:type owl:NamedIndividual ;
                 rdfs:label "10"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_22
+###  https://aidentifyage.github.io/ontology#FDI_22
 
 ###  http://purl.obolibrary.org/obo/OHD_0000111
 obo:OHD_0000111 rdf:type owl:NamedIndividual ;
@@ -3370,7 +3370,7 @@ obo:OHD_0000111 rdf:type owl:NamedIndividual ;
                 rdfs:label "11"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_23
+###  https://aidentifyage.github.io/ontology#FDI_23
 
 ###  http://purl.obolibrary.org/obo/OHD_0000112
 obo:OHD_0000112 rdf:type owl:NamedIndividual ;
@@ -3379,7 +3379,7 @@ obo:OHD_0000112 rdf:type owl:NamedIndividual ;
                 rdfs:label "12"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_24
+###  https://aidentifyage.github.io/ontology#FDI_24
 
 ###  http://purl.obolibrary.org/obo/OHD_0000113
 obo:OHD_0000113 rdf:type owl:NamedIndividual ;
@@ -3388,7 +3388,7 @@ obo:OHD_0000113 rdf:type owl:NamedIndividual ;
                 rdfs:label "13"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_25
+###  https://aidentifyage.github.io/ontology#FDI_25
 
 ###  http://purl.obolibrary.org/obo/OHD_0000114
 obo:OHD_0000114 rdf:type owl:NamedIndividual ;
@@ -3397,7 +3397,7 @@ obo:OHD_0000114 rdf:type owl:NamedIndividual ;
                 rdfs:label "14"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_26
+###  https://aidentifyage.github.io/ontology#FDI_26
 
 ###  http://purl.obolibrary.org/obo/OHD_0000115
 obo:OHD_0000115 rdf:type owl:NamedIndividual ;
@@ -3406,7 +3406,7 @@ obo:OHD_0000115 rdf:type owl:NamedIndividual ;
                 rdfs:label "15"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_27
+###  https://aidentifyage.github.io/ontology#FDI_27
 
 ###  http://purl.obolibrary.org/obo/OHD_0000116
 obo:OHD_0000116 rdf:type owl:NamedIndividual ;
@@ -3415,7 +3415,7 @@ obo:OHD_0000116 rdf:type owl:NamedIndividual ;
                 rdfs:label "16"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_28
+###  https://aidentifyage.github.io/ontology#FDI_28
 
 ###  http://purl.obolibrary.org/obo/OHD_0000117
 obo:OHD_0000117 rdf:type owl:NamedIndividual ;
@@ -3424,7 +3424,7 @@ obo:OHD_0000117 rdf:type owl:NamedIndividual ;
                 rdfs:label "17"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_38
+###  https://aidentifyage.github.io/ontology#FDI_38
 
 ###  http://purl.obolibrary.org/obo/OHD_0000118
 obo:OHD_0000118 rdf:type owl:NamedIndividual ;
@@ -3433,7 +3433,7 @@ obo:OHD_0000118 rdf:type owl:NamedIndividual ;
                 rdfs:label "18"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_37
+###  https://aidentifyage.github.io/ontology#FDI_37
 
 ###  http://purl.obolibrary.org/obo/OHD_0000119
 obo:OHD_0000119 rdf:type owl:NamedIndividual ;
@@ -3442,7 +3442,7 @@ obo:OHD_0000119 rdf:type owl:NamedIndividual ;
                 rdfs:label "19"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_36
+###  https://aidentifyage.github.io/ontology#FDI_36
 
 ###  http://purl.obolibrary.org/obo/OHD_0000120
 obo:OHD_0000120 rdf:type owl:NamedIndividual ;
@@ -3451,7 +3451,7 @@ obo:OHD_0000120 rdf:type owl:NamedIndividual ;
                 rdfs:label "20"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_35
+###  https://aidentifyage.github.io/ontology#FDI_35
 
 ###  http://purl.obolibrary.org/obo/OHD_0000121
 obo:OHD_0000121 rdf:type owl:NamedIndividual ;
@@ -3460,7 +3460,7 @@ obo:OHD_0000121 rdf:type owl:NamedIndividual ;
                 rdfs:label "21"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_34
+###  https://aidentifyage.github.io/ontology#FDI_34
 
 ###  http://purl.obolibrary.org/obo/OHD_0000122
 obo:OHD_0000122 rdf:type owl:NamedIndividual ;
@@ -3469,7 +3469,7 @@ obo:OHD_0000122 rdf:type owl:NamedIndividual ;
                 rdfs:label "22"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_33
+###  https://aidentifyage.github.io/ontology#FDI_33
 
 ###  http://purl.obolibrary.org/obo/OHD_0000123
 obo:OHD_0000123 rdf:type owl:NamedIndividual ;
@@ -3478,7 +3478,7 @@ obo:OHD_0000123 rdf:type owl:NamedIndividual ;
                 rdfs:label "23"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_32
+###  https://aidentifyage.github.io/ontology#FDI_32
 
 ###  http://purl.obolibrary.org/obo/OHD_0000124
 obo:OHD_0000124 rdf:type owl:NamedIndividual ;
@@ -3487,7 +3487,7 @@ obo:OHD_0000124 rdf:type owl:NamedIndividual ;
                 rdfs:label "24"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_31
+###  https://aidentifyage.github.io/ontology#FDI_31
 
 ###  http://purl.obolibrary.org/obo/OHD_0000125
 obo:OHD_0000125 rdf:type owl:NamedIndividual ;
@@ -3496,7 +3496,7 @@ obo:OHD_0000125 rdf:type owl:NamedIndividual ;
                 rdfs:label "25"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_41
+###  https://aidentifyage.github.io/ontology#FDI_41
 
 ###  http://purl.obolibrary.org/obo/OHD_0000126
 obo:OHD_0000126 rdf:type owl:NamedIndividual ;
@@ -3505,7 +3505,7 @@ obo:OHD_0000126 rdf:type owl:NamedIndividual ;
                 rdfs:label "26"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_42
+###  https://aidentifyage.github.io/ontology#FDI_42
 
 ###  http://purl.obolibrary.org/obo/OHD_0000127
 obo:OHD_0000127 rdf:type owl:NamedIndividual ;
@@ -3514,7 +3514,7 @@ obo:OHD_0000127 rdf:type owl:NamedIndividual ;
                 rdfs:label "27"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_43
+###  https://aidentifyage.github.io/ontology#FDI_43
 
 ###  http://purl.obolibrary.org/obo/OHD_0000128
 obo:OHD_0000128 rdf:type owl:NamedIndividual ;
@@ -3523,7 +3523,7 @@ obo:OHD_0000128 rdf:type owl:NamedIndividual ;
                 rdfs:label "28"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_44
+###  https://aidentifyage.github.io/ontology#FDI_44
 
 ###  http://purl.obolibrary.org/obo/OHD_0000129
 obo:OHD_0000129 rdf:type owl:NamedIndividual ;
@@ -3532,7 +3532,7 @@ obo:OHD_0000129 rdf:type owl:NamedIndividual ;
                 rdfs:label "29"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_45
+###  https://aidentifyage.github.io/ontology#FDI_45
 
 ###  http://purl.obolibrary.org/obo/OHD_0000130
 obo:OHD_0000130 rdf:type owl:NamedIndividual ;
@@ -3541,7 +3541,7 @@ obo:OHD_0000130 rdf:type owl:NamedIndividual ;
                 rdfs:label "30"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_46
+###  https://aidentifyage.github.io/ontology#FDI_46
 
 ###  http://purl.obolibrary.org/obo/OHD_0000131
 obo:OHD_0000131 rdf:type owl:NamedIndividual ;
@@ -3550,7 +3550,7 @@ obo:OHD_0000131 rdf:type owl:NamedIndividual ;
                 rdfs:label "31"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_47
+###  https://aidentifyage.github.io/ontology#FDI_47
 
 ###  http://purl.obolibrary.org/obo/OHD_0000132
 obo:OHD_0000132 rdf:type owl:NamedIndividual ;
@@ -3559,1277 +3559,1277 @@ obo:OHD_0000132 rdf:type owl:NamedIndividual ;
                 rdfs:label "32"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_48
+###  https://aidentifyage.github.io/ontology#FDI_48
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#A
+###  https://aidentifyage.github.io/ontology#A
 :A rdf:type owl:NamedIndividual ;
    owl:sameAs :FDI_55 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_55
+###  https://aidentifyage.github.io/ontology#FDI_55
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#B
+###  https://aidentifyage.github.io/ontology#B
 :B rdf:type owl:NamedIndividual ;
    owl:sameAs :FDI_54 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_54
+###  https://aidentifyage.github.io/ontology#FDI_54
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#C
+###  https://aidentifyage.github.io/ontology#C
 :C rdf:type owl:NamedIndividual ;
    owl:sameAs :FDI_53 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_53
+###  https://aidentifyage.github.io/ontology#FDI_53
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#D
+###  https://aidentifyage.github.io/ontology#D
 :D rdf:type owl:NamedIndividual ;
    owl:sameAs :FDI_52 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_52
+###  https://aidentifyage.github.io/ontology#FDI_52
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStageA
+###  https://aidentifyage.github.io/ontology#DemirjianStageA
 :DemirjianStageA rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStageB
+###  https://aidentifyage.github.io/ontology#DemirjianStageB
 :DemirjianStageB rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStageC
+###  https://aidentifyage.github.io/ontology#DemirjianStageC
 :DemirjianStageC rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStageD
+###  https://aidentifyage.github.io/ontology#DemirjianStageD
 :DemirjianStageD rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStageE
+###  https://aidentifyage.github.io/ontology#DemirjianStageE
 :DemirjianStageE rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStageF
+###  https://aidentifyage.github.io/ontology#DemirjianStageF
 :DemirjianStageF rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStageG
+###  https://aidentifyage.github.io/ontology#DemirjianStageG
 :DemirjianStageG rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStageH
+###  https://aidentifyage.github.io/ontology#DemirjianStageH
 :DemirjianStageH rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#E
+###  https://aidentifyage.github.io/ontology#E
 :E rdf:type owl:NamedIndividual ;
    owl:sameAs :FDI_51 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_51
+###  https://aidentifyage.github.io/ontology#FDI_51
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#F
+###  https://aidentifyage.github.io/ontology#F
 :F rdf:type owl:NamedIndividual ;
    owl:sameAs :FDI_61 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_61
+###  https://aidentifyage.github.io/ontology#FDI_61
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_11
+###  https://aidentifyage.github.io/ontology#FDI_11
 :FDI_11 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#1+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌> ;
+        owl:sameAs <https://aidentifyage.github.io/ontology#1+> ,
+                   <https://aidentifyage.github.io/ontology#1⏌> ;
         obo:IAO_0000136 obo:FMA_55681 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1+
+###  https://aidentifyage.github.io/ontology#1+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌
+###  https://aidentifyage.github.io/ontology#1⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_12
+###  https://aidentifyage.github.io/ontology#FDI_12
 :FDI_12 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#2+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌> ;
+        owl:sameAs <https://aidentifyage.github.io/ontology#2+> ,
+                   <https://aidentifyage.github.io/ontology#2⏌> ;
         obo:IAO_0000136 obo:FMA_55680 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2+
+###  https://aidentifyage.github.io/ontology#2+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌
+###  https://aidentifyage.github.io/ontology#2⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_13
+###  https://aidentifyage.github.io/ontology#FDI_13
 :FDI_13 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#3+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌> ;
+        owl:sameAs <https://aidentifyage.github.io/ontology#3+> ,
+                   <https://aidentifyage.github.io/ontology#3⏌> ;
         obo:IAO_0000136 obo:FMA_55798 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3+
+###  https://aidentifyage.github.io/ontology#3+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌
+###  https://aidentifyage.github.io/ontology#3⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_14
+###  https://aidentifyage.github.io/ontology#FDI_14
 :FDI_14 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#4+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌> ;
+        owl:sameAs <https://aidentifyage.github.io/ontology#4+> ,
+                   <https://aidentifyage.github.io/ontology#4⏌> ;
         obo:IAO_0000136 obo:FMA_55689 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4+
+###  https://aidentifyage.github.io/ontology#4+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌
+###  https://aidentifyage.github.io/ontology#4⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_15
+###  https://aidentifyage.github.io/ontology#FDI_15
 :FDI_15 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#5+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌> ;
+        owl:sameAs <https://aidentifyage.github.io/ontology#5+> ,
+                   <https://aidentifyage.github.io/ontology#5⏌> ;
         obo:IAO_0000136 obo:FMA_55688 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5+
+###  https://aidentifyage.github.io/ontology#5+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌
+###  https://aidentifyage.github.io/ontology#5⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_16
+###  https://aidentifyage.github.io/ontology#FDI_16
 :FDI_16 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#6+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌> ;
+        owl:sameAs <https://aidentifyage.github.io/ontology#6+> ,
+                   <https://aidentifyage.github.io/ontology#6⏌> ;
         obo:IAO_0000136 obo:FMA_55698 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6+
+###  https://aidentifyage.github.io/ontology#6+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌
+###  https://aidentifyage.github.io/ontology#6⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_17
+###  https://aidentifyage.github.io/ontology#FDI_17
 :FDI_17 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#7+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌> ;
+        owl:sameAs <https://aidentifyage.github.io/ontology#7+> ,
+                   <https://aidentifyage.github.io/ontology#7⏌> ;
         obo:IAO_0000136 obo:FMA_55697 .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7+
+###  https://aidentifyage.github.io/ontology#7+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌
+###  https://aidentifyage.github.io/ontology#7⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_18
+###  https://aidentifyage.github.io/ontology#FDI_18
 :FDI_18 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#8+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#8+> ,
+                   <https://aidentifyage.github.io/ontology#8⏌> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8+
+###  https://aidentifyage.github.io/ontology#8+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌
+###  https://aidentifyage.github.io/ontology#8⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_21
+###  https://aidentifyage.github.io/ontology#FDI_21
 :FDI_21 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+1> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#+1> ,
+                   <https://aidentifyage.github.io/ontology#⎿1> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+1
+###  https://aidentifyage.github.io/ontology#+1
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1
+###  https://aidentifyage.github.io/ontology#⎿1
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_22
+###  https://aidentifyage.github.io/ontology#FDI_22
 :FDI_22 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+2> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#+2> ,
+                   <https://aidentifyage.github.io/ontology#⎿2> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+2
+###  https://aidentifyage.github.io/ontology#+2
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2
+###  https://aidentifyage.github.io/ontology#⎿2
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_23
+###  https://aidentifyage.github.io/ontology#FDI_23
 :FDI_23 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+3> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#+3> ,
+                   <https://aidentifyage.github.io/ontology#⎿3> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+3
+###  https://aidentifyage.github.io/ontology#+3
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3
+###  https://aidentifyage.github.io/ontology#⎿3
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_24
+###  https://aidentifyage.github.io/ontology#FDI_24
 :FDI_24 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+4> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#+4> ,
+                   <https://aidentifyage.github.io/ontology#⎿4> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+4
+###  https://aidentifyage.github.io/ontology#+4
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4
+###  https://aidentifyage.github.io/ontology#⎿4
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_25
+###  https://aidentifyage.github.io/ontology#FDI_25
 :FDI_25 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+5> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#+5> ,
+                   <https://aidentifyage.github.io/ontology#⎿5> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+5
+###  https://aidentifyage.github.io/ontology#+5
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5
+###  https://aidentifyage.github.io/ontology#⎿5
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_26
+###  https://aidentifyage.github.io/ontology#FDI_26
 :FDI_26 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+6> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#+6> ,
+                   <https://aidentifyage.github.io/ontology#⎿6> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+6
+###  https://aidentifyage.github.io/ontology#+6
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6
+###  https://aidentifyage.github.io/ontology#⎿6
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_27
+###  https://aidentifyage.github.io/ontology#FDI_27
 :FDI_27 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+7> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#+7> ,
+                   <https://aidentifyage.github.io/ontology#⎿7> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+7
+###  https://aidentifyage.github.io/ontology#+7
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7
+###  https://aidentifyage.github.io/ontology#⎿7
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_28
+###  https://aidentifyage.github.io/ontology#FDI_28
 :FDI_28 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+8> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#+8> ,
+                   <https://aidentifyage.github.io/ontology#⎿8> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+8
+###  https://aidentifyage.github.io/ontology#+8
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8
+###  https://aidentifyage.github.io/ontology#⎿8
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_31
+###  https://aidentifyage.github.io/ontology#FDI_31
 :FDI_31 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-1> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#-1> ,
+                   <https://aidentifyage.github.io/ontology#⎾1> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-1
+###  https://aidentifyage.github.io/ontology#-1
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1
+###  https://aidentifyage.github.io/ontology#⎾1
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_32
+###  https://aidentifyage.github.io/ontology#FDI_32
 :FDI_32 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-2> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#-2> ,
+                   <https://aidentifyage.github.io/ontology#⎾2> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-2
+###  https://aidentifyage.github.io/ontology#-2
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2
+###  https://aidentifyage.github.io/ontology#⎾2
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_33
+###  https://aidentifyage.github.io/ontology#FDI_33
 :FDI_33 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-3> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#-3> ,
+                   <https://aidentifyage.github.io/ontology#⎾3> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-3
+###  https://aidentifyage.github.io/ontology#-3
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3
+###  https://aidentifyage.github.io/ontology#⎾3
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_34
+###  https://aidentifyage.github.io/ontology#FDI_34
 :FDI_34 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-4> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#-4> ,
+                   <https://aidentifyage.github.io/ontology#⎾4> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-4
+###  https://aidentifyage.github.io/ontology#-4
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4
+###  https://aidentifyage.github.io/ontology#⎾4
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_35
+###  https://aidentifyage.github.io/ontology#FDI_35
 :FDI_35 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-5> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#-5> ,
+                   <https://aidentifyage.github.io/ontology#⎾5> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-5
+###  https://aidentifyage.github.io/ontology#-5
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5
+###  https://aidentifyage.github.io/ontology#⎾5
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_36
+###  https://aidentifyage.github.io/ontology#FDI_36
 :FDI_36 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-6> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#-6> ,
+                   <https://aidentifyage.github.io/ontology#⎾6> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-6
+###  https://aidentifyage.github.io/ontology#-6
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6
+###  https://aidentifyage.github.io/ontology#⎾6
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_37
+###  https://aidentifyage.github.io/ontology#FDI_37
 :FDI_37 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-7> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#-7> ,
+                   <https://aidentifyage.github.io/ontology#⎾7> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-7
+###  https://aidentifyage.github.io/ontology#-7
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7
+###  https://aidentifyage.github.io/ontology#⎾7
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_38
+###  https://aidentifyage.github.io/ontology#FDI_38
 :FDI_38 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#-8> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#-8> ,
+                   <https://aidentifyage.github.io/ontology#⎾8> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-8
+###  https://aidentifyage.github.io/ontology#-8
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8
+###  https://aidentifyage.github.io/ontology#⎾8
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_41
+###  https://aidentifyage.github.io/ontology#FDI_41
 :FDI_41 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#1-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#1-> ,
+                   <https://aidentifyage.github.io/ontology#1⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1-
+###  https://aidentifyage.github.io/ontology#1-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋
+###  https://aidentifyage.github.io/ontology#1⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_42
+###  https://aidentifyage.github.io/ontology#FDI_42
 :FDI_42 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#2-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#2-> ,
+                   <https://aidentifyage.github.io/ontology#2⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2-
+###  https://aidentifyage.github.io/ontology#2-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋
+###  https://aidentifyage.github.io/ontology#2⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_43
+###  https://aidentifyage.github.io/ontology#FDI_43
 :FDI_43 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#3-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#3-> ,
+                   <https://aidentifyage.github.io/ontology#3⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3-
+###  https://aidentifyage.github.io/ontology#3-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋
+###  https://aidentifyage.github.io/ontology#3⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_44
+###  https://aidentifyage.github.io/ontology#FDI_44
 :FDI_44 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#4-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#4-> ,
+                   <https://aidentifyage.github.io/ontology#4⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4-
+###  https://aidentifyage.github.io/ontology#4-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋
+###  https://aidentifyage.github.io/ontology#4⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_45
+###  https://aidentifyage.github.io/ontology#FDI_45
 :FDI_45 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#5-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#5-> ,
+                   <https://aidentifyage.github.io/ontology#5⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5-
+###  https://aidentifyage.github.io/ontology#5-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋
+###  https://aidentifyage.github.io/ontology#5⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_46
+###  https://aidentifyage.github.io/ontology#FDI_46
 :FDI_46 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#6-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#6-> ,
+                   <https://aidentifyage.github.io/ontology#6⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6-
+###  https://aidentifyage.github.io/ontology#6-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋
+###  https://aidentifyage.github.io/ontology#6⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_47
+###  https://aidentifyage.github.io/ontology#FDI_47
 :FDI_47 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#7-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#7-> ,
+                   <https://aidentifyage.github.io/ontology#7⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7-
+###  https://aidentifyage.github.io/ontology#7-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋
+###  https://aidentifyage.github.io/ontology#7⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_48
+###  https://aidentifyage.github.io/ontology#FDI_48
 :FDI_48 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#8-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#8-> ,
+                   <https://aidentifyage.github.io/ontology#8⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8-
+###  https://aidentifyage.github.io/ontology#8-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋
+###  https://aidentifyage.github.io/ontology#8⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_51
+###  https://aidentifyage.github.io/ontology#FDI_51
 :FDI_51 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#01+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏌> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#01+> ,
+                   <https://aidentifyage.github.io/ontology#A⏌> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#01+
+###  https://aidentifyage.github.io/ontology#01+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏌
+###  https://aidentifyage.github.io/ontology#A⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_52
+###  https://aidentifyage.github.io/ontology#FDI_52
 :FDI_52 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#02+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏌> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#02+> ,
+                   <https://aidentifyage.github.io/ontology#B⏌> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#02+
+###  https://aidentifyage.github.io/ontology#02+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏌
+###  https://aidentifyage.github.io/ontology#B⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_53
+###  https://aidentifyage.github.io/ontology#FDI_53
 :FDI_53 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#03+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏌> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#03+> ,
+                   <https://aidentifyage.github.io/ontology#C⏌> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#03+
+###  https://aidentifyage.github.io/ontology#03+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏌
+###  https://aidentifyage.github.io/ontology#C⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_54
+###  https://aidentifyage.github.io/ontology#FDI_54
 :FDI_54 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#04+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏌> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#04+> ,
+                   <https://aidentifyage.github.io/ontology#D⏌> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#04+
+###  https://aidentifyage.github.io/ontology#04+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏌
+###  https://aidentifyage.github.io/ontology#D⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_55
+###  https://aidentifyage.github.io/ontology#FDI_55
 :FDI_55 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#05+> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏌> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#05+> ,
+                   <https://aidentifyage.github.io/ontology#E⏌> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#05+
+###  https://aidentifyage.github.io/ontology#05+
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏌
+###  https://aidentifyage.github.io/ontology#E⏌
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_61
+###  https://aidentifyage.github.io/ontology#FDI_61
 :FDI_61 rdf:type owl:NamedIndividual ,
                  :FDI ;
-        owl:sameAs <https://aidentifyage.github.io/ontology/AIdentifyAGE#+01> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A> .
+        owl:sameAs <https://aidentifyage.github.io/ontology#+01> ,
+                   <https://aidentifyage.github.io/ontology#⎿A> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+01
+###  https://aidentifyage.github.io/ontology#+01
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A
+###  https://aidentifyage.github.io/ontology#⎿A
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_62
+###  https://aidentifyage.github.io/ontology#FDI_62
 :FDI_62 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :G ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#+02> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿B> .
+                   <https://aidentifyage.github.io/ontology#+02> ,
+                   <https://aidentifyage.github.io/ontology#⎿B> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#G
+###  https://aidentifyage.github.io/ontology#G
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+02
+###  https://aidentifyage.github.io/ontology#+02
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿B
+###  https://aidentifyage.github.io/ontology#⎿B
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_63
+###  https://aidentifyage.github.io/ontology#FDI_63
 :FDI_63 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :H ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#+03> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿C> .
+                   <https://aidentifyage.github.io/ontology#+03> ,
+                   <https://aidentifyage.github.io/ontology#⎿C> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#H
+###  https://aidentifyage.github.io/ontology#H
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+03
+###  https://aidentifyage.github.io/ontology#+03
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿C
+###  https://aidentifyage.github.io/ontology#⎿C
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_64
+###  https://aidentifyage.github.io/ontology#FDI_64
 :FDI_64 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :I ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#+04> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿D> .
+                   <https://aidentifyage.github.io/ontology#+04> ,
+                   <https://aidentifyage.github.io/ontology#⎿D> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#I
+###  https://aidentifyage.github.io/ontology#I
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+04
+###  https://aidentifyage.github.io/ontology#+04
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿D
+###  https://aidentifyage.github.io/ontology#⎿D
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_65
+###  https://aidentifyage.github.io/ontology#FDI_65
 :FDI_65 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :J ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#+05> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E> .
+                   <https://aidentifyage.github.io/ontology#+05> ,
+                   <https://aidentifyage.github.io/ontology#⎿E> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#J
+###  https://aidentifyage.github.io/ontology#J
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+05
+###  https://aidentifyage.github.io/ontology#+05
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E
+###  https://aidentifyage.github.io/ontology#⎿E
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_71
+###  https://aidentifyage.github.io/ontology#FDI_71
 :FDI_71 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :O ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#-01> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾A> .
+                   <https://aidentifyage.github.io/ontology#-01> ,
+                   <https://aidentifyage.github.io/ontology#⎾A> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#O
+###  https://aidentifyage.github.io/ontology#O
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-01
+###  https://aidentifyage.github.io/ontology#-01
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾A
+###  https://aidentifyage.github.io/ontology#⎾A
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_72
+###  https://aidentifyage.github.io/ontology#FDI_72
 :FDI_72 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :N ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#-02> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾B> .
+                   <https://aidentifyage.github.io/ontology#-02> ,
+                   <https://aidentifyage.github.io/ontology#⎾B> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#N
+###  https://aidentifyage.github.io/ontology#N
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-02
+###  https://aidentifyage.github.io/ontology#-02
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾B
+###  https://aidentifyage.github.io/ontology#⎾B
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_73
+###  https://aidentifyage.github.io/ontology#FDI_73
 :FDI_73 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :M ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#-03> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾C> .
+                   <https://aidentifyage.github.io/ontology#-03> ,
+                   <https://aidentifyage.github.io/ontology#⎾C> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#M
+###  https://aidentifyage.github.io/ontology#M
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-03
+###  https://aidentifyage.github.io/ontology#-03
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾C
+###  https://aidentifyage.github.io/ontology#⎾C
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_74
+###  https://aidentifyage.github.io/ontology#FDI_74
 :FDI_74 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :L ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#-04> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾D> .
+                   <https://aidentifyage.github.io/ontology#-04> ,
+                   <https://aidentifyage.github.io/ontology#⎾D> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#L
+###  https://aidentifyage.github.io/ontology#L
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-04
+###  https://aidentifyage.github.io/ontology#-04
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾D
+###  https://aidentifyage.github.io/ontology#⎾D
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_75
+###  https://aidentifyage.github.io/ontology#FDI_75
 :FDI_75 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :K ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#-05> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾E> .
+                   <https://aidentifyage.github.io/ontology#-05> ,
+                   <https://aidentifyage.github.io/ontology#⎾E> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#K
+###  https://aidentifyage.github.io/ontology#K
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-05
+###  https://aidentifyage.github.io/ontology#-05
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾E
+###  https://aidentifyage.github.io/ontology#⎾E
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_81
+###  https://aidentifyage.github.io/ontology#FDI_81
 :FDI_81 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :P ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#01-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏋> .
+                   <https://aidentifyage.github.io/ontology#01-> ,
+                   <https://aidentifyage.github.io/ontology#A⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#P
+###  https://aidentifyage.github.io/ontology#P
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#01-
+###  https://aidentifyage.github.io/ontology#01-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏋
+###  https://aidentifyage.github.io/ontology#A⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_82
+###  https://aidentifyage.github.io/ontology#FDI_82
 :FDI_82 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :Q ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#02-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏋> .
+                   <https://aidentifyage.github.io/ontology#02-> ,
+                   <https://aidentifyage.github.io/ontology#B⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Q
+###  https://aidentifyage.github.io/ontology#Q
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#02-
+###  https://aidentifyage.github.io/ontology#02-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏋
+###  https://aidentifyage.github.io/ontology#B⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_83
+###  https://aidentifyage.github.io/ontology#FDI_83
 :FDI_83 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :R ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#03-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏋> .
+                   <https://aidentifyage.github.io/ontology#03-> ,
+                   <https://aidentifyage.github.io/ontology#C⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#R
+###  https://aidentifyage.github.io/ontology#R
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#03-
+###  https://aidentifyage.github.io/ontology#03-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏋
+###  https://aidentifyage.github.io/ontology#C⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_84
+###  https://aidentifyage.github.io/ontology#FDI_84
 :FDI_84 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :S ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#04-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏋> .
+                   <https://aidentifyage.github.io/ontology#04-> ,
+                   <https://aidentifyage.github.io/ontology#D⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#S
+###  https://aidentifyage.github.io/ontology#S
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#04-
+###  https://aidentifyage.github.io/ontology#04-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏋
+###  https://aidentifyage.github.io/ontology#D⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI_85
+###  https://aidentifyage.github.io/ontology#FDI_85
 :FDI_85 rdf:type owl:NamedIndividual ,
                  :FDI ;
         owl:sameAs :T ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#05-> ,
-                   <https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏋> .
+                   <https://aidentifyage.github.io/ontology#05-> ,
+                   <https://aidentifyage.github.io/ontology#E⏋> .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#T
+###  https://aidentifyage.github.io/ontology#T
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#05-
+###  https://aidentifyage.github.io/ontology#05-
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏋
+###  https://aidentifyage.github.io/ontology#E⏋
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#G
+###  https://aidentifyage.github.io/ontology#G
 :G rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#H
+###  https://aidentifyage.github.io/ontology#H
 :H rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#I
+###  https://aidentifyage.github.io/ontology#I
 :I rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#J
+###  https://aidentifyage.github.io/ontology#J
 :J rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#K
+###  https://aidentifyage.github.io/ontology#K
 :K rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#L
+###  https://aidentifyage.github.io/ontology#L
 :L rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#M
+###  https://aidentifyage.github.io/ontology#M
 :M rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#N
+###  https://aidentifyage.github.io/ontology#N
 :N rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#O
+###  https://aidentifyage.github.io/ontology#O
 :O rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#P
+###  https://aidentifyage.github.io/ontology#P
 :P rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Q
+###  https://aidentifyage.github.io/ontology#Q
 :Q rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#R
+###  https://aidentifyage.github.io/ontology#R
 :R rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#S
+###  https://aidentifyage.github.io/ontology#S
 :S rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#T
+###  https://aidentifyage.github.io/ontology#T
 :T rdf:type owl:NamedIndividual .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+01
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+01> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#+01
+<https://aidentifyage.github.io/ontology#+01> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+02
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+02> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#+02
+<https://aidentifyage.github.io/ontology#+02> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+03
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+03> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#+03
+<https://aidentifyage.github.io/ontology#+03> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+04
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+04> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#+04
+<https://aidentifyage.github.io/ontology#+04> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+05
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+05> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#+05
+<https://aidentifyage.github.io/ontology#+05> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+1
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+1> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#+1
+<https://aidentifyage.github.io/ontology#+1> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+2
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+2> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#+2
+<https://aidentifyage.github.io/ontology#+2> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+3
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+3> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#+3
+<https://aidentifyage.github.io/ontology#+3> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+4
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+4> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#+4
+<https://aidentifyage.github.io/ontology#+4> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+5
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+5> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#+5
+<https://aidentifyage.github.io/ontology#+5> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+6
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+6> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#+6
+<https://aidentifyage.github.io/ontology#+6> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+7
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+7> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#+7
+<https://aidentifyage.github.io/ontology#+7> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#+8
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#+8> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#+8
+<https://aidentifyage.github.io/ontology#+8> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-01
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-01> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#-01
+<https://aidentifyage.github.io/ontology#-01> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-02
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-02> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#-02
+<https://aidentifyage.github.io/ontology#-02> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-03
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-03> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#-03
+<https://aidentifyage.github.io/ontology#-03> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-04
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-04> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#-04
+<https://aidentifyage.github.io/ontology#-04> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-05
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-05> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#-05
+<https://aidentifyage.github.io/ontology#-05> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-1
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-1> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#-1
+<https://aidentifyage.github.io/ontology#-1> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-2
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-2> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#-2
+<https://aidentifyage.github.io/ontology#-2> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-3
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-3> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#-3
+<https://aidentifyage.github.io/ontology#-3> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-4
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-4> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#-4
+<https://aidentifyage.github.io/ontology#-4> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-5
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-5> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#-5
+<https://aidentifyage.github.io/ontology#-5> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-6
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-6> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#-6
+<https://aidentifyage.github.io/ontology#-6> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-7
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-7> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#-7
+<https://aidentifyage.github.io/ontology#-7> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#-8
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#-8> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#-8
+<https://aidentifyage.github.io/ontology#-8> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#01+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#01+> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#01+
+<https://aidentifyage.github.io/ontology#01+> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#01-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#01-> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#01-
+<https://aidentifyage.github.io/ontology#01-> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#02+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#02+> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#02+
+<https://aidentifyage.github.io/ontology#02+> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#02-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#02-> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#02-
+<https://aidentifyage.github.io/ontology#02-> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#03+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#03+> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#03+
+<https://aidentifyage.github.io/ontology#03+> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#03-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#03-> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#03-
+<https://aidentifyage.github.io/ontology#03-> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#04+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#04+> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#04+
+<https://aidentifyage.github.io/ontology#04+> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#04-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#04-> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#04-
+<https://aidentifyage.github.io/ontology#04-> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#05+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#05+> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#05+
+<https://aidentifyage.github.io/ontology#05+> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#05-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#05-> rdf:type owl:NamedIndividual ,
-                                                                    :Haderup .
+###  https://aidentifyage.github.io/ontology#05-
+<https://aidentifyage.github.io/ontology#05-> rdf:type owl:NamedIndividual ,
+                                                       :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#1+> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#1+
+<https://aidentifyage.github.io/ontology#1+> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#1-> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#1-
+<https://aidentifyage.github.io/ontology#1-> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#1⏋
+<https://aidentifyage.github.io/ontology#1⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#1⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#1⏌
+<https://aidentifyage.github.io/ontology#1⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#2+> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#2+
+<https://aidentifyage.github.io/ontology#2+> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#2-> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#2-
+<https://aidentifyage.github.io/ontology#2-> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#2⏋
+<https://aidentifyage.github.io/ontology#2⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#2⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#2⏌
+<https://aidentifyage.github.io/ontology#2⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#3+> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#3+
+<https://aidentifyage.github.io/ontology#3+> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#3-> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#3-
+<https://aidentifyage.github.io/ontology#3-> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#3⏋
+<https://aidentifyage.github.io/ontology#3⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#3⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#3⏌
+<https://aidentifyage.github.io/ontology#3⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#4+> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#4+
+<https://aidentifyage.github.io/ontology#4+> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#4-> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#4-
+<https://aidentifyage.github.io/ontology#4-> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#4⏋
+<https://aidentifyage.github.io/ontology#4⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#4⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#4⏌
+<https://aidentifyage.github.io/ontology#4⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#5+> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#5+
+<https://aidentifyage.github.io/ontology#5+> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#5-> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#5-
+<https://aidentifyage.github.io/ontology#5-> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#5⏋
+<https://aidentifyage.github.io/ontology#5⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#5⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#5⏌
+<https://aidentifyage.github.io/ontology#5⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#6+> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#6+
+<https://aidentifyage.github.io/ontology#6+> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#6-> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#6-
+<https://aidentifyage.github.io/ontology#6-> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#6⏋
+<https://aidentifyage.github.io/ontology#6⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#6⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#6⏌
+<https://aidentifyage.github.io/ontology#6⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#7+> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#7+
+<https://aidentifyage.github.io/ontology#7+> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#7-> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#7-
+<https://aidentifyage.github.io/ontology#7-> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#7⏋
+<https://aidentifyage.github.io/ontology#7⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#7⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#7⏌
+<https://aidentifyage.github.io/ontology#7⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8+
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#8+> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#8+
+<https://aidentifyage.github.io/ontology#8+> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8-
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#8-> rdf:type owl:NamedIndividual ,
-                                                                   :Haderup .
+###  https://aidentifyage.github.io/ontology#8-
+<https://aidentifyage.github.io/ontology#8-> rdf:type owl:NamedIndividual ,
+                                                      :Haderup .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#8⏋
+<https://aidentifyage.github.io/ontology#8⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#8⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#8⏌
+<https://aidentifyage.github.io/ontology#8⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#A⏋
+<https://aidentifyage.github.io/ontology#A⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#A⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#A⏌
+<https://aidentifyage.github.io/ontology#A⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#B⏋
+<https://aidentifyage.github.io/ontology#B⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#B⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#B⏌
+<https://aidentifyage.github.io/ontology#B⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#C⏋
+<https://aidentifyage.github.io/ontology#C⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#C⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#C⏌
+<https://aidentifyage.github.io/ontology#C⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#D⏋
+<https://aidentifyage.github.io/ontology#D⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#D⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#D⏌
+<https://aidentifyage.github.io/ontology#D⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏋
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏋> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#E⏋
+<https://aidentifyage.github.io/ontology#E⏋> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏌
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#E⏌> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#E⏌
+<https://aidentifyage.github.io/ontology#E⏌> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾A
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾A> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾A
+<https://aidentifyage.github.io/ontology#⎾A> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾B
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾B> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾B
+<https://aidentifyage.github.io/ontology#⎾B> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾C
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾C> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾C
+<https://aidentifyage.github.io/ontology#⎾C> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾D
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾D> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾D
+<https://aidentifyage.github.io/ontology#⎾D> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾E
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾E> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾E
+<https://aidentifyage.github.io/ontology#⎾E> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾1> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾1
+<https://aidentifyage.github.io/ontology#⎾1> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾2> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾2
+<https://aidentifyage.github.io/ontology#⎾2> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾3> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾3
+<https://aidentifyage.github.io/ontology#⎾3> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾4> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾4
+<https://aidentifyage.github.io/ontology#⎾4> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾5> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾5
+<https://aidentifyage.github.io/ontology#⎾5> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾6> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾6
+<https://aidentifyage.github.io/ontology#⎾6> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾7> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾7
+<https://aidentifyage.github.io/ontology#⎾7> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎾8> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎾8
+<https://aidentifyage.github.io/ontology#⎾8> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿A> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿A
+<https://aidentifyage.github.io/ontology#⎿A> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿B
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿B> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿B
+<https://aidentifyage.github.io/ontology#⎿B> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿C
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿C> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿C
+<https://aidentifyage.github.io/ontology#⎿C> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿D
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿D> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿D
+<https://aidentifyage.github.io/ontology#⎿D> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿E> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿E
+<https://aidentifyage.github.io/ontology#⎿E> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿1> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿1
+<https://aidentifyage.github.io/ontology#⎿1> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿2> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿2
+<https://aidentifyage.github.io/ontology#⎿2> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿3> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿3
+<https://aidentifyage.github.io/ontology#⎿3> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿4> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿4
+<https://aidentifyage.github.io/ontology#⎿4> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿5> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿5
+<https://aidentifyage.github.io/ontology#⎿5> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿6> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿6
+<https://aidentifyage.github.io/ontology#⎿6> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿7> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿7
+<https://aidentifyage.github.io/ontology#⎿7> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#⎿8> rdf:type owl:NamedIndividual ,
-                                                                   :PalmerNotation .
+###  https://aidentifyage.github.io/ontology#⎿8
+<https://aidentifyage.github.io/ontology#⎿8> rdf:type owl:NamedIndividual ,
+                                                      :PalmerNotation .
 
 
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
