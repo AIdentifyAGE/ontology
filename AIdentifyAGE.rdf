@@ -21,13 +21,13 @@
      xmlns:AIdentifyAGE="https://aidentifyage.github.io/aidentifyage-ontology/AIdentifyAGE#"
      xmlns:AIdentifyAGE1="https://aidentifyage.github.io/ontology/AIdentifyAGE#">
     <owl:Ontology rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE">
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ohd.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/iao-main.owl"/>
-        <owl:imports rdf:resource="http://purl.org/dc/terms"/>
-        <owl:imports rdf:resource="http://snomed.info/sct/900000000000207008"/>
-        <owl:imports rdf:resource="http://www.w3.org/2016/03/mls#"/>
-        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/MLSchema.ttl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/dc_terms_subset.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/foaf_subset.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/iao_subset.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/obi_subset.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/ohd_subset.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/snomed_subset.owl"/>
         <terms:contributor>Renato Marcelo
 Ana Rodrigues
 Cristiana Palmela Pereira

@@ -20,13 +20,13 @@
 @base <http://www.semanticweb.org/untitled-ontology-6/> .
 
 <https://aidentifyage.github.io/ontology/AIdentifyAGE> rdf:type owl:Ontology ;
-                                                        owl:imports obo:obi.owl ,
-                                                                    obo:ohd.owl ,
-                                                                    <http://purl.obolibrary.org/obo/iao/iao-main.owl> ,
-                                                                    <http://purl.org/dc/terms> ,
-                                                                    <http://snomed.info/sct/900000000000207008> ,
-                                                                    <http://www.w3.org/2016/03/mls#> ,
-                                                                    foaf: ;
+                                                        owl:imports <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/MLSchema.ttl> ,
+                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/dc_terms_subset.owl> ,
+                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/foaf_subset.owl> ,
+                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/iao_subset.owl> ,
+                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/obi_subset.owl> ,
+                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/ohd_subset.owl> ,
+                                                                    <https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/snomed_subset.owl> ;
                                                         terms:contributor """Renato Marcelo
 Ana Rodrigues
 Cristiana Palmela Pereira

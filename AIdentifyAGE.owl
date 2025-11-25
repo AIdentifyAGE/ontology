@@ -25,13 +25,13 @@
     <Prefix name="protege" IRI="http://protege.stanford.edu/plugins/owl/protege#"/>
     <Prefix name="oboInOwl" IRI="http://www.geneontology.org/formats/oboInOwl#"/>
     <Prefix name="AIdentifyAGE" IRI="https://aidentifyage.github.io/aidentifyage-ontology/AIdentifyAGE#"/>
-    <Import>http://purl.obolibrary.org/obo/obi.owl</Import>
-    <Import>http://purl.obolibrary.org/obo/ohd.owl</Import>
-    <Import>http://purl.obolibrary.org/obo/iao/iao-main.owl</Import>
-    <Import>http://purl.org/dc/terms</Import>
-    <Import>http://snomed.info/sct/900000000000207008</Import>
-    <Import>http://www.w3.org/2016/03/mls#</Import>
-    <Import>http://xmlns.com/foaf/0.1/</Import>
+    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/obi_subset.owl</Import>
+    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/ohd_subset.owl</Import>
+    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/iao_subset.owl</Import>
+    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/dc_terms_subset.owl</Import>
+    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/snomed_subset.owl</Import>
+    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/MLSchema.ttl</Import>
+    <Import>https://raw.githubusercontent.com/AIdentifyAGE/ontology/refs/heads/main/extending_ontologies/foaf_subset.owl</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:contributor"/>
         <Literal>Renato Marcelo
