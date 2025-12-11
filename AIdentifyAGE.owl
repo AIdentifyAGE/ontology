@@ -46,11 +46,11 @@ Cátia Vaz</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:issued"/>
-        <Literal>25/11/2025</Literal>
+        <Literal>11/12/2025</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal>v1.0.1-beta</Literal>
+        <Literal>v1.0.2-beta</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances"/>
@@ -98,31 +98,7 @@ Cátia Vaz</Literal>
         <Class abbreviatedIRI="obo:UBERON_0000165"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="terms:Agent"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="terms:Location"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="terms:LocationPeriodOrJurisdiction"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://schema.org/Person"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://snomed.info/id/363680008"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Class"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/ns/mls#InformationEntity"/>
@@ -135,9 +111,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/ns/mls#Quality"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="foaf:Agent"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="foaf:Person"/>
@@ -1622,23 +1595,8 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#DCTerms"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="terms:Agent"/>
-        <Class IRI="/AIdentifyAGE#DCTerms"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="terms:Location"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#locationName"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="terms:LocationPeriodOrJurisdiction"/>
         <Class IRI="/AIdentifyAGE#DCTerms"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://schema.org/Person"/>
-        <Class IRI="/AIdentifyAGE#foaf"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://snomed.info/id/363680008"/>
@@ -1653,14 +1611,6 @@ Cátia Vaz</Literal>
             <DataProperty IRI="/AIdentifyAGE#radiographicTakenDatetime"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
         </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rdfs:Class"/>
-        <Class IRI="/AIdentifyAGE#DCTerms"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
-        <Class IRI="/AIdentifyAGE#foaf"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
@@ -7221,12 +7171,12 @@ I.e. represents a set of ToothStage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147486048"/>
+        <AnonymousIndividual nodeID="_:genid2147488372"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147486049"/>
+        <AnonymousIndividual nodeID="_:genid2147488373"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
