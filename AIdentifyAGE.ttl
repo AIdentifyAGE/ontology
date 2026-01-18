@@ -33,8 +33,8 @@ Cristiana Palmela Pereira
 Alexandre Francisco
 Cátia Vaz""" ;
                                            terms:description "The AIdentifyAGE ontology provides a comprehensive vocabulary description for forensic age assessment using dental biological markers, promoting the transparent assessment processes in forensic odontology and age diagnostics. It formalizes expert knowledge according to IOFOS, AGFAD, ABFO, ADA and ISO standards, ensuring semantic interoperability and ethical AI integration. This ontology is a work in progress developed under the AIdentifyAGE project (FCT Grant 2024.07444.IACDC), within the national investment RE-C05-i08 – More Digital Science, measure RE-C05-i08.M04 – Support to R&D projects for advanced cybersecurity, artificial intelligence and data science systems in public administration. This work is being developed in collaboration with researchers from the University of Lisbon (Portugal), the University of Münster (Germany), and the University of Zagreb (Croatia), within the framework of the AIdentifyAGE international consortium., Base Ontology for use in AIdentifyAGE Project"@en ;
-                                           terms:issued "11/12/2025" ;
-                                           owl:versionInfo "v1.0.3-beta" .
+                                           terms:issued "18/01/2026" ;
+                                           owl:versionInfo "v1.0.4-beta" .
 
 #################################################################
 #    Annotation properties
@@ -1542,7 +1542,7 @@ obo:member_of rdf:type owl:ObjectProperty .
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#collectedBy
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#collectedBy> rdf:type owl:ObjectProperty ;
-                                                                   rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData> ;
+                                                                   rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData> ;
                                                                    rdfs:range <https://aidentifyage.github.io/ontology/AIdentifyAGE#ForensicExpertPerson> .
 
 
@@ -1550,7 +1550,7 @@ obo:member_of rdf:type owl:ObjectProperty .
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#containsData> rdf:type owl:ObjectProperty ;
                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
                                                                     rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#ReportData> ;
-                                                                    rdfs:range <https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData> .
+                                                                    rdfs:range <https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData> .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#containsRadiographicImaging
@@ -1572,7 +1572,7 @@ obo:member_of rdf:type owl:ObjectProperty .
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasIndividual
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasIndividual> rdf:type owl:ObjectProperty ;
-                                                                     rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData> ;
+                                                                     rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData> ;
                                                                      rdfs:range <https://aidentifyage.github.io/ontology/AIdentifyAGE#ForensicIndividualCasePerson> .
 
 
@@ -1586,7 +1586,7 @@ obo:member_of rdf:type owl:ObjectProperty .
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasLegalExamData> rdf:type owl:ObjectProperty ;
                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
                                                                         rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#DataCollection> ;
-                                                                        rdfs:range <https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData> .
+                                                                        rdfs:range <https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData> .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasMaturityConversionMapping
@@ -1603,7 +1603,7 @@ obo:member_of rdf:type owl:ObjectProperty .
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasMaturityScore
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasMaturityScore> rdf:type owl:ObjectProperty ;
                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                        rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#DentalMaturityScore> ;
+                                                                        rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianDentalMaturityScore> ;
                                                                         rdfs:range <https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianMaturityScoring> .
 
 
@@ -1618,7 +1618,7 @@ obo:member_of rdf:type owl:ObjectProperty .
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasRadiographicImaging
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasRadiographicImaging> rdf:type owl:ObjectProperty ;
                                                                               rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                              rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData> .
+                                                                              rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData> .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasReferenceStudy
@@ -1637,7 +1637,7 @@ obo:member_of rdf:type owl:ObjectProperty .
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasRequestingEntity
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasRequestingEntity> rdf:type owl:ObjectProperty ;
-                                                                           rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData> .
+                                                                           rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData> .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasRole
@@ -1693,8 +1693,7 @@ obo:member_of rdf:type owl:ObjectProperty .
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#hasToothStage
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasToothStage> rdf:type owl:ObjectProperty ;
                                                                      rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                     rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#CoefficientMaturityData> ,
-                                                                                 <https://aidentifyage.github.io/ontology/AIdentifyAGE#DataReferenceStudy> ,
+                                                                     rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#DataReferenceStudy> ,
                                                                                  <https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringMethod> ;
                                                                      rdfs:range <https://aidentifyage.github.io/ontology/AIdentifyAGE#ToothStage> .
 
@@ -1717,7 +1716,8 @@ obo:member_of rdf:type owl:ObjectProperty .
 
 ###  http://xmlns.com/foaf/0.1/age
 foaf:age rdf:type owl:DatatypeProperty ;
-         skos:prefLabel "Provided Age" .
+         owl:equivalentProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#reportedAge> ;
+         terms:description "Value reported by the individual (in years)"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/name
@@ -1730,15 +1730,46 @@ foaf:sex rdf:type owl:DatatypeProperty ;
          rdfs:label "sex" .
 
 
+###  https://aidentifyage.github.io/ontology#inferenceDateTime
+:inferenceDateTime rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#InferenceRun> ;
+                   rdfs:range xsd:dateTime .
+
+
+###  https://aidentifyage.github.io/ontology#probabilityLegalAgeThreshold
+:probabilityLegalAgeThreshold rdf:type owl:DatatypeProperty ;
+                              terms:description "Probability of having already reached the legal age threshold"@en ;
+                              rdfs:label "Probability Legal Age Threshold"@en .
+
+
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ageInterval
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#ageInterval> rdf:type owl:DatatypeProperty ;
+                                                                   owl:equivalentProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#ageRange> ;
                                                                    rdfs:subPropertyOf owl:topDataProperty ;
-                                                                   rdfs:range rdfs:Literal .
+                                                                   rdfs:range rdfs:Literal ;
+                                                                   terms:description """The range will have a minimum limit equal to the minimum age and a maximum limit equal to the maximum age.
+
+Using AI methods:
+Three different models
+
+Using manual methods:
+Three different reference studies"""@en ;
+                                                                   rdfs:label "Age Interval"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ageRange
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#ageRange> rdf:type owl:DatatypeProperty ;
-                                                                rdfs:subPropertyOf owl:topDataProperty .
+                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                rdfs:range rdfs:Literal ;
+                                                                terms:description """The range will have a minimum limit equal to the minimum age and a maximum limit equal to the maximum age.
+
+Using AI methods:
+Three different models
+
+Using manual methods:
+Three different reference studies"""@en ;
+                                                                rdfs:label "Age Range"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#author
@@ -1748,23 +1779,35 @@ foaf:sex rdf:type owl:DatatypeProperty ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#chronologicalAge
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#chronologicalAge> rdf:type owl:DatatypeProperty ;
                                                                         rdfs:subPropertyOf owl:topDataProperty ;
-                                                                        rdfs:range xsd:float .
+                                                                        rdfs:range xsd:date ;
+                                                                        terms:description "Actual time elapsed since birth (in years)"@en ;
+                                                                        rdfs:label "Chronological Age"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#confidence
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#confidence> rdf:type owl:DatatypeProperty ;
-                                                                  rdfs:subPropertyOf owl:topDataProperty .
+                                                                  owl:equivalentProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#mostProbableAge> ;
+                                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                                  rdfs:range rdfs:Literal ;
+                                                                  terms:description "Range value with the highest likelihood of representing an individual's true time since birth, based on biological indicators. An estimate and a 95% confidece Interval."@en ;
+                                                                  rdfs:label "Confidence"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#degreeOfProbability
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#degreeOfProbability> rdf:type owl:DatatypeProperty ;
-                                                                           rdfs:subPropertyOf owl:topDataProperty ;
-                                                                           rdfs:range rdfs:Literal .
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#degreeOfProbabilityAge
+<https://aidentifyage.github.io/ontology/AIdentifyAGE#degreeOfProbabilityAge> rdf:type owl:DatatypeProperty ;
+                                                                              owl:equivalentProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#probabilityGivenAge> ;
+                                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                                              rdfs:range xsd:float ;
+                                                                              terms:description "Probability of the age the individual claims to be."@en ;
+                                                                              rdfs:label "Degree of Probability Age"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#finalAgeAssessment
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#finalAgeAssessment> rdf:type owl:DatatypeProperty ;
-                                                                          rdfs:subPropertyOf owl:topDataProperty .
+                                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                                          rdfs:range xsd:float ;
+                                                                          terms:description "Determination of the most probable value or range representing an individual's time since birth."@en ;
+                                                                          rdfs:label "Final Age Assessment"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#forensicCaseNumber
@@ -1791,12 +1834,23 @@ foaf:sex rdf:type owl:DatatypeProperty ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#highestMinimumProbableAge
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#highestMinimumProbableAge> rdf:type owl:DatatypeProperty ;
-                                                                                 rdfs:subPropertyOf owl:topDataProperty .
+                                                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                 terms:description """Indicate the maximum of three minimum ages
+
+Using AI methods:
+Three different models
+
+Using manual methods:
+Three different reference studies"""@en ;
+                                                                                 rdfs:label "Highest MInimum Probable Age"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#legalAgeThreshold
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#legalAgeThreshold> rdf:type owl:DatatypeProperty ;
-                                                                         rdfs:subPropertyOf owl:topDataProperty .
+                                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                                         rdfs:range xsd:positiveInteger ;
+                                                                         terms:description "Minimum age defined by law for a person to acquire specific legal rights and responsibilities."@en ;
+                                                                         rdfs:label "Legal Age Threshold"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#locationName
@@ -1824,66 +1878,64 @@ foaf:sex rdf:type owl:DatatypeProperty ;
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#maturityScore> rdf:type owl:DatatypeProperty .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#maxAge
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#maxAge> rdf:type owl:DatatypeProperty ;
-                                                              rdfs:subPropertyOf owl:topDataProperty .
-
-
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#maximumProbableAge
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#maximumProbableAge> rdf:type owl:DatatypeProperty ;
-                                                                          rdfs:subPropertyOf owl:topDataProperty .
+                                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                                          rdfs:range xsd:float ;
+                                                                          terms:description """Highest probable value inferred from a particular developmental stage (OPG).
+- The 97.5th percentile of the actual test sample values associated with the estimates between:
+]MeanAge – 6 months; MeanAge + 6 months["""@en ;
+                                                                          rdfs:label "Maximum (Probable) Age"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#meanAge
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#meanAge> rdf:type owl:DatatypeProperty ;
-                                                               rdfs:subPropertyOf owl:topDataProperty .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#median
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#median> rdf:type owl:DatatypeProperty ;
-                                                              rdfs:subPropertyOf owl:topDataProperty .
+                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                               rdfs:range xsd:float ;
+                                                               terms:description "Estimate (conditional average value)"@en ;
+                                                               rdfs:label "Mean Age"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#medianAge
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#medianAge> rdf:type owl:DatatypeProperty ;
-                                                                 rdfs:subPropertyOf owl:topDataProperty .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#minAge
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#minAge> rdf:type owl:DatatypeProperty ;
-                                                              rdfs:subPropertyOf owl:topDataProperty .
+                                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                                 rdfs:range xsd:float ;
+                                                                 terms:description """The median of the actual test sample values associated with the estimates between:
+]MeanAge – 6 months; MeanAge + 6 months["""@en ;
+                                                                 rdfs:label "Median Age"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#minimumProbableAge
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#minimumProbableAge> rdf:type owl:DatatypeProperty ;
-                                                                          rdfs:subPropertyOf owl:topDataProperty .
+                                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                                          rdfs:range xsd:float ;
+                                                                          terms:description """Lowest probable value inferred from a particular developmental stage (OPG). 
+- the 2.5th percentile of the actual test sample values associated with the estimates between: 
+]MeanAge – 6 months; MeanAge + 6 months["""@en ;
+                                                                          rdfs:label "Minimum (Probable) Age"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#mostLikelyAge
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#mostLikelyAge> rdf:type owl:DatatypeProperty ;
-                                                                     rdfs:subPropertyOf owl:topDataProperty .
+                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                     rdfs:range xsd:float ;
+                                                                     terms:description "Value that best corresponds with available scientific and medical indicators (mean age)"@en ;
+                                                                     rdfs:label "Most Likeky Age"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#mostProbableAge
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#mostProbableAge> rdf:type owl:DatatypeProperty ;
-                                                                       rdfs:subPropertyOf owl:topDataProperty .
+                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                       rdfs:range rdfs:Literal ;
+                                                                       terms:description "Range value with the highest likelihood of representing an individual's true time since birth, based on biological indicators. An estimate and a 95% confidece Interval."@en ;
+                                                                       rdfs:label "Most Probable Age (Interval)"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#organizationProcessID
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#organizationProcessID> rdf:type owl:DatatypeProperty ;
                                                                              rdfs:subPropertyOf owl:topDataProperty ;
-                                                                             rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#OrganizationProcess> ;
+                                                                             rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#Organization> ;
                                                                              rdfs:range xsd:string .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#pairKey
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#pairKey> rdf:type owl:DatatypeProperty ;
-                                                               rdfs:range rdfs:Literal .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#pairValue
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#pairValue> rdf:type owl:DatatypeProperty ;
-                                                                 rdfs:range rdfs:Literal .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#populationAffinity
@@ -1911,14 +1963,19 @@ foaf:sex rdf:type owl:DatatypeProperty ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#probabilityGivenAge
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#probabilityGivenAge> rdf:type owl:DatatypeProperty ;
-                                                                           rdfs:subPropertyOf owl:topDataProperty .
+                                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                                           rdfs:range xsd:float ;
+                                                                           terms:description "Probability of the age the individual claims to be."@en ;
+                                                                           rdfs:label "Probability Given Age"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#providedBirthDate
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#providedBirthDate> rdf:type owl:DatatypeProperty ;
                                                                          rdfs:subPropertyOf owl:topDataProperty ;
                                                                          rdfs:domain <https://aidentifyage.github.io/ontology/AIdentifyAGE#ForensicIndividualCasePerson> ;
-                                                                         rdfs:range xsd:dateTime .
+                                                                         rdfs:range xsd:date ;
+                                                                         terms:description "Value reported by the individual (in format dd-mm-yyyy)"@en ;
+                                                                         rdfs:label "Provided Birth Date"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#radiographicImageURI
@@ -1952,7 +2009,9 @@ foaf:sex rdf:type owl:DatatypeProperty ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#reportedAge
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#reportedAge> rdf:type owl:DatatypeProperty ;
-                                                                   rdfs:subPropertyOf owl:topDataProperty .
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   terms:description "Value reported by the individual (in years)"@en ;
+                                                                   rdfs:label "Reported Age"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#requestingEntityName
@@ -1968,12 +2027,6 @@ foaf:sex rdf:type owl:DatatypeProperty ;
                                                                 rdfs:label "Root Type" .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#scoreValue
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#scoreValue> rdf:type owl:DatatypeProperty ;
-                                                                  rdfs:subPropertyOf owl:topDataProperty ;
-                                                                  rdfs:label "Score Value" .
-
-
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#stageSystemUsed
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#stageSystemUsed> rdf:type owl:DatatypeProperty ;
                                                                        rdfs:range xsd:string .
@@ -1983,6 +2036,7 @@ foaf:sex rdf:type owl:DatatypeProperty ;
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#standardDev> rdf:type owl:DatatypeProperty ;
                                                                    rdfs:subPropertyOf owl:topDataProperty ;
                                                                    rdfs:range xsd:float ;
+                                                                   terms:description "Standard deviation of the estimation error in test sample."@en ;
                                                                    rdfs:label "Standard Deviation" .
 
 
@@ -1993,10 +2047,6 @@ foaf:sex rdf:type owl:DatatypeProperty ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#studyYear
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#studyYear> rdf:type owl:DatatypeProperty .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#toothLabel
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#toothLabel> rdf:type owl:DatatypeProperty .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#totalMaturityScore
@@ -2014,18 +2064,6 @@ foaf:sex rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances
-<http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption> ;
-                                                                        rdfs:label "Orthodontic Appliances" .
-
-
-###  http://aidentifyage.com/ontologies/AIdentifyAGE#RootCanal
-<http://aidentifyage.com/ontologies/AIdentifyAGE#RootCanal> rdf:type owl:Class ;
-                                                            rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption> ;
-                                                            rdfs:label "Root Canal" .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000023
 obo:BFO_0000023 rdf:type owl:Class .
 
@@ -2036,8 +2074,12 @@ obo:FMA_12516 rdf:type owl:Class ;
                                 owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasTreatment> ;
                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                 owl:onClass <https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#rootType> ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
                               ] ;
-              skos:definition "Hard structure composed of dentine and pulp, usually covered partially with enamel and cementum, anchored in the alveolar bone, serving in mastication, phonetics, and aesthetics"@en .
+              terms:description "Hard structure composed of dentine and pulp, usually covered partially with enamel and cementum, anchored in the alveolar bone, serving in mastication, phonetics, and aesthetics"@en .
 
 
 ###  http://purl.obolibrary.org/obo/FMA_269582
@@ -2103,11 +2145,13 @@ terms:LocationPeriodOrJurisdiction rdfs:subClassOf <https://aidentifyage.github.
                                                     owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#radiographicTakenDatetime> ;
                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                     owl:onDataRange xsd:dateTime
-                                                  ] .
+                                                  ] ;
+                                  terms:description "Contains data about a given Radiographic Imaging Procedure."@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
-<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#foaf> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#foaf> .
 
 
 ###  http://www.w3.org/ns/mls#InformationEntity
@@ -2116,11 +2160,7 @@ terms:LocationPeriodOrJurisdiction rdfs:subClassOf <https://aidentifyage.github.
 
 
 ###  http://www.w3.org/ns/mls#Model
-<http://www.w3.org/ns/mls#Model> rdf:type owl:Class ;
-                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                   owl:onProperty <http://www.w3.org/ns/mls#hasQuality> ;
-                                                   owl:someValuesFrom <http://www.w3.org/ns/mls#ModelCharacteristic>
-                                                 ] .
+<http://www.w3.org/ns/mls#Model> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/mls#Process
@@ -2134,21 +2174,25 @@ terms:LocationPeriodOrJurisdiction rdfs:subClassOf <https://aidentifyage.github.
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
-foaf:Agent rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#foaf> .
+foaf:Agent rdf:type owl:Class ;
+           rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#foaf> .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
-foaf:Person rdf:type owl:Class .
+foaf:Person rdf:type owl:Class ;
+            terms:description "Group of individuals involved in a medico-legal examination for age assessment purposes."@en .
+
+
+###  https://aidentifyage.github.io/ontology#LeeReferenceStudy
+:LeeReferenceStudy rdf:type owl:Class ;
+                   rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy> ;
+                   terms:description "Lee’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
+                   rdfs:label "Lee Reference Study"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#AIDentalAgeAsessment
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#AIDentalAgeAsessment> rdf:type owl:Class ;
                                                                             rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#ReportData> ,
-                                                                                            [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#confidence> ;
-                                                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                              owl:onDataRange xsd:float
-                                                                                            ] ,
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#finalAgeAssessment> ;
                                                                                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
@@ -2166,6 +2210,19 @@ foaf:Person rdf:type owl:Class .
                                                                             rdfs:label "AI Dental Age Assessment"@en .
 
 
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#AIDentalAgeThresholdAssessment
+<https://aidentifyage.github.io/ontology/AIdentifyAGE#AIDentalAgeThresholdAssessment> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#AIDentalAgeAsessment> ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#legalAgeThreshold> ;
+                                                                                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                        owl:onDataRange xsd:positiveInteger
+                                                                                                      ] ;
+                                                                                      owl:disjointWith <https://aidentifyage.github.io/ontology/AIdentifyAGE#AIRegDentalAgeAssessement> ;
+                                                                                      terms:description "Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on AI/ML methods for defining accurate legal age thresholds"@en ;
+                                                                                      rdfs:label "AI Dental Age Threshold Assessment"@en .
+
+
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#AIRegDentalAgeAssessement
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#AIRegDentalAgeAssessement> rdf:type owl:Class ;
                                                                                  rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#AIDentalAgeAsessment> ,
@@ -2174,12 +2231,7 @@ foaf:Person rdf:type owl:Class .
                                                                                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                                                                  ] ,
                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#chronologicalAge> ;
-                                                                                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                                   owl:onDataRange xsd:float
-                                                                                                 ] ,
-                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#degreeOfProbability> ;
+                                                                                                   owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#degreeOfProbabilityAge> ;
                                                                                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                                                                  ] ,
                                                                                                  [ rdf:type owl:Restriction ;
@@ -2189,6 +2241,11 @@ foaf:Person rdf:type owl:Class .
                                                                                                  ] ,
                                                                                                  [ rdf:type owl:Restriction ;
                                                                                                    owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#maximumProbableAge> ;
+                                                                                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onDataRange xsd:float
+                                                                                                 ] ,
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#meanAge> ;
                                                                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                                    owl:onDataRange xsd:float
                                                                                                  ] ,
@@ -2203,10 +2260,6 @@ foaf:Person rdf:type owl:Class .
                                                                                                    owl:onDataRange xsd:float
                                                                                                  ] ,
                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                   owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#mostLikelyAge> ;
-                                                                                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                                                                                 ] ,
-                                                                                                 [ rdf:type owl:Restriction ;
                                                                                                    owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#populationAffinity> ;
                                                                                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                                                                  ] ,
@@ -2219,33 +2272,14 @@ foaf:Person rdf:type owl:Class .
                                                                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                                    owl:onDataRange xsd:float
                                                                                                  ] ;
-                                                                                 owl:disjointWith <https://aidentifyage.github.io/ontology/AIdentifyAGE#AIThresholdDentalAgeAssessment> ;
                                                                                  terms:description "Represents the final age assessment report results, produced by using dental information to relate it with chronological age, using AI/ML methods to perform regression tasks"@en ;
                                                                                  rdfs:label "AI Reg Dental Age Assessment"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#AIThresholdDentalAgeAssessment
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#AIThresholdDentalAgeAssessment> rdf:type owl:Class ;
-                                                                                      rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#AIDentalAgeAsessment> ;
-                                                                                      terms:description "Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on AI/ML methods for defining accurate legal age thresholds"@en ;
-                                                                                      rdfs:label "AI Threshold Dental Age Assessment"@en .
-
-
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Braces
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#Braces> rdf:type owl:Class ;
-                                                              rdfs:subClassOf <http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances> .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#CoefficientMaturityData
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#CoefficientMaturityData> rdf:type owl:Class ;
-                                                                               rdfs:subClassOf obo:IAO_0000027 ,
-                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                 owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasToothStage> ;
-                                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                                 owl:onClass <https://aidentifyage.github.io/ontology/AIdentifyAGE#ToothStage>
-                                                                                               ] ;
-                                                                               terms:description "Represents a reference study entry related to maturity scores"@en ;
-                                                                               rdfs:label "Coefficient Maturity Data"@en .
+                                                              rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#OrthodonticAppliances> ;
+                                                              rdfs:label "Braces"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DCTerms
@@ -2258,10 +2292,10 @@ foaf:Person rdf:type owl:Class .
                                                                       rdfs:subClassOf obo:IAO_0000100 ,
                                                                                       [ rdf:type owl:Restriction ;
                                                                                         owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasLegalExamData> ;
-                                                                                        owl:someValuesFrom <https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData>
+                                                                                        owl:someValuesFrom <https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData>
                                                                                       ] ;
                                                                       owl:disjointWith <https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy> ;
-                                                                      terms:description "Represents a set of Legal Medical Exams Data" ;
+                                                                      terms:description "Represents a set of Legal Medical Exam Data"@en ;
                                                                       rdfs:label "Data Collection"@en .
 
 
@@ -2279,11 +2313,15 @@ foaf:Person rdf:type owl:Class .
                                                                                             owl:onDataRange xsd:string
                                                                                           ] ,
                                                                                           [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#ageRange> ;
+                                                                                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#lowerQuartile> ;
                                                                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                                                           ] ,
                                                                                           [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#maxAge> ;
+                                                                                            owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#maximumProbableAge> ;
                                                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                             owl:onDataRange xsd:float
                                                                                           ] ,
@@ -2293,12 +2331,12 @@ foaf:Person rdf:type owl:Class .
                                                                                             owl:onDataRange xsd:float
                                                                                           ] ,
                                                                                           [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#median> ;
+                                                                                            owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#medianAge> ;
                                                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                             owl:onDataRange xsd:float
                                                                                           ] ,
                                                                                           [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#minAge> ;
+                                                                                            owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#minimumProbableAge> ;
                                                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                             owl:onDataRange xsd:float
                                                                                           ] ,
@@ -2317,7 +2355,12 @@ foaf:Person rdf:type owl:Class .
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianCoefficientMaturityData
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianCoefficientMaturityData> rdf:type owl:Class ;
-                                                                                        rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#CoefficientMaturityData> ,
+                                                                                        rdfs:subClassOf obo:IAO_0000027 ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasToothStage> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onClass <https://aidentifyage.github.io/ontology/AIdentifyAGE#ToothStage>
+                                                                                                        ] ,
                                                                                                         [ rdf:type owl:Restriction ;
                                                                                                           owl:onProperty foaf:sex ;
                                                                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -2327,13 +2370,35 @@ foaf:Person rdf:type owl:Class .
                                                                                                           owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#maturityScore> ;
                                                                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                                           owl:onDataRange xsd:float
-                                                                                                        ] ,
-                                                                                                        [ rdf:type owl:Restriction ;
-                                                                                                          owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#toothLabel> ;
-                                                                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                                                         ] ;
-                                                                                        terms:description "Represents a reference study entry related to maturity scores (e.g. reference studies that use the demirjian tooth development stages)" ;
+                                                                                        terms:description "Dental Maturity Score resulting index, used as a global quantitative measure of dental maturity, which is then converted into estimated age."@en ;
                                                                                         rdfs:label "Demirjian Coefficient Maturity Data"@en .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianDentalMaturityScore
+<https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianDentalMaturityScore> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringMethod> ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasToothStage> ;
+                                                                                                      owl:allValuesFrom <https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStages>
+                                                                                                    ] ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasMaturityScore> ;
+                                                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                      owl:onClass <https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianMaturityScoring>
+                                                                                                    ] ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#maturityDataUsed> ;
+                                                                                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                                    ] ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#totalMaturityScore> ;
+                                                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                      owl:onDataRange xsd:float
+                                                                                                    ] ;
+                                                                                    owl:disjointWith <https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringStage> ;
+                                                                                    terms:description "Represents the sum of the maturity scores of all evaluated teeth"@en ;
+                                                                                    rdfs:label "Demirjian Dental Maturity Score"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianMaturityScoring
@@ -2352,7 +2417,7 @@ foaf:Person rdf:type owl:Class .
                                                                                rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy> ,
                                                                                                [ rdf:type owl:Restriction ;
                                                                                                  owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring> ;
-                                                                                                 owl:allValuesFrom <https://aidentifyage.github.io/ontology/AIdentifyAGE#DentalMaturityScore>
+                                                                                                 owl:allValuesFrom <https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianDentalMaturityScore>
                                                                                                ] ;
                                                                                terms:description "Represents a Reference Study that is based on the Demirjian tooth development and maturity scoring system stages"@en ;
                                                                                rdfs:label "Demirjian Reference Study"@en .
@@ -2386,19 +2451,11 @@ foaf:Person rdf:type owl:Class .
                                                                                              owl:someValuesFrom rdfs:Literal
                                                                                            ] ,
                                                                                            [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#confidence> ;
-                                                                                             owl:someValuesFrom xsd:float
-                                                                                           ] ,
-                                                                                           [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#degreeOfProbability> ;
+                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#degreeOfProbabilityAge> ;
                                                                                              owl:someValuesFrom rdfs:Literal
                                                                                            ] ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#finalAgeAssessment> ;
-                                                                                             owl:someValuesFrom rdfs:Literal
-                                                                                           ] ,
-                                                                                           [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#legalAgeThreshold> ;
                                                                                              owl:someValuesFrom rdfs:Literal
                                                                                            ] ,
                                                                                            [ rdf:type owl:Restriction ;
@@ -2407,10 +2464,6 @@ foaf:Person rdf:type owl:Class .
                                                                                            ] ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#minimumProbableAge> ;
-                                                                                             owl:someValuesFrom xsd:float
-                                                                                           ] ,
-                                                                                           [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#mostLikelyAge> ;
                                                                                              owl:someValuesFrom xsd:float
                                                                                            ] ,
                                                                                            [ rdf:type owl:Restriction ;
@@ -2427,14 +2480,14 @@ foaf:Person rdf:type owl:Class .
                                                                                              owl:onDataRange xsd:float
                                                                                            ] ,
                                                                                            [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#chronologicalAge> ;
+                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#highestMinimumProbableAge> ;
                                                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                              owl:onDataRange xsd:float
                                                                                            ] ,
                                                                                            [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#highestMinimumProbableAge> ;
+                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#legalAgeThreshold> ;
                                                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                             owl:onDataRange xsd:float
+                                                                                             owl:onDataRange xsd:positiveInteger
                                                                                            ] ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#medianAge> ;
@@ -2453,34 +2506,8 @@ foaf:Person rdf:type owl:Class .
                                                                                              owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#relevantAgeLimits> ;
                                                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                                                            ] ;
-                                                                           terms:description "Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on tradicional methods"@en ;
+                                                                           terms:description "Processes using dental information and relate it to chronological age"@en ;
                                                                            rdfs:label "Dental Age Assessment"@en .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DentalMaturityScore
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#DentalMaturityScore> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringMethod> ,
-                                                                                           [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasToothStage> ;
-                                                                                             owl:allValuesFrom <https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianStages>
-                                                                                           ] ,
-                                                                                           [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasMaturityScore> ;
-                                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                             owl:onClass <https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianMaturityScoring>
-                                                                                           ] ,
-                                                                                           [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#maturityDataUsed> ;
-                                                                                             owl:cardinality "1"^^xsd:nonNegativeInteger
-                                                                                           ] ,
-                                                                                           [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#totalMaturityScore> ;
-                                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                             owl:onDataRange xsd:float
-                                                                                           ] ;
-                                                                           owl:disjointWith <https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringStage> ;
-                                                                           terms:description "Represents the sum of the maturity scores of all evaluated teeth"@en ;
-                                                                           rdfs:label "Dental Maturity Score"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#FDI
@@ -2517,7 +2544,7 @@ foaf:Person rdf:type owl:Class .
                                                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                                             ] ;
                                                                             owl:disjointWith <https://aidentifyage.github.io/ontology/AIdentifyAGE#ForensicIndividualCasePerson> ;
-                                                                            terms:description "Represents a forensic expert performing a medico-legal examination for age assessment purposes"@en ;
+                                                                            terms:description "Contains data about a Forensic Expert"@en ;
                                                                             rdfs:label "Forensic Expert Person"@en .
 
 
@@ -2537,11 +2564,6 @@ foaf:Person rdf:type owl:Class .
                                                                                                       owl:allValuesFrom <https://aidentifyage.github.io/ontology/AIdentifyAGE#ForensicIndividualCaseRole>
                                                                                                     ] ,
                                                                                                     [ rdf:type owl:Restriction ;
-                                                                                                      owl:onProperty foaf:age ;
-                                                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                                      owl:onDataRange xsd:positiveInteger
-                                                                                                    ] ,
-                                                                                                    [ rdf:type owl:Restriction ;
                                                                                                       owl:onProperty foaf:name ;
                                                                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                                       owl:onDataRange xsd:string
@@ -2555,8 +2577,18 @@ foaf:Person rdf:type owl:Class .
                                                                                                       owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#providedBirthDate> ;
                                                                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                                       owl:onDataRange xsd:dateTime
+                                                                                                    ] ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty foaf:age ;
+                                                                                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                      owl:onDataRange xsd:float
+                                                                                                    ] ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#reportedAge> ;
+                                                                                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                      owl:onDataRange xsd:float
                                                                                                     ] ;
-                                                                                    terms:description "Represents an individual undergoing a medico-legal examination for age assessment purposes"@en ;
+                                                                                    terms:description "Contains data about an individual undergoing a medico-legal examination for age assessment purposes"@en ;
                                                                                     rdfs:label "Forensic Individual Case Person"@en .
 
 
@@ -2741,13 +2773,8 @@ foaf:Person rdf:type owl:Class .
                                                                          rdfs:label "Kullman Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MLSchema
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#MLSchema> rdf:type owl:Class ;
-                                                                rdfs:label "MLSchema" .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData> rdf:type owl:Class ;
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData
+<https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData> rdf:type owl:Class ;
                                                                             rdfs:subClassOf obo:OGMS_0000123 ,
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#collectedBy> ;
@@ -2766,7 +2793,7 @@ foaf:Person rdf:type owl:Class .
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#hasRequestingEntity> ;
                                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                              owl:onClass <https://aidentifyage.github.io/ontology/AIdentifyAGE#OrganizationProcess>
+                                                                                              owl:onClass <https://aidentifyage.github.io/ontology/AIdentifyAGE#Organization>
                                                                                             ] ,
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#forensicCaseNumber> ;
@@ -2778,8 +2805,13 @@ foaf:Person rdf:type owl:Class .
                                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                               owl:onDataRange xsd:dateTime
                                                                                             ] ;
-                                                                            terms:description "Represents the collected information at the beginning of the forensic process"@en ;
+                                                                            terms:description "Contains data about a given Legal Medical Exam."@en ;
                                                                             rdfs:label "Legal Medical Exam Data"@en .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MLSchema
+<https://aidentifyage.github.io/ontology/AIdentifyAGE#MLSchema> rdf:type owl:Class ;
+                                                                rdfs:label "MLSchema" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MincerReferenceStudy
@@ -2915,24 +2947,35 @@ foaf:Person rdf:type owl:Class .
                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                              owl:onClass <https://aidentifyage.github.io/ontology/AIdentifyAGE#TeethSet>
                                                                            ] ;
-                                                           rdfs:comment "Represents an Orthopantomogram (OPG). It consists in a panoramic X-Ray picture of a person's mouth (oral cavity and complete set of teeth)" .
+                                                           terms:description "Panoramic radiography whereby the coordinated motion of a scanning fan-shaped X-ray beam and an X-ray image receptor, both rotating around the head."@en ;
+                                                           rdfs:label "OPG"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#OrganizationProcess
-<https://aidentifyage.github.io/ontology/AIdentifyAGE#OrganizationProcess> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#foaf> ,
-                                                                                           [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#organizationProcessID> ;
-                                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                             owl:onDataRange xsd:string
-                                                                                           ] ,
-                                                                                           [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#requestingEntityName> ;
-                                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                             owl:onDataRange xsd:string
-                                                                                           ] ;
-                                                                           terms:description "Represents the information regarding the requesting entity"@en ;
-                                                                           rdfs:label "Organization Process"@en .
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Organization
+<https://aidentifyage.github.io/ontology/AIdentifyAGE#Organization> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf obo:OBI_0000245 ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#organizationProcessID> ;
+                                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                      owl:onDataRange xsd:string
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#requestingEntityName> ;
+                                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                      owl:onDataRange xsd:string
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#locationName> ;
+                                                                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                                    ] ;
+                                                                    terms:description "Contains data about a given Legal Entity"@en ;
+                                                                    rdfs:label "Organization"@en .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#OrthodonticAppliances
+<https://aidentifyage.github.io/ontology/AIdentifyAGE#OrthodonticAppliances> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption> ;
+                                                                             rdfs:label "Orthodontic Appliances" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#PalmerNotation
@@ -2943,8 +2986,8 @@ foaf:Person rdf:type owl:Class .
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#RadiographicImagingLegalMedicalExamData
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#RadiographicImagingLegalMedicalExamData> rdf:type owl:Class ;
-                                                                                               rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData> ;
-                                                                                               terms:description "Represents the collected information at the beginning of the forensic process, mainly related to a radiographical-based forensic process"@en ;
+                                                                                               rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData> ;
+                                                                                               terms:description "Contains data about a given Legal Medical Exam based on Radiographic Images"@en ;
                                                                                                rdfs:label "Radiographic Imaging Legal Medical Exam Data"@en .
 
 
@@ -2968,8 +3011,13 @@ foaf:Person rdf:type owl:Class .
                                                                                         owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#studyYear> ;
                                                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                         owl:onDataRange xsd:positiveInteger
+                                                                                      ] ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#populationAffinity> ;
+                                                                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                        owl:onDataRange xsd:positiveInteger
                                                                                       ] ;
-                                                                      terms:description "Represents a group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
+                                                                      terms:description "Group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                                                       rdfs:label "Reference Study"@en .
 
 
@@ -2993,24 +3041,39 @@ foaf:Person rdf:type owl:Class .
                                                                                               owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#standardDev> ;
                                                                                               owl:someValuesFrom xsd:float
                                                                                             ] ;
-                                                                            terms:description "Represents the application of a reference study (group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data) to a given set of tooth development stages"@en ;
+                                                                            terms:description "Group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data."@en ;
                                                                             rdfs:label "Reference Study Result"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ReportData
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#ReportData> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf obo:IAO_0000030 ,
+                                                                  rdfs:subClassOf obo:IAO_0000027 ,
                                                                                   [ rdf:type owl:Restriction ;
                                                                                     owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#containsData> ;
-                                                                                    owl:someValuesFrom <https://aidentifyage.github.io/ontology/AIdentifyAGE#MedicalLegalExamData>
+                                                                                    owl:someValuesFrom <https://aidentifyage.github.io/ontology/AIdentifyAGE#LegalMedicalExamData>
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#chronologicalAge> ;
+                                                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                    owl:onDataRange xsd:date
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#confidence> ;
+                                                                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                                                   ] ,
                                                                                   [ rdf:type owl:Restriction ;
                                                                                     owl:onProperty <https://aidentifyage.github.io/ontology/AIdentifyAGE#reportDatetime> ;
                                                                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                     owl:onDataRange xsd:dateTime
                                                                                   ] ;
-                                                                  terms:description "Represents a final legal medicine report for judicial purposes"@en ;
+                                                                  terms:description "Contains data about a given Report."@en ;
                                                                   rdfs:label "Report Data" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#RootCanal
+<https://aidentifyage.github.io/ontology/AIdentifyAGE#RootCanal> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#TreatmentOption> ;
+                                                                 rdfs:label "Root Canal" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringMethod
@@ -3028,15 +3091,14 @@ I.e. represents a set of ToothStage"""@en ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringStage
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringStage> rdf:type owl:Class ;
                                                                     rdfs:subClassOf <https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringMethod> ;
-                                                                    terms:description "Represents the aggregation of a set of Tooth Stages for tooth stage methods that do not rely on maturity dental scores"@en .
+                                                                    terms:description "Objectively defined step of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity."@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Stage
 <https://aidentifyage.github.io/ontology/AIdentifyAGE#Stage> rdf:type owl:Class ;
                                                              rdfs:subClassOf obo:IAO_0000104 ;
-                                                             terms:description "Represents the Scoring System applied to a given teeth (or tooth set) to estimate a persons dental age"@en ;
-                                                             rdfs:label "Stage" ;
-                                                             skos:definition "Formal phase within a process or life cycle, delimited by objective entry and exit criteria, characterized by specific purposes, activities, and outcomes"@en .
+                                                             terms:description "Formal phase within a process or life cycle, delimited by objective entry and exit criteria, characterized by specific purposes, activities, and outcomes"@en ;
+                                                             rdfs:label "Stage" .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#TeethSet
@@ -3063,7 +3125,7 @@ I.e. represents a set of ToothStage"""@en ;
                                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                     owl:onClass obo:FMA_12516
                                                                                   ] ;
-                                                                  terms:description "Defined phase in the process of tooth development, characterized by specific and observable morphological and radiographic criteria of crown and/or root formation and mineralization, used as a reproducible unit for age estimation"@en ;
+                                                                  terms:description "Defined phase in the process of tooth development, characterized by specific and observable morphological and radiographic criteria of crown and/or root formation and mineralization, used as a reproducible unit for age estimation."@en ;
                                                                   rdfs:label "Tooth Stage"@en .
 
 
@@ -4832,20 +4894,6 @@ obo:FMA_55637 <https://aidentifyage.github.io/ontology/AIdentifyAGE#synonym> "Bi
 #################################################################
 #    General axioms
 #################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <https://aidentifyage.github.io/ontology/AIdentifyAGE#CoefficientMaturityData>
-                <https://aidentifyage.github.io/ontology/AIdentifyAGE#DataReferenceStudy>
-                <https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianMaturityScoring>
-                <https://aidentifyage.github.io/ontology/AIdentifyAGE#DentalAgeAssessment>
-                <https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy>
-                <https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudyResult>
-                <https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringMethod>
-                <https://aidentifyage.github.io/ontology/AIdentifyAGE#Stage>
-                <https://aidentifyage.github.io/ontology/AIdentifyAGE#ToothStage>
-              )
-] .
-
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( <https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianReferenceStudy>

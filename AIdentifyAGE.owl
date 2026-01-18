@@ -46,18 +46,12 @@ Cátia Vaz</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:issued"/>
-        <Literal>11/12/2025</Literal>
+        <Literal>18/01/2026</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal>v1.0.3-beta</Literal>
+        <Literal>v1.0.4-beta</Literal>
     </Annotation>
-    <Declaration>
-        <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#RootCanal"/>
-    </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:BFO_0000023"/>
     </Declaration>
@@ -101,6 +95,9 @@ Cátia Vaz</Literal>
         <Class IRI="http://snomed.info/id/363680008"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.w3.org/ns/mls#InformationEntity"/>
     </Declaration>
     <Declaration>
@@ -113,22 +110,25 @@ Cátia Vaz</Literal>
         <Class IRI="http://www.w3.org/ns/mls#Quality"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="foaf:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeeReferenceStudy"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#AIDentalAgeAsessment"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/AIdentifyAGE#AIDentalAgeThresholdAssessment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/AIdentifyAGE#AIRegDentalAgeAssessement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#AIThresholdDentalAgeAssessment"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="/AIdentifyAGE#Braces"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/AIdentifyAGE#CoefficientMaturityData"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#DCTerms"/>
@@ -141,6 +141,9 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#DemirjianCoefficientMaturityData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#DemirjianMaturityScoring"/>
@@ -156,9 +159,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#DentalAgeAssessment"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/AIdentifyAGE#DentalMaturityScore"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#FDI"/>
@@ -239,10 +239,10 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#KullmanToothStage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#MLSchema"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#MLSchema"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#MincerReferenceStudy"/>
@@ -290,7 +290,10 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#OPG"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#OrganizationProcess"/>
+        <Class IRI="/AIdentifyAGE#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/AIdentifyAGE#OrthodonticAppliances"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#PalmerNotation"/>
@@ -306,6 +309,9 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#ReportData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/AIdentifyAGE#RootCanal"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#ScoringMethod"/>
@@ -519,6 +525,12 @@ Cátia Vaz</Literal>
         <DataProperty abbreviatedIRI="foaf:sex"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#inferenceDateTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#probabilityLegalAgeThreshold"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="/AIdentifyAGE#ageInterval"/>
     </Declaration>
     <Declaration>
@@ -534,7 +546,7 @@ Cátia Vaz</Literal>
         <DataProperty IRI="/AIdentifyAGE#confidence"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/AIdentifyAGE#degreeOfProbability"/>
+        <DataProperty IRI="/AIdentifyAGE#degreeOfProbabilityAge"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/AIdentifyAGE#finalAgeAssessment"/>
@@ -570,22 +582,13 @@ Cátia Vaz</Literal>
         <DataProperty IRI="/AIdentifyAGE#maturityScore"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/AIdentifyAGE#maxAge"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/AIdentifyAGE#maximumProbableAge"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/AIdentifyAGE#meanAge"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/AIdentifyAGE#median"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/AIdentifyAGE#medianAge"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/AIdentifyAGE#minAge"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/AIdentifyAGE#minimumProbableAge"/>
@@ -598,12 +601,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/AIdentifyAGE#organizationProcessID"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/AIdentifyAGE#pairKey"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/AIdentifyAGE#pairValue"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/AIdentifyAGE#populationAffinity"/>
@@ -648,9 +645,6 @@ Cátia Vaz</Literal>
         <DataProperty IRI="/AIdentifyAGE#rootType"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="/AIdentifyAGE#scoreValue"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/AIdentifyAGE#stageSystemUsed"/>
     </Declaration>
     <Declaration>
@@ -661,9 +655,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/AIdentifyAGE#studyYear"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/AIdentifyAGE#totalMaturityScore"/>
@@ -1576,19 +1567,17 @@ Cátia Vaz</Literal>
         <Datatype abbreviatedIRI="terms:URI"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances"/>
-        <Class IRI="/AIdentifyAGE#TreatmentOption"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#RootCanal"/>
-        <Class IRI="/AIdentifyAGE#TreatmentOption"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="obo:FMA_12516"/>
         <ObjectMinCardinality cardinality="0">
             <ObjectProperty IRI="/AIdentifyAGE#hasTreatment"/>
             <Class IRI="/AIdentifyAGE#TreatmentOption"/>
         </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:FMA_12516"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#rootType"/>
+        </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
@@ -1621,13 +1610,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#MLSchema"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.w3.org/ns/mls#Model"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/mls#hasQuality"/>
-            <Class IRI="http://www.w3.org/ns/mls#ModelCharacteristic"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="http://www.w3.org/ns/mls#Process"/>
         <Class IRI="/AIdentifyAGE#MLSchema"/>
     </SubClassOf>
@@ -1640,15 +1622,12 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#foaf"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#AIDentalAgeAsessment"/>
-        <Class IRI="/AIdentifyAGE#ReportData"/>
+        <Class IRI="#LeeReferenceStudy"/>
+        <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#AIDentalAgeAsessment"/>
-        <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#confidence"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataMaxCardinality>
+        <Class IRI="/AIdentifyAGE#ReportData"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#AIDentalAgeAsessment"/>
@@ -1670,6 +1649,17 @@ Cátia Vaz</Literal>
         </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/AIdentifyAGE#AIDentalAgeThresholdAssessment"/>
+        <Class IRI="/AIdentifyAGE#AIDentalAgeAsessment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#AIDentalAgeThresholdAssessment"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#legalAgeThreshold"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/AIdentifyAGE#AIRegDentalAgeAssessement"/>
         <Class IRI="/AIdentifyAGE#AIDentalAgeAsessment"/>
     </SubClassOf>
@@ -1682,14 +1672,7 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#AIRegDentalAgeAssessement"/>
         <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#chronologicalAge"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataMaxCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#AIRegDentalAgeAssessement"/>
-        <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#degreeOfProbability"/>
+            <DataProperty IRI="/AIdentifyAGE#degreeOfProbabilityAge"/>
         </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -1709,6 +1692,13 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#AIRegDentalAgeAssessement"/>
         <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#meanAge"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#AIRegDentalAgeAssessement"/>
+        <DataMaxCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#medianAge"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataMaxCardinality>
@@ -1718,12 +1708,6 @@ Cátia Vaz</Literal>
         <DataMaxCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#minimumProbableAge"/>
             <Datatype abbreviatedIRI="xsd:float"/>
-        </DataMaxCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#AIRegDentalAgeAssessement"/>
-        <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#mostLikelyAge"/>
         </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -1746,23 +1730,8 @@ Cátia Vaz</Literal>
         </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#AIThresholdDentalAgeAssessment"/>
-        <Class IRI="/AIdentifyAGE#AIDentalAgeAsessment"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/AIdentifyAGE#Braces"/>
-        <Class IRI="http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#CoefficientMaturityData"/>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#CoefficientMaturityData"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
-            <Class IRI="/AIdentifyAGE#ToothStage"/>
-        </ObjectExactCardinality>
+        <Class IRI="/AIdentifyAGE#OrthodonticAppliances"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#DataCollection"/>
@@ -1772,7 +1741,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#DataCollection"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasLegalExamData"/>
-            <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+            <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1796,13 +1765,19 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#DataReferenceStudy"/>
         <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#ageRange"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#DataReferenceStudy"/>
+        <DataMaxCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#lowerQuartile"/>
         </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#DataReferenceStudy"/>
         <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#maxAge"/>
+            <DataProperty IRI="/AIdentifyAGE#maximumProbableAge"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataMaxCardinality>
     </SubClassOf>
@@ -1816,14 +1791,14 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#DataReferenceStudy"/>
         <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#median"/>
+            <DataProperty IRI="/AIdentifyAGE#medianAge"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#DataReferenceStudy"/>
         <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#minAge"/>
+            <DataProperty IRI="/AIdentifyAGE#minimumProbableAge"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataMaxCardinality>
     </SubClassOf>
@@ -1842,7 +1817,14 @@ Cátia Vaz</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#DemirjianCoefficientMaturityData"/>
-        <Class IRI="/AIdentifyAGE#CoefficientMaturityData"/>
+        <Class abbreviatedIRI="obo:IAO_0000027"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#DemirjianCoefficientMaturityData"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
+            <Class IRI="/AIdentifyAGE#ToothStage"/>
+        </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#DemirjianCoefficientMaturityData"/>
@@ -1859,9 +1841,34 @@ Cátia Vaz</Literal>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#DemirjianCoefficientMaturityData"/>
+        <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
+        <Class IRI="/AIdentifyAGE#ScoringMethod"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
+            <Class IRI="/AIdentifyAGE#DemirjianStages"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="/AIdentifyAGE#hasMaturityScore"/>
+            <Class IRI="/AIdentifyAGE#DemirjianMaturityScoring"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#toothLabel"/>
+            <DataProperty IRI="/AIdentifyAGE#maturityDataUsed"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#totalMaturityScore"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -1883,7 +1890,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#DemirjianReferenceStudy"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#DentalMaturityScore"/>
+            <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1922,14 +1929,7 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#DentalAgeAssessment"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="/AIdentifyAGE#confidence"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#DentalAgeAssessment"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/AIdentifyAGE#degreeOfProbability"/>
+            <DataProperty IRI="/AIdentifyAGE#degreeOfProbabilityAge"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1937,13 +1937,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#DentalAgeAssessment"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/AIdentifyAGE#finalAgeAssessment"/>
-            <Datatype abbreviatedIRI="rdfs:Literal"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#DentalAgeAssessment"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/AIdentifyAGE#legalAgeThreshold"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1958,13 +1951,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#DentalAgeAssessment"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="/AIdentifyAGE#minimumProbableAge"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#DentalAgeAssessment"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="/AIdentifyAGE#mostLikelyAge"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1992,15 +1978,15 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#DentalAgeAssessment"/>
         <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#chronologicalAge"/>
+            <DataProperty IRI="/AIdentifyAGE#highestMinimumProbableAge"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#DentalAgeAssessment"/>
         <DataMaxCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#highestMinimumProbableAge"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
+            <DataProperty IRI="/AIdentifyAGE#legalAgeThreshold"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
         </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -2027,37 +2013,6 @@ Cátia Vaz</Literal>
         <DataMaxCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#relevantAgeLimits"/>
         </DataMaxCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#DentalMaturityScore"/>
-        <Class IRI="/AIdentifyAGE#ScoringMethod"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#DentalMaturityScore"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
-            <Class IRI="/AIdentifyAGE#DemirjianStages"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#DentalMaturityScore"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="/AIdentifyAGE#hasMaturityScore"/>
-            <Class IRI="/AIdentifyAGE#DemirjianMaturityScoring"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#DentalMaturityScore"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#maturityDataUsed"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#DentalMaturityScore"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#totalMaturityScore"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
-        </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#FDI"/>
@@ -2113,13 +2068,6 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ForensicIndividualCasePerson"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty abbreviatedIRI="foaf:age"/>
-            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#ForensicIndividualCasePerson"/>
-        <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="foaf:name"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
@@ -2137,6 +2085,20 @@ Cátia Vaz</Literal>
             <DataProperty IRI="/AIdentifyAGE#providedBirthDate"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
         </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#ForensicIndividualCasePerson"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="foaf:age"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#ForensicIndividualCasePerson"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#reportedAge"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ForensicIndividualCaseRole"/>
@@ -2324,46 +2286,46 @@ Cátia Vaz</Literal>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
         <Class abbreviatedIRI="obo:OGMS_0000123"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#collectedBy"/>
             <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="/AIdentifyAGE#hasIndividual"/>
             <Class IRI="/AIdentifyAGE#ForensicIndividualCasePerson"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="/AIdentifyAGE#hasRadiographicImaging"/>
             <Class IRI="http://snomed.info/id/363680008"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="/AIdentifyAGE#hasRequestingEntity"/>
-            <Class IRI="/AIdentifyAGE#OrganizationProcess"/>
+            <Class IRI="/AIdentifyAGE#Organization"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
         <DataExactCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#forensicCaseNumber"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
         <DataExactCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#forensicExaminationDatetime"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
@@ -2507,22 +2469,32 @@ Cátia Vaz</Literal>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#OrganizationProcess"/>
-        <Class IRI="/AIdentifyAGE#foaf"/>
+        <Class IRI="/AIdentifyAGE#Organization"/>
+        <Class abbreviatedIRI="obo:OBI_0000245"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#OrganizationProcess"/>
+        <Class IRI="/AIdentifyAGE#Organization"/>
         <DataExactCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#organizationProcessID"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#OrganizationProcess"/>
+        <Class IRI="/AIdentifyAGE#Organization"/>
         <DataExactCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#requestingEntityName"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#Organization"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#locationName"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#OrthodonticAppliances"/>
+        <Class IRI="/AIdentifyAGE#TreatmentOption"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#PalmerNotation"/>
@@ -2530,7 +2502,7 @@ Cátia Vaz</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#RadiographicImagingLegalMedicalExamData"/>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
@@ -2563,6 +2535,13 @@ Cátia Vaz</Literal>
             <DataProperty IRI="/AIdentifyAGE#studyYear"/>
             <Datatype abbreviatedIRI="xsd:positiveInteger"/>
         </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#populationAffinity"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ReferenceStudyResult"/>
@@ -2598,14 +2577,27 @@ Cátia Vaz</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ReportData"/>
-        <Class abbreviatedIRI="obo:IAO_0000030"/>
+        <Class abbreviatedIRI="obo:IAO_0000027"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ReportData"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#containsData"/>
-            <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+            <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#ReportData"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#chronologicalAge"/>
+            <Datatype abbreviatedIRI="xsd:date"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#ReportData"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#confidence"/>
+        </DataMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ReportData"/>
@@ -2613,6 +2605,10 @@ Cátia Vaz</Literal>
             <DataProperty IRI="/AIdentifyAGE#reportDatetime"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
         </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#RootCanal"/>
+        <Class IRI="/AIdentifyAGE#TreatmentOption"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ScoringMethod"/>
@@ -2712,23 +2708,16 @@ Cátia Vaz</Literal>
         <Class abbreviatedIRI="obo:FMA_269582"/>
     </SubClassOf>
     <DisjointClasses>
+        <Class IRI="/AIdentifyAGE#AIDentalAgeThresholdAssessment"/>
         <Class IRI="/AIdentifyAGE#AIRegDentalAgeAssessement"/>
-        <Class IRI="/AIdentifyAGE#AIThresholdDentalAgeAssessment"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="/AIdentifyAGE#CoefficientMaturityData"/>
-        <Class IRI="/AIdentifyAGE#DataReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#DemirjianMaturityScoring"/>
-        <Class IRI="/AIdentifyAGE#DentalAgeAssessment"/>
-        <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#ReferenceStudyResult"/>
-        <Class IRI="/AIdentifyAGE#ScoringMethod"/>
-        <Class IRI="/AIdentifyAGE#Stage"/>
-        <Class IRI="/AIdentifyAGE#ToothStage"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="/AIdentifyAGE#DataCollection"/>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
+        <Class IRI="/AIdentifyAGE#ScoringStage"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="/AIdentifyAGE#DemirjianReferenceStudy"/>
@@ -2762,10 +2751,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#MoorreesFanningHuntToothStage"/>
         <Class IRI="/AIdentifyAGE#NollaToothStage"/>
         <Class IRI="/AIdentifyAGE#WillemsToothStage"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="/AIdentifyAGE#DentalMaturityScore"/>
-        <Class IRI="/AIdentifyAGE#ScoringStage"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
@@ -4443,7 +4428,7 @@ Cátia Vaz</Literal>
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#collectedBy"/>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#containsData"/>
@@ -4459,7 +4444,7 @@ Cátia Vaz</Literal>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasIndividual"/>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasInferenceRun"/>
@@ -4475,11 +4460,11 @@ Cátia Vaz</Literal>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasMaturityScore"/>
-        <Class IRI="/AIdentifyAGE#DentalMaturityScore"/>
+        <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasRadiographicImaging"/>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasReferenceStudy"/>
@@ -4491,7 +4476,7 @@ Cátia Vaz</Literal>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasRequestingEntity"/>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasRole"/>
@@ -4519,10 +4504,6 @@ Cátia Vaz</Literal>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
-        <Class IRI="/AIdentifyAGE#CoefficientMaturityData"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
         <Class IRI="/AIdentifyAGE#DataReferenceStudy"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -4539,7 +4520,7 @@ Cátia Vaz</Literal>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/AIdentifyAGE#containsData"/>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/AIdentifyAGE#containsRadiographicImaging"/>
@@ -4559,7 +4540,7 @@ Cátia Vaz</Literal>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/AIdentifyAGE#hasLegalExamData"/>
-        <Class IRI="/AIdentifyAGE#MedicalLegalExamData"/>
+        <Class IRI="/AIdentifyAGE#LegalMedicalExamData"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/AIdentifyAGE#hasMaturityData"/>
@@ -4605,6 +4586,26 @@ Cátia Vaz</Literal>
         <ObjectProperty IRI="/AIdentifyAGE#hasTreatment"/>
         <Class IRI="/AIdentifyAGE#TreatmentOption"/>
     </ObjectPropertyRange>
+    <EquivalentDataProperties>
+        <DataProperty abbreviatedIRI="foaf:age"/>
+        <DataProperty IRI="/AIdentifyAGE#reportedAge"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="/AIdentifyAGE#ageInterval"/>
+        <DataProperty IRI="/AIdentifyAGE#ageRange"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="/AIdentifyAGE#confidence"/>
+        <DataProperty IRI="/AIdentifyAGE#mostProbableAge"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="/AIdentifyAGE#degreeOfProbabilityAge"/>
+        <DataProperty IRI="/AIdentifyAGE#probabilityGivenAge"/>
+    </EquivalentDataProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#inferenceDateTime"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="/AIdentifyAGE#ageInterval"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -4622,7 +4623,7 @@ Cátia Vaz</Literal>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="/AIdentifyAGE#degreeOfProbability"/>
+        <DataProperty IRI="/AIdentifyAGE#degreeOfProbabilityAge"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -4658,10 +4659,6 @@ Cátia Vaz</Literal>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="/AIdentifyAGE#maxAge"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="/AIdentifyAGE#maximumProbableAge"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -4670,15 +4667,7 @@ Cátia Vaz</Literal>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="/AIdentifyAGE#median"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="/AIdentifyAGE#medianAge"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="/AIdentifyAGE#minAge"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -4746,10 +4735,6 @@ Cátia Vaz</Literal>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="/AIdentifyAGE#scoreValue"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="/AIdentifyAGE#standardDev"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -4766,6 +4751,10 @@ Cátia Vaz</Literal>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
+        <DataProperty IRI="#inferenceDateTime"/>
+        <Class IRI="/AIdentifyAGE#InferenceRun"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="/AIdentifyAGE#forensicExpertID"/>
         <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
     </DataPropertyDomain>
@@ -4775,7 +4764,7 @@ Cátia Vaz</Literal>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/AIdentifyAGE#organizationProcessID"/>
-        <Class IRI="/AIdentifyAGE#OrganizationProcess"/>
+        <Class IRI="/AIdentifyAGE#Organization"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/AIdentifyAGE#providedBirthDate"/>
@@ -4790,16 +4779,32 @@ Cátia Vaz</Literal>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#inferenceDateTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="/AIdentifyAGE#ageInterval"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#ageRange"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="/AIdentifyAGE#chronologicalAge"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#confidence"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#degreeOfProbabilityAge"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="/AIdentifyAGE#degreeOfProbability"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
+        <DataProperty IRI="/AIdentifyAGE#finalAgeAssessment"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/AIdentifyAGE#forensicCaseNumber"/>
@@ -4814,20 +4819,40 @@ Cátia Vaz</Literal>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#legalAgeThreshold"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="/AIdentifyAGE#material"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#maximumProbableAge"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#meanAge"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#medianAge"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#minimumProbableAge"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#mostLikelyAge"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#mostProbableAge"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="/AIdentifyAGE#organizationProcessID"/>
         <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/AIdentifyAGE#pairKey"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="/AIdentifyAGE#pairValue"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/AIdentifyAGE#predictedAge"/>
@@ -4842,8 +4867,12 @@ Cátia Vaz</Literal>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="/AIdentifyAGE#probabilityGivenAge"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="/AIdentifyAGE#providedBirthDate"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="/AIdentifyAGE#radiographicImageURI"/>
@@ -4881,16 +4910,6 @@ Cátia Vaz</Literal>
         <DataProperty IRI="/AIdentifyAGE#totalMaturityScore"/>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://aidentifyage.com/ontologies/AIdentifyAGE#OrthodonticAppliances</IRI>
-        <Literal>Orthodontic Appliances</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://aidentifyage.com/ontologies/AIdentifyAGE#RootCanal</IRI>
-        <Literal>Root Canal</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="prov:wasDerivedFrom"/>
@@ -5257,7 +5276,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <Literal xml:lang="en">has part</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
         <AbbreviatedIRI>obo:FMA_12516</AbbreviatedIRI>
         <Literal xml:lang="en">Hard structure composed of dentine and pulp, usually covered partially with enamel and cementum, anchored in the alveolar bone, serving in mastication, phonetics, and aesthetics</Literal>
     </AnnotationAssertion>
@@ -6672,14 +6691,44 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal xml:lang="en">mereotopologically related to</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>http://snomed.info/id/363680008</IRI>
+        <Literal xml:lang="en">Contains data about a given Radiographic Imaging Procedure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <Literal xml:lang="en">Group of individuals involved in a medico-legal examination for age assessment purposes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
         <AbbreviatedIRI>foaf:age</AbbreviatedIRI>
-        <Literal>Provided Age</Literal>
+        <Literal xml:lang="en">Value reported by the individual (in years)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>foaf:sex</AbbreviatedIRI>
         <Literal>sex</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#LeeReferenceStudy</IRI>
+        <Literal xml:lang="en">Lee’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LeeReferenceStudy</IRI>
+        <Literal xml:lang="en">Lee Reference Study</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#probabilityLegalAgeThreshold</IRI>
+        <Literal xml:lang="en">Probability of having already reached the legal age threshold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#probabilityLegalAgeThreshold</IRI>
+        <Literal xml:lang="en">Probability Legal Age Threshold</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -6693,6 +6742,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#AIDentalAgeThresholdAssessment</IRI>
+        <Literal xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on AI/ML methods for defining accurate legal age thresholds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#AIDentalAgeThresholdAssessment</IRI>
+        <Literal xml:lang="en">AI Dental Age Threshold Assessment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#AIRegDentalAgeAssessement</IRI>
         <Literal xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age, using AI/ML methods to perform regression tasks</Literal>
     </AnnotationAssertion>
@@ -6702,24 +6761,9 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal xml:lang="en">AI Reg Dental Age Assessment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <IRI>/AIdentifyAGE#AIThresholdDentalAgeAssessment</IRI>
-        <Literal xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on AI/ML methods for defining accurate legal age thresholds</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AIdentifyAGE#AIThresholdDentalAgeAssessment</IRI>
-        <Literal xml:lang="en">AI Threshold Dental Age Assessment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <IRI>/AIdentifyAGE#CoefficientMaturityData</IRI>
-        <Literal xml:lang="en">Represents a reference study entry related to maturity scores</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AIdentifyAGE#CoefficientMaturityData</IRI>
-        <Literal xml:lang="en">Coefficient Maturity Data</Literal>
+        <IRI>/AIdentifyAGE#Braces</IRI>
+        <Literal xml:lang="en">Braces</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6729,7 +6773,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#DataCollection</IRI>
-        <Literal>Represents a set of Legal Medical Exams Data</Literal>
+        <Literal xml:lang="en">Represents a set of Legal Medical Exam Data</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6749,12 +6793,22 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#DemirjianCoefficientMaturityData</IRI>
-        <Literal>Represents a reference study entry related to maturity scores (e.g. reference studies that use the demirjian tooth development stages)</Literal>
+        <Literal xml:lang="en">Dental Maturity Score resulting index, used as a global quantitative measure of dental maturity, which is then converted into estimated age.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#DemirjianCoefficientMaturityData</IRI>
         <Literal xml:lang="en">Demirjian Coefficient Maturity Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#DemirjianDentalMaturityScore</IRI>
+        <Literal xml:lang="en">Represents the sum of the maturity scores of all evaluated teeth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#DemirjianDentalMaturityScore</IRI>
+        <Literal xml:lang="en">Demirjian Dental Maturity Score</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -6789,22 +6843,12 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#DentalAgeAssessment</IRI>
-        <Literal xml:lang="en">Represents the final age assessment report results, produced by using dental information to relate it with chronological age, based on tradicional methods</Literal>
+        <Literal xml:lang="en">Processes using dental information and relate it to chronological age</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#DentalAgeAssessment</IRI>
         <Literal xml:lang="en">Dental Age Assessment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <IRI>/AIdentifyAGE#DentalMaturityScore</IRI>
-        <Literal xml:lang="en">Represents the sum of the maturity scores of all evaluated teeth</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AIdentifyAGE#DentalMaturityScore</IRI>
-        <Literal xml:lang="en">Dental Maturity Score</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -6819,7 +6863,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#ForensicExpertPerson</IRI>
-        <Literal xml:lang="en">Represents a forensic expert performing a medico-legal examination for age assessment purposes</Literal>
+        <Literal xml:lang="en">Contains data about a Forensic Expert</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6839,7 +6883,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#ForensicIndividualCasePerson</IRI>
-        <Literal xml:lang="en">Represents an individual undergoing a medico-legal examination for age assessment purposes</Literal>
+        <Literal xml:lang="en">Contains data about an individual undergoing a medico-legal examination for age assessment purposes</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6952,19 +6996,19 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal xml:lang="en">Kullman Tooth Stage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#LegalMedicalExamData</IRI>
+        <Literal xml:lang="en">Contains data about a given Legal Medical Exam.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#LegalMedicalExamData</IRI>
+        <Literal xml:lang="en">Legal Medical Exam Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#MLSchema</IRI>
         <Literal>MLSchema</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <IRI>/AIdentifyAGE#MedicalLegalExamData</IRI>
-        <Literal xml:lang="en">Represents the collected information at the beginning of the forensic process</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AIdentifyAGE#MedicalLegalExamData</IRI>
-        <Literal xml:lang="en">Legal Medical Exam Data</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -7042,19 +7086,29 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal xml:lang="en">Nolla Tooth Stage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/AIdentifyAGE#OPG</IRI>
-        <Literal>Represents an Orthopantomogram (OPG). It consists in a panoramic X-Ray picture of a person&apos;s mouth (oral cavity and complete set of teeth)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <IRI>/AIdentifyAGE#OrganizationProcess</IRI>
-        <Literal xml:lang="en">Represents the information regarding the requesting entity</Literal>
+        <IRI>/AIdentifyAGE#OPG</IRI>
+        <Literal xml:lang="en">Panoramic radiography whereby the coordinated motion of a scanning fan-shaped X-ray beam and an X-ray image receptor, both rotating around the head.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AIdentifyAGE#OrganizationProcess</IRI>
-        <Literal xml:lang="en">Organization Process</Literal>
+        <IRI>/AIdentifyAGE#OPG</IRI>
+        <Literal xml:lang="en">OPG</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#Organization</IRI>
+        <Literal xml:lang="en">Contains data about a given Legal Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#Organization</IRI>
+        <Literal xml:lang="en">Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#OrthodonticAppliances</IRI>
+        <Literal>Orthodontic Appliances</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -7064,7 +7118,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#RadiographicImagingLegalMedicalExamData</IRI>
-        <Literal xml:lang="en">Represents the collected information at the beginning of the forensic process, mainly related to a radiographical-based forensic process</Literal>
+        <Literal xml:lang="en">Contains data about a given Legal Medical Exam based on Radiographic Images</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7074,7 +7128,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#ReferenceStudy</IRI>
-        <Literal xml:lang="en">Represents a group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</Literal>
+        <Literal xml:lang="en">Group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7084,7 +7138,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#ReferenceStudyResult</IRI>
-        <Literal xml:lang="en">Represents the application of a reference study (group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data) to a given set of tooth development stages</Literal>
+        <Literal xml:lang="en">Group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7094,12 +7148,17 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#ReportData</IRI>
-        <Literal xml:lang="en">Represents a final legal medicine report for judicial purposes</Literal>
+        <Literal xml:lang="en">Contains data about a given Report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#ReportData</IRI>
         <Literal>Report Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#RootCanal</IRI>
+        <Literal>Root Canal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -7115,22 +7174,17 @@ I.e. represents a set of ToothStage</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#ScoringStage</IRI>
-        <Literal xml:lang="en">Represents the aggregation of a set of Tooth Stages for tooth stage methods that do not rely on maturity dental scores</Literal>
+        <Literal xml:lang="en">Objectively defined step of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#Stage</IRI>
-        <Literal xml:lang="en">Represents the Scoring System applied to a given teeth (or tooth set) to estimate a persons dental age</Literal>
+        <Literal xml:lang="en">Formal phase within a process or life cycle, delimited by objective entry and exit criteria, characterized by specific purposes, activities, and outcomes</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#Stage</IRI>
         <Literal>Stage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>/AIdentifyAGE#Stage</IRI>
-        <Literal xml:lang="en">Formal phase within a process or life cycle, delimited by objective entry and exit criteria, characterized by specific purposes, activities, and outcomes</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -7145,7 +7199,7 @@ I.e. represents a set of ToothStage</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#ToothStage</IRI>
-        <Literal xml:lang="en">Defined phase in the process of tooth development, characterized by specific and observable morphological and radiographic criteria of crown and/or root formation and mineralization, used as a reproducible unit for age estimation</Literal>
+        <Literal xml:lang="en">Defined phase in the process of tooth development, characterized by specific and observable morphological and radiographic criteria of crown and/or root formation and mineralization, used as a reproducible unit for age estimation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7183,6 +7237,78 @@ I.e. represents a set of ToothStage</Literal>
         <Literal xml:lang="en">Willems Tooth Stage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#ageInterval</IRI>
+        <Literal xml:lang="en">The range will have a minimum limit equal to the minimum age and a maximum limit equal to the maximum age.
+
+Using AI methods:
+Three different models
+
+Using manual methods:
+Three different reference studies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#ageInterval</IRI>
+        <Literal xml:lang="en">Age Interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#ageRange</IRI>
+        <Literal xml:lang="en">The range will have a minimum limit equal to the minimum age and a maximum limit equal to the maximum age.
+
+Using AI methods:
+Three different models
+
+Using manual methods:
+Three different reference studies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#ageRange</IRI>
+        <Literal xml:lang="en">Age Range</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#chronologicalAge</IRI>
+        <Literal xml:lang="en">Actual time elapsed since birth (in years)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#chronologicalAge</IRI>
+        <Literal xml:lang="en">Chronological Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#confidence</IRI>
+        <Literal xml:lang="en">Range value with the highest likelihood of representing an individual&apos;s true time since birth, based on biological indicators. An estimate and a 95% confidece Interval.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#confidence</IRI>
+        <Literal xml:lang="en">Confidence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#degreeOfProbabilityAge</IRI>
+        <Literal xml:lang="en">Probability of the age the individual claims to be.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#degreeOfProbabilityAge</IRI>
+        <Literal xml:lang="en">Degree of Probability Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#finalAgeAssessment</IRI>
+        <Literal xml:lang="en">Determination of the most probable value or range representing an individual&apos;s time since birth.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#finalAgeAssessment</IRI>
+        <Literal xml:lang="en">Final Age Assessment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#foaf</IRI>
         <Literal>FOAF</Literal>
@@ -7203,9 +7329,120 @@ I.e. represents a set of ToothStage</Literal>
         <Literal>Forensic Expert ID</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#highestMinimumProbableAge</IRI>
+        <Literal xml:lang="en">Indicate the maximum of three minimum ages
+
+Using AI methods:
+Three different models
+
+Using manual methods:
+Three different reference studies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#highestMinimumProbableAge</IRI>
+        <Literal xml:lang="en">Highest MInimum Probable Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#legalAgeThreshold</IRI>
+        <Literal xml:lang="en">Minimum age defined by law for a person to acquire specific legal rights and responsibilities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#legalAgeThreshold</IRI>
+        <Literal xml:lang="en">Legal Age Threshold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#material</IRI>
         <Literal>Filling Material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#maximumProbableAge</IRI>
+        <Literal xml:lang="en">Highest probable value inferred from a particular developmental stage (OPG).
+- The 97.5th percentile of the actual test sample values associated with the estimates between:
+]MeanAge – 6 months; MeanAge + 6 months[</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#maximumProbableAge</IRI>
+        <Literal xml:lang="en">Maximum (Probable) Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#meanAge</IRI>
+        <Literal xml:lang="en">Estimate (conditional average value)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#meanAge</IRI>
+        <Literal xml:lang="en">Mean Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#medianAge</IRI>
+        <Literal xml:lang="en">The median of the actual test sample values associated with the estimates between:
+]MeanAge – 6 months; MeanAge + 6 months[</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#medianAge</IRI>
+        <Literal xml:lang="en">Median Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#minimumProbableAge</IRI>
+        <Literal xml:lang="en">Lowest probable value inferred from a particular developmental stage (OPG). 
+- the 2.5th percentile of the actual test sample values associated with the estimates between: 
+]MeanAge – 6 months; MeanAge + 6 months[</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#minimumProbableAge</IRI>
+        <Literal xml:lang="en">Minimum (Probable) Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#mostLikelyAge</IRI>
+        <Literal xml:lang="en">Value that best corresponds with available scientific and medical indicators (mean age)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#mostLikelyAge</IRI>
+        <Literal xml:lang="en">Most Likeky Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#mostProbableAge</IRI>
+        <Literal xml:lang="en">Range value with the highest likelihood of representing an individual&apos;s true time since birth, based on biological indicators. An estimate and a 95% confidece Interval.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#mostProbableAge</IRI>
+        <Literal xml:lang="en">Most Probable Age (Interval)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#probabilityGivenAge</IRI>
+        <Literal xml:lang="en">Probability of the age the individual claims to be.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#probabilityGivenAge</IRI>
+        <Literal xml:lang="en">Probability Given Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#providedBirthDate</IRI>
+        <Literal xml:lang="en">Value reported by the individual (in format dd-mm-yyyy)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#providedBirthDate</IRI>
+        <Literal xml:lang="en">Provided Birth Date</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7213,14 +7450,24 @@ I.e. represents a set of ToothStage</Literal>
         <Literal>Report DateTime</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#reportedAge</IRI>
+        <Literal xml:lang="en">Value reported by the individual (in years)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#reportedAge</IRI>
+        <Literal xml:lang="en">Reported Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#rootType</IRI>
         <Literal>Root Type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AIdentifyAGE#scoreValue</IRI>
-        <Literal>Score Value</Literal>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#standardDev</IRI>
+        <Literal xml:lang="en">Standard deviation of the estimation error in test sample.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7229,12 +7476,12 @@ I.e. represents a set of ToothStage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147488372"/>
+        <AnonymousIndividual nodeID="_:genid2147486009"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147488373"/>
+        <AnonymousIndividual nodeID="_:genid2147486010"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
