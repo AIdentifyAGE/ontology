@@ -1997,7 +1997,7 @@ AIdentifyAGE:nameSubject rdf:type owl:DatatypeProperty ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#organizationProcessID
 AIdentifyAGE:organizationProcessID rdf:type owl:DatatypeProperty ;
                                    rdfs:subPropertyOf owl:topDataProperty ;
-                                   rdfs:domain AIdentifyAGE:Organization ;
+                                   rdfs:domain foaf:Organization ;
                                    rdfs:range xsd:string ;
                                    terms:description "Number of a forensic case given by a specific organization different from the one performing the forensic examination"@en ;
                                    rdfs:label "Organization Process ID"@en .
@@ -2064,6 +2064,12 @@ AIdentifyAGE:reportDatetime rdf:type owl:DatatypeProperty ;
                             rdfs:range xsd:dateTime ;
                             terms:description "Date of the delivering of a report"@en ;
                             rdfs:label "Report DateTime" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#reportID
+AIdentifyAGE:reportID rdf:type owl:DatatypeProperty ;
+                      terms:description "ID number for a given report"@en ;
+                      rdfs:label "Report ID"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#reportedAge
@@ -2193,16 +2199,6 @@ terms:LocationPeriodOrJurisdiction rdfs:subClassOf AIdentifyAGE:DCTerms .
 
 ###  http://snomed.info/id/363680008
 <http://snomed.info/id/363680008> rdf:type owl:Class ;
-                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                    owl:onProperty AIdentifyAGE:radiographicImageURI ;
-                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                    owl:onDataRange terms:URI
-                                                  ] ,
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty AIdentifyAGE:radiographicTakenDatetime ;
-                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                    owl:onDataRange xsd:dateTime
-                                                  ] ;
                                   terms:description "Contains data about a given Radiographic Imaging Procedure."@en .
 
 
@@ -2221,7 +2217,11 @@ terms:LocationPeriodOrJurisdiction rdfs:subClassOf AIdentifyAGE:DCTerms .
 
 
 ###  http://www.w3.org/ns/mls#Model
-<http://www.w3.org/ns/mls#Model> rdf:type owl:Class .
+<http://www.w3.org/ns/mls#Model> rdf:type owl:Class ;
+                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://www.w3.org/ns/mls#hasQuality> ;
+                                                   owl:someValuesFrom <http://www.w3.org/ns/mls#ModelCharacteristic>
+                                                 ] .
 
 
 ###  http://www.w3.org/ns/mls#Process
@@ -2239,16 +2239,16 @@ foaf:Agent rdf:type owl:Class ;
            rdfs:subClassOf AIdentifyAGE:foaf .
 
 
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class ;
+                  rdfs:subClassOf foaf:Agent ;
+                  rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/" ;
+                  rdfs:label "Organization"@en .
+
+
 ###  http://xmlns.com/foaf/0.1/Person
 foaf:Person rdf:type owl:Class ;
             terms:description "Group of individuals involved in a medico-legal examination for age assessment purposes."@en .
-
-
-###  https://aidentifyage.github.io/ontology#LeeReferenceStudy
-:LeeReferenceStudy rdf:type owl:Class ;
-                   rdfs:subClassOf AIdentifyAGE:ReferenceStudy ;
-                   terms:description "Lee’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
-                   rdfs:label "Lee Reference Study"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#AIDentalAgeAssessment
@@ -2682,19 +2682,21 @@ AIdentifyAGE:GarnReferenceStudy rdf:type owl:Class ;
                                 rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
                                                 [ rdf:type owl:Restriction ;
                                                   owl:onProperty AIdentifyAGE:hasScoring ;
-                                                  owl:allValuesFrom AIdentifyAGE:GarnScoring
+                                                  owl:allValuesFrom AIdentifyAGE:GarnScoringMethod
                                                 ] ;
                                 terms:description "Garn’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data."@en ;
                                 rdfs:label "Garn Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GarnScoring
-AIdentifyAGE:GarnScoring rdf:type owl:Class ;
-                         rdfs:subClassOf AIdentifyAGE:ScoringStage ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty AIdentifyAGE:hasToothStage ;
-                                           owl:allValuesFrom AIdentifyAGE:GarnToothStage
-                                         ] .
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GarnScoringMethod
+AIdentifyAGE:GarnScoringMethod rdf:type owl:Class ;
+                               rdfs:subClassOf AIdentifyAGE:ScoringStage ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty AIdentifyAGE:hasToothStage ;
+                                                 owl:allValuesFrom AIdentifyAGE:GarnToothStage
+                                               ] ;
+                               terms:description "Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Garn defined set of tooth development stages."@en ;
+                               rdfs:label "Garn Scoring Method"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GarnStages
@@ -2720,7 +2722,7 @@ AIdentifyAGE:GleiserHuntReferenceStudy rdf:type owl:Class ;
                                        rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty AIdentifyAGE:hasScoring ;
-                                                         owl:allValuesFrom AIdentifyAGE:GleiserScoring
+                                                         owl:allValuesFrom AIdentifyAGE:GleiserScoringMethod
                                                        ] ;
                                        terms:description "Gleiser and Hunt’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                        rdfs:label "Gleiser Hunt Reference Study"@en .
@@ -2744,13 +2746,15 @@ AIdentifyAGE:GleiserHuntToothStage rdf:type owl:Class ;
                                    rdfs:label "Gleiser Hunt Tooth Stage"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GleiserScoring
-AIdentifyAGE:GleiserScoring rdf:type owl:Class ;
-                            rdfs:subClassOf AIdentifyAGE:ScoringStage ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty AIdentifyAGE:hasToothStage ;
-                                              owl:allValuesFrom AIdentifyAGE:GleiserHuntToothStage
-                                            ] .
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GleiserScoringMethod
+AIdentifyAGE:GleiserScoringMethod rdf:type owl:Class ;
+                                  rdfs:subClassOf AIdentifyAGE:ScoringStage ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty AIdentifyAGE:hasToothStage ;
+                                                    owl:allValuesFrom AIdentifyAGE:GleiserHuntToothStage
+                                                  ] ;
+                                  terms:description "Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Gleiser defined set of tooth development stages."@en ;
+                                  rdfs:label "Gleiser Scoring Method"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#HaavikkoReferenceStudy
@@ -2758,7 +2762,7 @@ AIdentifyAGE:HaavikkoReferenceStudy rdf:type owl:Class ;
                                     rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty AIdentifyAGE:hasScoring ;
-                                                      owl:allValuesFrom AIdentifyAGE:HavvikkoScoring
+                                                      owl:allValuesFrom AIdentifyAGE:HavvikkoScoringMethod
                                                     ] ;
                                     terms:description "Haavikko’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                     rdfs:label "Haviikoo Reference Study"@en .
@@ -2771,13 +2775,15 @@ AIdentifyAGE:HaderupDentalClassificationSystem rdf:type owl:Class ;
                                                rdfs:label "Haderup Dental Classification System"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#HavvikkoScoring
-AIdentifyAGE:HavvikkoScoring rdf:type owl:Class ;
-                             rdfs:subClassOf AIdentifyAGE:ScoringStage ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty AIdentifyAGE:hasToothStage ;
-                                               owl:allValuesFrom AIdentifyAGE:HavvikkoToothStage
-                                             ] .
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#HavvikkoScoringMethod
+AIdentifyAGE:HavvikkoScoringMethod rdf:type owl:Class ;
+                                   rdfs:subClassOf AIdentifyAGE:ScoringStage ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty AIdentifyAGE:hasToothStage ;
+                                                     owl:allValuesFrom AIdentifyAGE:HavvikkoToothStage
+                                                   ] ;
+                                   terms:description "Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Havvikko defined set of tooth development stages."@en ;
+                                   rdfs:label "Havvikko Scoring Method"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#HavvikkoStages
@@ -2827,19 +2833,21 @@ AIdentifyAGE:KullmanReferenceStudy rdf:type owl:Class ;
                                    rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty AIdentifyAGE:hasScoring ;
-                                                     owl:allValuesFrom AIdentifyAGE:KullmanScoring
+                                                     owl:allValuesFrom AIdentifyAGE:KullmanScoringMethod
                                                    ] ;
                                    terms:description "Kullman’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                    rdfs:label "Kullman Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#KullmanScoring
-AIdentifyAGE:KullmanScoring rdf:type owl:Class ;
-                            rdfs:subClassOf AIdentifyAGE:ScoringStage ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty AIdentifyAGE:hasToothStage ;
-                                              owl:allValuesFrom AIdentifyAGE:KullmanToothStage
-                                            ] .
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#KullmanScoringMethod
+AIdentifyAGE:KullmanScoringMethod rdf:type owl:Class ;
+                                  rdfs:subClassOf AIdentifyAGE:ScoringStage ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty AIdentifyAGE:hasToothStage ;
+                                                    owl:allValuesFrom AIdentifyAGE:KullmanToothStage
+                                                  ] ;
+                                  terms:description "Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Kullman defined set of tooth development stages."@en ;
+                                  rdfs:label "Kullman Scoring Method"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#KullmanStages
@@ -2863,7 +2871,7 @@ AIdentifyAGE:KullmanToothStage rdf:type owl:Class ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#LeeReferenceStudy
 AIdentifyAGE:LeeReferenceStudy rdf:type owl:Class ;
                                rdfs:subClassOf AIdentifyAGE:ReferenceStudy ;
-                               terms:description "Lees’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
+                               terms:description "Lee’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                rdfs:label "Lee Reference Study"@en .
 
 
@@ -2882,12 +2890,12 @@ AIdentifyAGE:LegalDentalMedicalExamData rdf:type owl:Class ;
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty AIdentifyAGE:hasRadiographicImaging ;
                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                          owl:onClass <http://snomed.info/id/363680008>
+                                                          owl:onClass AIdentifyAGE:OPG
                                                         ] ,
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty AIdentifyAGE:hasRequestingEntity ;
                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                          owl:onClass AIdentifyAGE:Organization
+                                                          owl:onClass AIdentifyAGE:RequestingEntity
                                                         ] ,
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty AIdentifyAGE:forensicCaseNumber ;
@@ -2954,19 +2962,21 @@ AIdentifyAGE:MoorreesFanningHuntReferenceStudy rdf:type owl:Class ;
                                                rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty AIdentifyAGE:hasScoring ;
-                                                                 owl:allValuesFrom AIdentifyAGE:MoorreesFanningHuntScoring
+                                                                 owl:allValuesFrom AIdentifyAGE:MoorreesFanningHuntScoringMethod
                                                                ] ;
                                                terms:description "Moorrees, Fanning and Hunt’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                                rdfs:label "Moorrees, Fanning and Hunt Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MoorreesFanningHuntScoring
-AIdentifyAGE:MoorreesFanningHuntScoring rdf:type owl:Class ;
-                                        rdfs:subClassOf AIdentifyAGE:ScoringStage ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty AIdentifyAGE:hasToothStage ;
-                                                          owl:allValuesFrom AIdentifyAGE:MoorreesFanningHuntToothStage
-                                                        ] .
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MoorreesFanningHuntScoringMethod
+AIdentifyAGE:MoorreesFanningHuntScoringMethod rdf:type owl:Class ;
+                                              rdfs:subClassOf AIdentifyAGE:ScoringStage ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty AIdentifyAGE:hasToothStage ;
+                                                                owl:allValuesFrom AIdentifyAGE:MoorreesFanningHuntToothStage
+                                                              ] ;
+                                              terms:description "Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Moorrees, Fanning and Hunt defined set of tooth development stages."@en ;
+                                              rdfs:label "Moorrees Fanning and Hunt Scoring Method"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MoorreesFanningHuntStages
@@ -2992,19 +3002,21 @@ AIdentifyAGE:NollaReferenceStudy rdf:type owl:Class ;
                                  rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty AIdentifyAGE:hasScoring ;
-                                                   owl:allValuesFrom AIdentifyAGE:NollaScoring
+                                                   owl:allValuesFrom AIdentifyAGE:NollaScoringMethod
                                                  ] ;
                                  terms:description "Nolla’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                  rdfs:label "Nolla Reference Study"@en .
 
 
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#NollaScoring
-AIdentifyAGE:NollaScoring rdf:type owl:Class ;
-                          rdfs:subClassOf AIdentifyAGE:ScoringStage ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty AIdentifyAGE:hasToothStage ;
-                                            owl:allValuesFrom AIdentifyAGE:NollaStages
-                                          ] .
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#NollaScoringMethod
+AIdentifyAGE:NollaScoringMethod rdf:type owl:Class ;
+                                rdfs:subClassOf AIdentifyAGE:ScoringStage ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty AIdentifyAGE:hasToothStage ;
+                                                  owl:allValuesFrom AIdentifyAGE:NollaStages
+                                                ] ;
+                                terms:description "Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Nolla defined set of tooth development stages."@en ;
+                                rdfs:label "Nolla Scoring Method"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#NollaStages
@@ -3019,7 +3031,7 @@ AIdentifyAGE:NollaToothStage rdf:type owl:Class ;
                              rdfs:subClassOf AIdentifyAGE:ToothStage ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty AIdentifyAGE:hasStage ;
-                                               owl:allValuesFrom AIdentifyAGE:NollaToothStage
+                                               owl:allValuesFrom AIdentifyAGE:NollaStages
                                              ] ;
                              terms:description "Nolla's defined phase in the process of tooth development, characterized by specific and observable morphological and radiographic criteria of crown and/or root formation and mineralization, used as a reproducible unit for age estimation."@en ;
                              rdfs:label "Nolla Tooth Stage"@en .
@@ -3032,6 +3044,16 @@ AIdentifyAGE:OPG rdf:type owl:Class ;
                                    owl:onProperty AIdentifyAGE:hasTeethSet ;
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onClass AIdentifyAGE:TeethSet
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty AIdentifyAGE:radiographicTakenDatetime ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:dateTime
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty AIdentifyAGE:referenceStudyURI ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange terms:URI
                                  ] ;
                  terms:description "Panoramic radiography whereby the coordinated motion of a scanning fan-shaped X-ray beam and an X-ray image receptor, both rotating around the head."@en ;
                  rdfs:label "OPG"@en .
@@ -3042,23 +3064,6 @@ AIdentifyAGE:OlzeReferenceStudy rdf:type owl:Class ;
                                 rdfs:subClassOf AIdentifyAGE:ReferenceStudy ;
                                 terms:description "Olze’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                 rdfs:label "Olze Reference Study"@en .
-
-
-###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Organization
-AIdentifyAGE:Organization rdf:type owl:Class ;
-                          rdfs:subClassOf obo:OBI_0000245 ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty AIdentifyAGE:organizationProcessID ;
-                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                            owl:onDataRange xsd:string
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty AIdentifyAGE:requestingEntityName ;
-                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                            owl:onDataRange xsd:string
-                                          ] ;
-                          terms:description "Contains data about a given Legal Entity"@en ;
-                          rdfs:label "Organization"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#OrthodonticAppliances
@@ -3150,6 +3155,11 @@ AIdentifyAGE:ReportData rdf:type owl:Class ;
                                           owl:someValuesFrom AIdentifyAGE:LegalDentalMedicalExamData
                                         ] ,
                                         [ rdf:type owl:Restriction ;
+                                          owl:onProperty AIdentifyAGE:reportID ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:string
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
                                           owl:onProperty AIdentifyAGE:chronologicalAge ;
                                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                           owl:onDataRange xsd:date
@@ -3165,6 +3175,23 @@ AIdentifyAGE:ReportData rdf:type owl:Class ;
                                         ] ;
                         terms:description "Contains data about a given Report."@en ;
                         rdfs:label "Report Data" .
+
+
+###  https://aidentifyage.github.io/ontology/AIdentifyAGE#RequestingEntity
+AIdentifyAGE:RequestingEntity rdf:type owl:Class ;
+                              rdfs:subClassOf foaf:Organization ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty AIdentifyAGE:organizationProcessID ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:string
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty AIdentifyAGE:requestingEntityName ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:string
+                                              ] ;
+                              terms:description "Contains data about a given Legal Entity"@en ;
+                              rdfs:label "Requesting Entity"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#RootCanalTreatment
@@ -3187,7 +3214,8 @@ AIdentifyAGE:ScoringMethod rdf:type owl:Class ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringStage
 AIdentifyAGE:ScoringStage rdf:type owl:Class ;
                           rdfs:subClassOf AIdentifyAGE:ScoringMethod ;
-                          terms:description "Objectively defined step of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity."@en .
+                          terms:description "Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity."@en ;
+                          rdfs:label "Scoring Stage"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#Stage
@@ -3246,12 +3274,14 @@ AIdentifyAGE:foaf rdf:type owl:Class ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#mixedMandibularDentition
 AIdentifyAGE:mixedMandibularDentition rdf:type owl:Class ;
-                                      rdfs:subClassOf obo:FMA_269584 .
+                                      rdfs:subClassOf obo:FMA_269584 ;
+                                      rdfs:label "Mixed Mandibular Dentition"@en .
 
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#mixedMaxiliarDentition
 AIdentifyAGE:mixedMaxiliarDentition rdf:type owl:Class ;
-                                    rdfs:subClassOf obo:FMA_269582 .
+                                    rdfs:subClassOf obo:FMA_269582 ;
+                                    rdfs:label "Mixed Maxiliar Dentition"@en .
 
 
 #################################################################
@@ -5058,12 +5088,12 @@ obo:FMA_55637 AIdentifyAGE:synonym "Bicuspid Tooth" .
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :LeeReferenceStudy
-                AIdentifyAGE:DemirjianReferenceStudy
+  owl:members ( AIdentifyAGE:DemirjianReferenceStudy
                 AIdentifyAGE:GarnReferenceStudy
                 AIdentifyAGE:GleiserHuntReferenceStudy
                 AIdentifyAGE:HaavikkoReferenceStudy
                 AIdentifyAGE:KullmanReferenceStudy
+                AIdentifyAGE:LeeReferenceStudy
                 AIdentifyAGE:MincerReferenceStudy
                 AIdentifyAGE:MoorreesFanningHuntReferenceStudy
                 AIdentifyAGE:NollaReferenceStudy

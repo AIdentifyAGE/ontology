@@ -113,10 +113,10 @@ Cátia Vaz</Literal>
         <Class abbreviatedIRI="foaf:Agent"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="foaf:Person"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#LeeReferenceStudy"/>
+        <Class abbreviatedIRI="foaf:Person"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#AIDentalAgeAssessment"/>
@@ -185,7 +185,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#GarnReferenceStudy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#GarnScoring"/>
+        <Class IRI="/AIdentifyAGE#GarnScoringMethod"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#GarnStages"/>
@@ -203,7 +203,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#GleiserHuntToothStage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#GleiserScoring"/>
+        <Class IRI="/AIdentifyAGE#GleiserScoringMethod"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#HaavikkoReferenceStudy"/>
@@ -212,7 +212,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#HavvikkoScoring"/>
+        <Class IRI="/AIdentifyAGE#HavvikkoScoringMethod"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#HavvikkoStages"/>
@@ -230,7 +230,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#KullmanReferenceStudy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#KullmanScoring"/>
+        <Class IRI="/AIdentifyAGE#KullmanScoringMethod"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#KullmanStages"/>
@@ -263,7 +263,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#MoorreesFanningHuntReferenceStudy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#MoorreesFanningHuntScoring"/>
+        <Class IRI="/AIdentifyAGE#MoorreesFanningHuntScoringMethod"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#MoorreesFanningHuntStages"/>
@@ -275,7 +275,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#NollaReferenceStudy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/AIdentifyAGE#NollaScoring"/>
+        <Class IRI="/AIdentifyAGE#NollaScoringMethod"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#NollaStages"/>
@@ -288,9 +288,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#OlzeReferenceStudy"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/AIdentifyAGE#Organization"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#OrthodonticAppliances"/>
@@ -312,6 +309,9 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#ReportData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/AIdentifyAGE#RequestingEntity"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#RootCanalTreatment"/>
@@ -634,6 +634,9 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/AIdentifyAGE#reportDatetime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/AIdentifyAGE#reportID"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="/AIdentifyAGE#reportedAge"/>
@@ -1601,26 +1604,19 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#DCTerms"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://snomed.info/id/363680008"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#radiographicImageURI"/>
-            <Datatype abbreviatedIRI="terms:URI"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://snomed.info/id/363680008"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#radiographicTakenDatetime"/>
-            <Datatype abbreviatedIRI="xsd:dateTime"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
         <Class IRI="/AIdentifyAGE#foaf"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.w3.org/ns/mls#InformationEntity"/>
         <Class IRI="/AIdentifyAGE#MLSchema"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/mls#Model"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/mls#hasQuality"/>
+            <Class IRI="http://www.w3.org/ns/mls#ModelCharacteristic"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.w3.org/ns/mls#Process"/>
@@ -1635,8 +1631,8 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#foaf"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#LeeReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#AIDentalAgeAssessment"/>
@@ -2136,15 +2132,15 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#GarnReferenceStudy"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#GarnScoring"/>
+            <Class IRI="/AIdentifyAGE#GarnScoringMethod"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#GarnScoring"/>
+        <Class IRI="/AIdentifyAGE#GarnScoringMethod"/>
         <Class IRI="/AIdentifyAGE#ScoringStage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#GarnScoring"/>
+        <Class IRI="/AIdentifyAGE#GarnScoringMethod"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
             <Class IRI="/AIdentifyAGE#GarnToothStage"/>
@@ -2173,7 +2169,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#GleiserHuntReferenceStudy"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#GleiserScoring"/>
+            <Class IRI="/AIdentifyAGE#GleiserScoringMethod"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2192,11 +2188,11 @@ Cátia Vaz</Literal>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#GleiserScoring"/>
+        <Class IRI="/AIdentifyAGE#GleiserScoringMethod"/>
         <Class IRI="/AIdentifyAGE#ScoringStage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#GleiserScoring"/>
+        <Class IRI="/AIdentifyAGE#GleiserScoringMethod"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
             <Class IRI="/AIdentifyAGE#GleiserHuntToothStage"/>
@@ -2210,7 +2206,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#HaavikkoReferenceStudy"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#HavvikkoScoring"/>
+            <Class IRI="/AIdentifyAGE#HavvikkoScoringMethod"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2218,11 +2214,11 @@ Cátia Vaz</Literal>
         <Class abbreviatedIRI="obo:IAO_0000009"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#HavvikkoScoring"/>
+        <Class IRI="/AIdentifyAGE#HavvikkoScoringMethod"/>
         <Class IRI="/AIdentifyAGE#ScoringStage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#HavvikkoScoring"/>
+        <Class IRI="/AIdentifyAGE#HavvikkoScoringMethod"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
             <Class IRI="/AIdentifyAGE#HavvikkoToothStage"/>
@@ -2280,15 +2276,15 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#KullmanReferenceStudy"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#KullmanScoring"/>
+            <Class IRI="/AIdentifyAGE#KullmanScoringMethod"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#KullmanScoring"/>
+        <Class IRI="/AIdentifyAGE#KullmanScoringMethod"/>
         <Class IRI="/AIdentifyAGE#ScoringStage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#KullmanScoring"/>
+        <Class IRI="/AIdentifyAGE#KullmanScoringMethod"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
             <Class IRI="/AIdentifyAGE#KullmanToothStage"/>
@@ -2335,14 +2331,14 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#LegalDentalMedicalExamData"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="/AIdentifyAGE#hasRadiographicImaging"/>
-            <Class IRI="http://snomed.info/id/363680008"/>
+            <Class IRI="/AIdentifyAGE#OPG"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#LegalDentalMedicalExamData"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="/AIdentifyAGE#hasRequestingEntity"/>
-            <Class IRI="/AIdentifyAGE#Organization"/>
+            <Class IRI="/AIdentifyAGE#RequestingEntity"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -2404,15 +2400,15 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#MoorreesFanningHuntReferenceStudy"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#MoorreesFanningHuntScoring"/>
+            <Class IRI="/AIdentifyAGE#MoorreesFanningHuntScoringMethod"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#MoorreesFanningHuntScoring"/>
+        <Class IRI="/AIdentifyAGE#MoorreesFanningHuntScoringMethod"/>
         <Class IRI="/AIdentifyAGE#ScoringStage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#MoorreesFanningHuntScoring"/>
+        <Class IRI="/AIdentifyAGE#MoorreesFanningHuntScoringMethod"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
             <Class IRI="/AIdentifyAGE#MoorreesFanningHuntToothStage"/>
@@ -2441,15 +2437,15 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#NollaReferenceStudy"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#NollaScoring"/>
+            <Class IRI="/AIdentifyAGE#NollaScoringMethod"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#NollaScoring"/>
+        <Class IRI="/AIdentifyAGE#NollaScoringMethod"/>
         <Class IRI="/AIdentifyAGE#ScoringStage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#NollaScoring"/>
+        <Class IRI="/AIdentifyAGE#NollaScoringMethod"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
             <Class IRI="/AIdentifyAGE#NollaStages"/>
@@ -2467,7 +2463,7 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#NollaToothStage"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/AIdentifyAGE#hasStage"/>
-            <Class IRI="/AIdentifyAGE#NollaToothStage"/>
+            <Class IRI="/AIdentifyAGE#NollaStages"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2482,26 +2478,22 @@ Cátia Vaz</Literal>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/AIdentifyAGE#OPG"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#radiographicTakenDatetime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#OPG"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#referenceStudyURI"/>
+            <Datatype abbreviatedIRI="terms:URI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/AIdentifyAGE#OlzeReferenceStudy"/>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#Organization"/>
-        <Class abbreviatedIRI="obo:OBI_0000245"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#Organization"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#organizationProcessID"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#Organization"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="/AIdentifyAGE#requestingEntityName"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#OrthodonticAppliances"/>
@@ -2603,6 +2595,13 @@ Cátia Vaz</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ReportData"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#reportID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#ReportData"/>
         <DataMaxCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#chronologicalAge"/>
             <Datatype abbreviatedIRI="xsd:date"/>
@@ -2620,6 +2619,24 @@ Cátia Vaz</Literal>
             <DataProperty IRI="/AIdentifyAGE#reportDatetime"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
         </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#RequestingEntity"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#RequestingEntity"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#organizationProcessID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#RequestingEntity"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="/AIdentifyAGE#requestingEntityName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#RootCanalTreatment"/>
@@ -2690,18 +2707,6 @@ Cátia Vaz</Literal>
         <Class abbreviatedIRI="obo:FMA_269582"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#LeeReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#DemirjianReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#GarnReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#GleiserHuntReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#HaavikkoReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#KullmanReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#MincerReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#MoorreesFanningHuntReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#NollaReferenceStudy"/>
-        <Class IRI="/AIdentifyAGE#WillemsReferenceStudy"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="/AIdentifyAGE#AIDentalAgeThresholdAssessment"/>
         <Class IRI="/AIdentifyAGE#AIRegDentalAgeAssessement"/>
     </DisjointClasses>
@@ -2712,6 +2717,18 @@ Cátia Vaz</Literal>
     <DisjointClasses>
         <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
         <Class IRI="/AIdentifyAGE#ScoringStage"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/AIdentifyAGE#DemirjianReferenceStudy"/>
+        <Class IRI="/AIdentifyAGE#GarnReferenceStudy"/>
+        <Class IRI="/AIdentifyAGE#GleiserHuntReferenceStudy"/>
+        <Class IRI="/AIdentifyAGE#HaavikkoReferenceStudy"/>
+        <Class IRI="/AIdentifyAGE#KullmanReferenceStudy"/>
+        <Class IRI="/AIdentifyAGE#LeeReferenceStudy"/>
+        <Class IRI="/AIdentifyAGE#MincerReferenceStudy"/>
+        <Class IRI="/AIdentifyAGE#MoorreesFanningHuntReferenceStudy"/>
+        <Class IRI="/AIdentifyAGE#NollaReferenceStudy"/>
+        <Class IRI="/AIdentifyAGE#WillemsReferenceStudy"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
@@ -5104,7 +5121,7 @@ Cátia Vaz</Literal>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/AIdentifyAGE#organizationProcessID"/>
-        <Class IRI="/AIdentifyAGE#Organization"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/AIdentifyAGE#providedBirthDate"/>
@@ -7040,6 +7057,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal xml:lang="en">Contains data about a given Radiographic Imaging Procedure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:Organization</AbbreviatedIRI>
+        <Literal>http://xmlns.com/foaf/0.1/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>foaf:Organization</AbbreviatedIRI>
+        <Literal xml:lang="en">Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
         <Literal xml:lang="en">Group of individuals involved in a medico-legal examination for age assessment purposes.</Literal>
@@ -7053,16 +7080,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>foaf:sex</AbbreviatedIRI>
         <Literal>sex</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <IRI>#LeeReferenceStudy</IRI>
-        <Literal xml:lang="en">Lee’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#LeeReferenceStudy</IRI>
-        <Literal xml:lang="en">Lee Reference Study</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -7276,6 +7293,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#GarnScoringMethod</IRI>
+        <Literal xml:lang="en">Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Garn defined set of tooth development stages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#GarnScoringMethod</IRI>
+        <Literal xml:lang="en">Garn Scoring Method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#GarnStages</IRI>
         <Literal xml:lang="en">Garn&apos;s formal phases within a process or life cycle, delimited by objective entry and exit criteria, characterized by specific purposes, activities, and outcomes.</Literal>
     </AnnotationAssertion>
@@ -7326,6 +7353,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#GleiserScoringMethod</IRI>
+        <Literal xml:lang="en">Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Gleiser defined set of tooth development stages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#GleiserScoringMethod</IRI>
+        <Literal xml:lang="en">Gleiser Scoring Method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#HaavikkoReferenceStudy</IRI>
         <Literal xml:lang="en">Haavikko’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</Literal>
     </AnnotationAssertion>
@@ -7343,6 +7380,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#HaderupDentalClassificationSystem</IRI>
         <Literal xml:lang="en">Haderup Dental Classification System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#HavvikkoScoringMethod</IRI>
+        <Literal xml:lang="en">Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Havvikko defined set of tooth development stages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#HavvikkoScoringMethod</IRI>
+        <Literal xml:lang="en">Havvikko Scoring Method</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -7386,6 +7433,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#KullmanScoringMethod</IRI>
+        <Literal xml:lang="en">Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Kullman defined set of tooth development stages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#KullmanScoringMethod</IRI>
+        <Literal xml:lang="en">Kullman Scoring Method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#KullmanStages</IRI>
         <Literal xml:lang="en">Kullman&apos;s formal phases within a process or life cycle, delimited by objective entry and exit criteria, characterized by specific purposes, activities, and outcomes.</Literal>
     </AnnotationAssertion>
@@ -7407,7 +7464,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#LeeReferenceStudy</IRI>
-        <Literal xml:lang="en">Lees’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</Literal>
+        <Literal xml:lang="en">Lee’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7476,6 +7533,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#MoorreesFanningHuntScoringMethod</IRI>
+        <Literal xml:lang="en">Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Moorrees, Fanning and Hunt defined set of tooth development stages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#MoorreesFanningHuntScoringMethod</IRI>
+        <Literal xml:lang="en">Moorrees Fanning and Hunt Scoring Method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#MoorreesFanningHuntStages</IRI>
         <Literal xml:lang="en">Moorrees, Fanning and Hunt&apos;s formal phases within a process or life cycle, delimited by objective entry and exit criteria, characterized by specific purposes, activities, and outcomes.</Literal>
     </AnnotationAssertion>
@@ -7503,6 +7570,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#NollaReferenceStudy</IRI>
         <Literal xml:lang="en">Nolla Reference Study</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#NollaScoringMethod</IRI>
+        <Literal xml:lang="en">Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity, following Nolla defined set of tooth development stages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#NollaScoringMethod</IRI>
+        <Literal xml:lang="en">Nolla Scoring Method</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -7543,16 +7620,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#OlzeReferenceStudy</IRI>
         <Literal xml:lang="en">Olze Reference Study</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <IRI>/AIdentifyAGE#Organization</IRI>
-        <Literal xml:lang="en">Contains data about a given Legal Entity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AIdentifyAGE#Organization</IRI>
-        <Literal xml:lang="en">Organization</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -7620,6 +7687,16 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <Literal>Report Data</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#RequestingEntity</IRI>
+        <Literal xml:lang="en">Contains data about a given Legal Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#RequestingEntity</IRI>
+        <Literal xml:lang="en">Requesting Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#RootCanalTreatment</IRI>
         <Literal xml:lang="en">Root Canal Treatment</Literal>
@@ -7637,7 +7714,12 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#ScoringStage</IRI>
-        <Literal xml:lang="en">Objectively defined step of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity.</Literal>
+        <Literal xml:lang="en">Objectively defined set of steps of dental development, based on reproducible morphological criteria, to which a numerical score is assigned for the purpose of assessing tooth formation and estimating dental maturity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#ScoringStage</IRI>
+        <Literal xml:lang="en">Scoring Stage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -7947,6 +8029,16 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <Literal xml:lang="en">Minimum (Probable) Age</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#mixedMandibularDentition</IRI>
+        <Literal xml:lang="en">Mixed Mandibular Dentition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#mixedMaxiliarDentition</IRI>
+        <Literal xml:lang="en">Mixed Maxiliar Dentition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>/AIdentifyAGE#mostLikelyAge</IRI>
         <Literal xml:lang="en">Value that best corresponds with available scientific and medical indicators (mean age)</Literal>
@@ -8065,6 +8157,16 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#reportDatetime</IRI>
         <Literal>Report DateTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>/AIdentifyAGE#reportID</IRI>
+        <Literal xml:lang="en">ID number for a given report</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/AIdentifyAGE#reportID</IRI>
+        <Literal xml:lang="en">Report ID</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
