@@ -33,8 +33,8 @@ Cristiana Palmela Pereira
 Alexandre Francisco
 Cátia Vaz""" ;
                                            terms:description "The AIdentifyAGE ontology provides a comprehensive vocabulary description for forensic age assessment using dental biological markers, promoting the transparent assessment processes in forensic odontology and age diagnostics. It formalizes expert knowledge according to IOFOS, AGFAD, ABFO, ADA and ISO standards, ensuring semantic interoperability and ethical AI integration. This ontology is a work in progress developed under the AIdentifyAGE project (FCT Grant 2024.07444.IACDC), within the national investment RE-C05-i08 – More Digital Science, measure RE-C05-i08.M04 – Support to R&D projects for advanced cybersecurity, artificial intelligence and data science systems in public administration. This work is being developed in collaboration with researchers from the University of Lisbon (Portugal), the University of Münster (Germany), and the University of Zagreb (Croatia), within the framework of the AIdentifyAGE international consortium., Base Ontology for use in AIdentifyAGE Project"@en ;
-                                           terms:issued "21/01/2026" ;
-                                           owl:versionInfo "v1.0.7-beta" .
+                                           terms:issued "23/01/2026" ;
+                                           owl:versionInfo "v1.0.8-beta" .
 
 #################################################################
 #    Annotation properties
@@ -2501,11 +2501,7 @@ AIdentifyAGE:DemirjianMaturityScoring rdf:type owl:Class ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianReferenceStudy
 AIdentifyAGE:DemirjianReferenceStudy rdf:type owl:Class ;
-                                     rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty AIdentifyAGE:hasScoring ;
-                                                       owl:allValuesFrom AIdentifyAGE:DemirjianDentalMaturityScore
-                                                     ] ;
+                                     rdfs:subClassOf AIdentifyAGE:ReferenceStudy ;
                                      terms:description "Demirjian’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                      rdfs:label "Demirjian Reference Study"@en .
 
@@ -2683,11 +2679,7 @@ AIdentifyAGE:ForensicIndividualCasePerson rdf:type owl:Class ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GarnReferenceStudy
 AIdentifyAGE:GarnReferenceStudy rdf:type owl:Class ;
-                                rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty AIdentifyAGE:hasScoring ;
-                                                  owl:allValuesFrom AIdentifyAGE:GarnScoringMethod
-                                                ] ;
+                                rdfs:subClassOf AIdentifyAGE:ReferenceStudy ;
                                 terms:description "Garn’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data."@en ;
                                 rdfs:label "Garn Reference Study"@en .
 
@@ -2723,11 +2715,7 @@ AIdentifyAGE:GarnToothStage rdf:type owl:Class ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#GleiserHuntReferenceStudy
 AIdentifyAGE:GleiserHuntReferenceStudy rdf:type owl:Class ;
-                                       rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty AIdentifyAGE:hasScoring ;
-                                                         owl:allValuesFrom AIdentifyAGE:GleiserScoringMethod
-                                                       ] ;
+                                       rdfs:subClassOf AIdentifyAGE:ReferenceStudy ;
                                        terms:description "Gleiser and Hunt’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                        rdfs:label "Gleiser Hunt Reference Study"@en .
 
@@ -2763,11 +2751,7 @@ AIdentifyAGE:GleiserScoringMethod rdf:type owl:Class ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#HaavikkoReferenceStudy
 AIdentifyAGE:HaavikkoReferenceStudy rdf:type owl:Class ;
-                                    rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty AIdentifyAGE:hasScoring ;
-                                                      owl:allValuesFrom AIdentifyAGE:HavvikkoScoringMethod
-                                                    ] ;
+                                    rdfs:subClassOf AIdentifyAGE:ReferenceStudy ;
                                     terms:description "Haavikko’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                     rdfs:label "Haviikoo Reference Study"@en .
 
@@ -2837,11 +2821,7 @@ AIdentifyAGE:InferenceRun rdf:type owl:Class ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#KullmanReferenceStudy
 AIdentifyAGE:KullmanReferenceStudy rdf:type owl:Class ;
-                                   rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty AIdentifyAGE:hasScoring ;
-                                                     owl:allValuesFrom AIdentifyAGE:KullmanScoringMethod
-                                                   ] ;
+                                   rdfs:subClassOf AIdentifyAGE:ReferenceStudy ;
                                    terms:description "Kullman’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                    rdfs:label "Kullman Reference Study"@en .
 
@@ -2968,11 +2948,7 @@ AIdentifyAGE:ModelOutput rdf:type owl:Class ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#MoorreesFanningHuntReferenceStudy
 AIdentifyAGE:MoorreesFanningHuntReferenceStudy rdf:type owl:Class ;
-                                               rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty AIdentifyAGE:hasScoring ;
-                                                                 owl:allValuesFrom AIdentifyAGE:MoorreesFanningHuntScoringMethod
-                                                               ] ;
+                                               rdfs:subClassOf AIdentifyAGE:ReferenceStudy ;
                                                terms:description "Moorrees, Fanning and Hunt’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                                rdfs:label "Moorrees, Fanning and Hunt Reference Study"@en .
 
@@ -3008,11 +2984,7 @@ AIdentifyAGE:MoorreesFanningHuntToothStage rdf:type owl:Class ;
 
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#NollaReferenceStudy
 AIdentifyAGE:NollaReferenceStudy rdf:type owl:Class ;
-                                 rdfs:subClassOf AIdentifyAGE:ReferenceStudy ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty AIdentifyAGE:hasScoring ;
-                                                   owl:allValuesFrom AIdentifyAGE:NollaScoringMethod
-                                                 ] ;
+                                 rdfs:subClassOf AIdentifyAGE:ReferenceStudy ;
                                  terms:description "Nolla’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data"@en ;
                                  rdfs:label "Nolla Reference Study"@en .
 
@@ -3111,10 +3083,6 @@ AIdentifyAGE:ReferenceStudy rdf:type owl:Class ;
                                               owl:someValuesFrom AIdentifyAGE:DataReferenceStudy
                                             ] ,
                                             [ rdf:type owl:Restriction ;
-                                              owl:onProperty AIdentifyAGE:hasScoring ;
-                                              owl:someValuesFrom AIdentifyAGE:ScoringMethod
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
                                               owl:onProperty AIdentifyAGE:author ;
                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                               owl:onDataRange xsd:string
@@ -3136,6 +3104,10 @@ AIdentifyAGE:ReferenceStudy rdf:type owl:Class ;
 ###  https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudyResult
 AIdentifyAGE:ReferenceStudyResult rdf:type owl:Class ;
                                   rdfs:subClassOf obo:IAO_0000109 ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty AIdentifyAGE:hasScoring ;
+                                                    owl:someValuesFrom AIdentifyAGE:ScoringMethod
+                                                  ] ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty AIdentifyAGE:hasReferenceStudy ;
                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;

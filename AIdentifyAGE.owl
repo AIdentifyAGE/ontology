@@ -46,11 +46,11 @@ Cátia Vaz</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:issued"/>
-        <Literal>21/01/2026</Literal>
+        <Literal>23/01/2026</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal>v1.0.7-beta</Literal>
+        <Literal>v1.0.8-beta</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="obo:BFO_0000023"/>
@@ -1916,13 +1916,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#DemirjianReferenceStudy"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#DemirjianDentalMaturityScore"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/AIdentifyAGE#DemirjianStages"/>
         <Class IRI="/AIdentifyAGE#Stage"/>
     </SubClassOf>
@@ -2125,13 +2118,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#GarnReferenceStudy"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#GarnScoringMethod"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/AIdentifyAGE#GarnScoringMethod"/>
         <Class IRI="/AIdentifyAGE#ScoringStage"/>
     </SubClassOf>
@@ -2162,13 +2148,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#GleiserHuntReferenceStudy"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#GleiserScoringMethod"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/AIdentifyAGE#GleiserHuntStages"/>
         <Class IRI="/AIdentifyAGE#Stage"/>
     </SubClassOf>
@@ -2197,13 +2176,6 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#HaavikkoReferenceStudy"/>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#HaavikkoReferenceStudy"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#HavvikkoScoringMethod"/>
-        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#HaderupDentalClassificationSystem"/>
@@ -2267,13 +2239,6 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#KullmanReferenceStudy"/>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#KullmanReferenceStudy"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#KullmanScoringMethod"/>
-        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#KullmanScoringMethod"/>
@@ -2393,13 +2358,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#MoorreesFanningHuntReferenceStudy"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#MoorreesFanningHuntScoringMethod"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="/AIdentifyAGE#MoorreesFanningHuntScoringMethod"/>
         <Class IRI="/AIdentifyAGE#ScoringStage"/>
     </SubClassOf>
@@ -2428,13 +2386,6 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#NollaReferenceStudy"/>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#NollaReferenceStudy"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#NollaScoringMethod"/>
-        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#NollaScoringMethod"/>
@@ -2520,13 +2471,6 @@ Cátia Vaz</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
-            <Class IRI="/AIdentifyAGE#ScoringMethod"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/AIdentifyAGE#ReferenceStudy"/>
         <DataExactCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#author"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -2549,6 +2493,13 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ReferenceStudyResult"/>
         <Class abbreviatedIRI="obo:IAO_0000109"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/AIdentifyAGE#ReferenceStudyResult"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
+            <Class IRI="/AIdentifyAGE#ScoringMethod"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ReferenceStudyResult"/>
@@ -9465,12 +9416,12 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147486009"/>
+        <AnonymousIndividual nodeID="_:genid2147505757"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147486010"/>
+        <AnonymousIndividual nodeID="_:genid2147505758"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>

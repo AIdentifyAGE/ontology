@@ -33,8 +33,8 @@ Cristiana Palmela Pereira
 Alexandre Francisco
 Cátia Vaz</terms:contributor>
         <terms:description xml:lang="en">The AIdentifyAGE ontology provides a comprehensive vocabulary description for forensic age assessment using dental biological markers, promoting the transparent assessment processes in forensic odontology and age diagnostics. It formalizes expert knowledge according to IOFOS, AGFAD, ABFO, ADA and ISO standards, ensuring semantic interoperability and ethical AI integration. This ontology is a work in progress developed under the AIdentifyAGE project (FCT Grant 2024.07444.IACDC), within the national investment RE-C05-i08 – More Digital Science, measure RE-C05-i08.M04 – Support to R&amp;D projects for advanced cybersecurity, artificial intelligence and data science systems in public administration. This work is being developed in collaboration with researchers from the University of Lisbon (Portugal), the University of Münster (Germany), and the University of Zagreb (Croatia), within the framework of the AIdentifyAGE international consortium., Base Ontology for use in AIdentifyAGE Project</terms:description>
-        <terms:issued>21/01/2026</terms:issued>
-        <owl:versionInfo>v1.0.7-beta</owl:versionInfo>
+        <terms:issued>23/01/2026</terms:issued>
+        <owl:versionInfo>v1.0.8-beta</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2967,12 +2967,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianReferenceStudy">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring"/>
-                <owl:allValuesFrom rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#DemirjianDentalMaturityScore"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <terms:description xml:lang="en">Demirjian’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</terms:description>
         <rdfs:label xml:lang="en">Demirjian Reference Study</rdfs:label>
     </owl:Class>
@@ -3226,12 +3220,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#GarnReferenceStudy">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring"/>
-                <owl:allValuesFrom rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#GarnScoringMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <terms:description xml:lang="en">Garn’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data.</terms:description>
         <rdfs:label xml:lang="en">Garn Reference Study</rdfs:label>
     </owl:Class>
@@ -3284,12 +3272,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#GleiserHuntReferenceStudy">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring"/>
-                <owl:allValuesFrom rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#GleiserScoringMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <terms:description xml:lang="en">Gleiser and Hunt’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</terms:description>
         <rdfs:label xml:lang="en">Gleiser Hunt Reference Study</rdfs:label>
     </owl:Class>
@@ -3342,12 +3324,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#HaavikkoReferenceStudy">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring"/>
-                <owl:allValuesFrom rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#HavvikkoScoringMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <terms:description xml:lang="en">Haavikko’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</terms:description>
         <rdfs:label xml:lang="en">Haviikoo Reference Study</rdfs:label>
     </owl:Class>
@@ -3449,12 +3425,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#KullmanReferenceStudy">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring"/>
-                <owl:allValuesFrom rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#KullmanScoringMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <terms:description xml:lang="en">Kullman’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</terms:description>
         <rdfs:label xml:lang="en">Kullman Reference Study</rdfs:label>
     </owl:Class>
@@ -3637,12 +3607,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#MoorreesFanningHuntReferenceStudy">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring"/>
-                <owl:allValuesFrom rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#MoorreesFanningHuntScoringMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <terms:description xml:lang="en">Moorrees, Fanning and Hunt’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</terms:description>
         <rdfs:label xml:lang="en">Moorrees, Fanning and Hunt Reference Study</rdfs:label>
     </owl:Class>
@@ -3695,12 +3659,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#NollaReferenceStudy">
         <rdfs:subClassOf rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudy"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring"/>
-                <owl:allValuesFrom rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#NollaScoringMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <terms:description xml:lang="en">Nolla’s group of individuals against which an assessment is compared to estimate age, often involving biological or developmental data</terms:description>
         <rdfs:label xml:lang="en">Nolla Reference Study</rdfs:label>
     </owl:Class>
@@ -3842,12 +3800,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring"/>
-                <owl:someValuesFrom rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringMethod"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#author"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -3877,6 +3829,12 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
 
     <owl:Class rdf:about="https://aidentifyage.github.io/ontology/AIdentifyAGE#ReferenceStudyResult">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasScoring"/>
+                <owl:someValuesFrom rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#ScoringMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://aidentifyage.github.io/ontology/AIdentifyAGE#hasReferenceStudy"/>
