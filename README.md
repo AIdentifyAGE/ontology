@@ -1,6 +1,21 @@
 # AIDentifyAGE Ontology
 
-This repository contains all development for the project's ontology/knowledge model.
+This repository contains all development for the project's ontology/knowledge
+model, a domain-specific ontology designed to support forensic
+dental age assessment through standardized and semantically knowledge
+representation. The ontology formally models the complete medico-legal
+workflow, integrating judicial context, forensic examination data, dental
+developmental assessment methods, radiographic imaging, statistical reference
+studies, and age estimation based on artificial intelligence approaches. Built
+upon upper ontologies, such as Ontology for Biomedical Investigations, and
+reusing established biomedical, dental, and machine learning ontologies,
+AIdentifyAGE ensures interoperability, extensibility, and compliance with FAIR
+principles. This document includes a total of 11 competency questions, the
+corresponding SPARQL queries, a systematic traceability matrix linking each
+competency question to the ontology classes and properties that enable its
+formal representation and querying, as well as an explicit concept-level
+mapping to demonstrate the interoperability of AIdentifyAGE with major
+biomedical and AI ontologies.
 
 ## Competency Questions
 
