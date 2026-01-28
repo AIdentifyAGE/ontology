@@ -282,20 +282,6 @@
     <!-- http://purl.org/dc/terms/URI -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/URI"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/created -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/created"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/modified -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/modified"/>
-    
-
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
