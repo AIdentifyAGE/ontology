@@ -83,17 +83,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.org/dc/terms/created -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.org/dc/terms/date -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
@@ -103,16 +92,6 @@
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Date</rdfs:label>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/modified -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
-    </owl:DatatypeProperty>
-    
-
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
