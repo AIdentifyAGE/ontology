@@ -17,6 +17,14 @@ formal representation and querying, as well as an explicit concept-level
 mapping to demonstrate the interoperability of AIdentifyAGE with major
 biomedical and AI ontologies.
 
+#### Table of contents
+
+1. [Competency Questions](#competency-questions)
+2. [Competency Question–Driven SPARQL Queries](#competency-questiondriven-sparql-queries)
+3. [Traceability between Competency Questions and Ontology Axioms](#traceability-between-competency-questions-and-ontology-axioms)
+4. [Interoperability Mapping with External Ontologies](#interoperability-mapping-with-external-ontologies)
+5. [Accessing SPARQL in Protégé](#accessing-sparql-in-protégé)
+
 ## Competency Questions
 
 ### Judicial and  Forensic Domain
