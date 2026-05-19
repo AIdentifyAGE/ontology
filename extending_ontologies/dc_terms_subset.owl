@@ -1,333 +1,518 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/dc/terms#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://purl.org/dc/terms"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://purl.org/dc/terms"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/terms/created -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/issued -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/modified -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/terms/ISO3166 -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/ISO3166"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/URI -->
-
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/URI"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#date -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <!-- http://purl.org/dc/terms/date -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
-        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character.  Either the start or end date may be missing.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
-        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Date</rdfs:label>
-    </owl:DatatypeProperty>
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/dcam/VocabularyEncodingScheme -->
-
-    <owl:Class rdf:about="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/Location -->
-
-    <owl:Class rdf:about="http://purl.org/dc/terms/Location">
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/LocationPeriodOrJurisdiction"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/dc/terms/LocationPeriodOrJurisdiction -->
-
-    <owl:Class rdf:about="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
-        <rdfs:comment xml:lang="en">A location, period of time, or jurisdiction.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Location, Period, or Jurisdiction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/terms/Agent -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Agent">
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
-        <rdfs:comment xml:lang="en">A resource that acts or has the power to act.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Agent</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/DCMIType -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/DCMIType">
-        <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">DCMI Type Vocabulary</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.org/dc/dcmitype/"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/DDC -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/DDC">
-        <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">The set of conceptual resources specified by the Dewey Decimal Classification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">DDC</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.oclc.org/dewey/"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/IMT -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/IMT">
-        <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">The set of media types specified by the Internet Assigned Numbers Authority.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">IMT</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/ISO3166 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ISO3166"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/LCC -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LCC">
-        <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">The set of conceptual resources specified by the Library of Congress Classification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">LCC</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/LCSH -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LCSH">
-        <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">The set of labeled concepts specified by the Library of Congress Subject Headings.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">LCSH</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/Location -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Location"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/MESH -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MESH">
-        <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">The set of labeled concepts specified by the Medical Subject Headings.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">MeSH</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.nlm.nih.gov/mesh/meshhome.html"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/NLM -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/NLM">
-        <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</terms:issued>
-        <rdfs:comment xml:lang="en">The set of conceptual resources specified by the National Library of Medicine Classification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">NLM</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://wwwcf.nlm.nih.gov/class/"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/TGN -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/TGN">
-        <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">The set of places specified by the Getty Thesaurus of Geographic Names.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">TGN</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.getty.edu/research/tools/vocabulary/tgn/index.html"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/UDC -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/UDC">
-        <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">The set of conceptual resources specified by the Universal Decimal Classification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">UDC</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.udcc.org/"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/dc/terms/URI -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/URI"/>
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://purl.org/dc/terms/ISO3166">
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">The set of codes listed in ISO 3166-1 for the representation of names of countries.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">ISO 3166</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://www.iso.org/obp/ui/#search"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
-        <rdfs:comment xml:lang="en">A spatial region or named place.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Location</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/URI">
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">URI</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc3986.txt"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
-        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Date Created</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
-        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Date Modified</rdfs:label>
-    </rdf:Description>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+     ontologyIRI="http://purl.org/dc/terms">
+    <Prefix name="" IRI="http://purl.org/dc/terms#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Declaration>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/LocationPeriodOrJurisdiction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/date"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Agent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/DCMIType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/DDC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/IMT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/ISO3166"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/LCC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/LCSH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Location"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/MESH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/NLM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/TGN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/UDC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/URI"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="/created"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="/description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="/issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="/modified"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="/ISO3166"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="/URI"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/Location"/>
+        <Class IRI="/LocationPeriodOrJurisdiction"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+        <NamedIndividual IRI="/DCMIType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+        <NamedIndividual IRI="/DDC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+        <NamedIndividual IRI="/IMT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+        <NamedIndividual IRI="/LCC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+        <NamedIndividual IRI="/LCSH"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+        <NamedIndividual IRI="/MESH"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+        <NamedIndividual IRI="/NLM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+        <NamedIndividual IRI="/TGN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+        <NamedIndividual IRI="/UDC"/>
+    </ClassAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/DCMIType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DCMIType</IRI>
+        <Literal xml:lang="en">The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DCMIType</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DCMIType</IRI>
+        <Literal xml:lang="en">DCMI Type Vocabulary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/DCMIType</IRI>
+        <IRI>http://purl.org/dc/dcmitype/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/DDC</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DDC</IRI>
+        <Literal xml:lang="en">The set of conceptual resources specified by the Dewey Decimal Classification.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/DDC</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DDC</IRI>
+        <Literal xml:lang="en">DDC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/DDC</IRI>
+        <IRI>http://www.oclc.org/dewey/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/IMT</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/IMT</IRI>
+        <Literal xml:lang="en">The set of media types specified by the Internet Assigned Numbers Authority.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/IMT</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/IMT</IRI>
+        <Literal xml:lang="en">IMT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/IMT</IRI>
+        <IRI>http://www.iana.org/assignments/media-types/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/ISO3166</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ISO3166</IRI>
+        <Literal xml:lang="en">The set of codes listed in ISO 3166-1 for the representation of names of countries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/ISO3166</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ISO3166</IRI>
+        <Literal xml:lang="en">ISO 3166</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/ISO3166</IRI>
+        <IRI>https://www.iso.org/obp/ui/#search</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/LCC</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/LCC</IRI>
+        <Literal xml:lang="en">The set of conceptual resources specified by the Library of Congress Classification.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/LCC</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/LCC</IRI>
+        <Literal xml:lang="en">LCC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/LCC</IRI>
+        <IRI>http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/LCSH</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/LCSH</IRI>
+        <Literal xml:lang="en">The set of labeled concepts specified by the Library of Congress Subject Headings.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/LCSH</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/LCSH</IRI>
+        <Literal xml:lang="en">LCSH</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/Location</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Location</IRI>
+        <Literal xml:lang="en">A spatial region or named place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Location</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Location</IRI>
+        <Literal xml:lang="en">Location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/LocationPeriodOrJurisdiction</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/LocationPeriodOrJurisdiction</IRI>
+        <Literal xml:lang="en">A location, period of time, or jurisdiction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/LocationPeriodOrJurisdiction</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/LocationPeriodOrJurisdiction</IRI>
+        <Literal xml:lang="en">Location, Period, or Jurisdiction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/MESH</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/MESH</IRI>
+        <Literal xml:lang="en">The set of labeled concepts specified by the Medical Subject Headings.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/MESH</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/MESH</IRI>
+        <Literal xml:lang="en">MeSH</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/MESH</IRI>
+        <IRI>http://www.nlm.nih.gov/mesh/meshhome.html</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/NLM</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2005-06-13</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/NLM</IRI>
+        <Literal xml:lang="en">The set of conceptual resources specified by the National Library of Medicine Classification.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NLM</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/NLM</IRI>
+        <Literal xml:lang="en">NLM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/NLM</IRI>
+        <IRI>http://wwwcf.nlm.nih.gov/class/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/TGN</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/TGN</IRI>
+        <Literal xml:lang="en">The set of places specified by the Getty Thesaurus of Geographic Names.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/TGN</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TGN</IRI>
+        <Literal xml:lang="en">TGN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/TGN</IRI>
+        <IRI>http://www.getty.edu/research/tools/vocabulary/tgn/index.html</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/UDC</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/UDC</IRI>
+        <Literal xml:lang="en">The set of conceptual resources specified by the Universal Decimal Classification.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/UDC</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/UDC</IRI>
+        <Literal xml:lang="en">UDC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/UDC</IRI>
+        <IRI>http://www.udcc.org/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/URI</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/URI</IRI>
+        <Literal xml:lang="en">The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/URI</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/URI</IRI>
+        <Literal xml:lang="en">URI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>/URI</IRI>
+        <IRI>http://www.ietf.org/rfc/rfc3986.txt</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/description"/>
+        <IRI>/created</IRI>
+        <Literal xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/created</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/created</IRI>
+        <Literal xml:lang="en">Date of creation of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/created</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/created</IRI>
+        <Literal xml:lang="en">Date Created</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/description"/>
+        <IRI>/date</IRI>
+        <Literal xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character.  Either the start or end date may be missing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/date</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/date</IRI>
+        <Literal xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/date</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/date</IRI>
+        <Literal xml:lang="en">Date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/description"/>
+        <IRI>/modified</IRI>
+        <Literal xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="/issued"/>
+        <IRI>/modified</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2000-07-11</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/modified</IRI>
+        <Literal xml:lang="en">Date on which the resource was changed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/modified</IRI>
+        <IRI>/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/modified</IRI>
+        <Literal xml:lang="en">Date Modified</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
