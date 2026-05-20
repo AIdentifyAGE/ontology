@@ -92,9 +92,6 @@ Cátia Vaz</Literal>
         <Class abbreviatedIRI="obo:UBERON_0000165"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://snomed.info/id/363680008"/>
     </Declaration>
     <Declaration>
@@ -135,9 +132,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#Braces"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/AIdentifyAGE#DCTerms"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#DataCollection"/>
@@ -1579,10 +1573,6 @@ Cátia Vaz</Literal>
         <DataMaxCardinality cardinality="1">
             <DataProperty IRI="/AIdentifyAGE#rootType"/>
         </DataMaxCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <Class IRI="/AIdentifyAGE#DCTerms"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
@@ -7569,11 +7559,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#Braces</IRI>
         <Literal xml:lang="en">Braces</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AIdentifyAGE#DCTerms</IRI>
-        <Literal>DCTerms</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
