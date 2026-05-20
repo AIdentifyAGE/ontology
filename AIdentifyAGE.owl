@@ -46,11 +46,11 @@ Cátia Vaz</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:issued"/>
-        <Literal>23/01/2026</Literal>
+        <Literal>19/05/2026</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal>v1.0.8-beta</Literal>
+        <Literal>v1.0.9-beta</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="obo:BFO_0000023"/>
@@ -90,6 +90,9 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:UBERON_0000165"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://snomed.info/id/363680008"/>
@@ -171,9 +174,6 @@ Cátia Vaz</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/AIdentifyAGE#ForensicExpertRole"/>
     </Declaration>
     <Declaration>
         <Class IRI="/AIdentifyAGE#ForensicIndividualCasePerson"/>
@@ -376,9 +376,6 @@ Cátia Vaz</Literal>
         <ObjectProperty abbreviatedIRI="obo:FMA_85925"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="obo:FMA_85926"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="obo:FMA_85927"/>
     </Declaration>
     <Declaration>
@@ -441,9 +438,6 @@ Cátia Vaz</Literal>
         <ObjectProperty IRI="/AIdentifyAGE#hasForensicExpert"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/AIdentifyAGE#hasIndividual"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/AIdentifyAGE#hasInferenceRun"/>
     </Declaration>
     <Declaration>
@@ -480,9 +474,6 @@ Cátia Vaz</Literal>
         <ObjectProperty IRI="/AIdentifyAGE#hasRequestingEntity"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/AIdentifyAGE#hasRole"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/AIdentifyAGE#hasScoreResult"/>
     </Declaration>
     <Declaration>
@@ -501,16 +492,13 @@ Cátia Vaz</Literal>
         <ObjectProperty IRI="/AIdentifyAGE#hasTeethSet"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/AIdentifyAGE#hasTooth"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/AIdentifyAGE#hasTreatment"/>
+        <ObjectProperty IRI="/AIdentifyAGE#hasTreatmentOption"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="/AIdentifyAGE#is_TreatmentOf"/>
+        <ObjectProperty IRI="/AIdentifyAGE#is_TreatmentOptionOf"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="foaf:age"/>
@@ -1558,9 +1546,6 @@ Cátia Vaz</Literal>
         <AnnotationProperty abbreviatedIRI="oboInOwl:shorthand"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty abbreviatedIRI="skos:definition"/>
     </Declaration>
     <Declaration>
@@ -1585,7 +1570,7 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class abbreviatedIRI="obo:FMA_12516"/>
         <ObjectMinCardinality cardinality="0">
-            <ObjectProperty IRI="/AIdentifyAGE#hasTreatment"/>
+            <ObjectProperty IRI="/AIdentifyAGE#hasTreatmentOption"/>
             <Class IRI="/AIdentifyAGE#TreatmentOption"/>
         </ObjectMinCardinality>
     </SubClassOf>
@@ -1597,10 +1582,6 @@ Cátia Vaz</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <Class IRI="/AIdentifyAGE#DCTerms"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="terms:LocationPeriodOrJurisdiction"/>
         <Class IRI="/AIdentifyAGE#DCTerms"/>
     </SubClassOf>
     <SubClassOf>
@@ -2055,14 +2036,11 @@ Cátia Vaz</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
-        <Class abbreviatedIRI="foaf:Person"/>
+        <Class abbreviatedIRI="obo:NCBITaxon_9606"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasRole"/>
-            <Class IRI="/AIdentifyAGE#ForensicExpertRole"/>
-        </ObjectAllValuesFrom>
+        <Class abbreviatedIRI="foaf:Person"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
@@ -2071,8 +2049,8 @@ Cátia Vaz</Literal>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/AIdentifyAGE#ForensicExpertRole"/>
-        <Class abbreviatedIRI="obo:BFO_0000023"/>
+        <Class IRI="/AIdentifyAGE#ForensicIndividualCasePerson"/>
+        <Class abbreviatedIRI="obo:NCBITaxon_9606"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ForensicIndividualCasePerson"/>
@@ -2284,7 +2262,7 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#LegalDentalMedicalExamData"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="/AIdentifyAGE#hasIndividual"/>
+            <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
             <Class IRI="/AIdentifyAGE#ForensicIndividualCasePerson"/>
         </ObjectExactCardinality>
     </SubClassOf>
@@ -2615,7 +2593,7 @@ Cátia Vaz</Literal>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#TeethSet"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="/AIdentifyAGE#hasTooth"/>
+            <ObjectProperty abbreviatedIRI="obo:BFO_0000051"/>
             <Class abbreviatedIRI="obo:FMA_12516"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2625,16 +2603,16 @@ Cátia Vaz</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ToothStage"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="/AIdentifyAGE#hasStage"/>
-            <Class IRI="/AIdentifyAGE#Stage"/>
-        </ObjectExactCardinality>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:BFO_0000051"/>
+            <Class abbreviatedIRI="obo:FMA_12516"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/AIdentifyAGE#ToothStage"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="/AIdentifyAGE#hasTooth"/>
-            <Class abbreviatedIRI="obo:FMA_12516"/>
+            <ObjectProperty IRI="/AIdentifyAGE#hasStage"/>
+            <Class IRI="/AIdentifyAGE#Stage"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -5356,19 +5334,15 @@ Cátia Vaz</Literal>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/AIdentifyAGE#hasTooth"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/AIdentifyAGE#hasTreatment"/>
+        <ObjectProperty IRI="/AIdentifyAGE#hasTreatmentOption"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="/AIdentifyAGE#is_TreatmentOf"/>
+        <ObjectProperty IRI="/AIdentifyAGE#is_TreatmentOptionOf"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
@@ -5388,16 +5362,12 @@ Cátia Vaz</Literal>
         <ObjectProperty abbreviatedIRI="obo:FMA_85927"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="obo:FMA_85926"/>
-        <ObjectProperty abbreviatedIRI="obo:FMA_85928"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty abbreviatedIRI="obo:FMA_85996"/>
         <ObjectProperty abbreviatedIRI="obo:FMA_85997"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="/AIdentifyAGE#hasTreatment"/>
-        <ObjectProperty IRI="/AIdentifyAGE#is_TreatmentOf"/>
+        <ObjectProperty IRI="/AIdentifyAGE#hasTreatmentOption"/>
+        <ObjectProperty IRI="/AIdentifyAGE#is_TreatmentOptionOf"/>
     </InverseObjectProperties>
     <TransitiveObjectProperty>
         <ObjectProperty abbreviatedIRI="obo:FMA_85848"/>
@@ -5441,10 +5411,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#LegalDentalMedicalExamData"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="/AIdentifyAGE#hasIndividual"/>
-        <Class IRI="/AIdentifyAGE#LegalDentalMedicalExamData"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasInferenceRun"/>
         <Class IRI="/AIdentifyAGE#AIDentalAgeAssessment"/>
     </ObjectPropertyDomain>
@@ -5481,10 +5447,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#LegalDentalMedicalExamData"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="/AIdentifyAGE#hasRole"/>
-        <Class abbreviatedIRI="foaf:Person"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasScoreResult"/>
         <Class IRI="/AIdentifyAGE#ReportData"/>
     </ObjectPropertyDomain>
@@ -5499,13 +5461,6 @@ Cátia Vaz</Literal>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasTeethSet"/>
         <Class IRI="/AIdentifyAGE#OPG"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="/AIdentifyAGE#hasTooth"/>
-        <ObjectUnionOf>
-            <Class IRI="/AIdentifyAGE#TeethSet"/>
-            <Class IRI="/AIdentifyAGE#ToothStage"/>
-        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
@@ -5539,10 +5494,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#ForensicExpertPerson"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/AIdentifyAGE#hasIndividual"/>
-        <Class IRI="/AIdentifyAGE#ForensicIndividualCasePerson"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="/AIdentifyAGE#hasInferenceRun"/>
         <Class IRI="/AIdentifyAGE#InferenceRun"/>
     </ObjectPropertyRange>
@@ -5571,10 +5522,6 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#ReferenceStudyResult"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/AIdentifyAGE#hasRole"/>
-        <Class abbreviatedIRI="obo:BFO_0000023"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="/AIdentifyAGE#hasScoring"/>
         <Class IRI="/AIdentifyAGE#ScoringMethod"/>
     </ObjectPropertyRange>
@@ -5591,15 +5538,11 @@ Cátia Vaz</Literal>
         <Class IRI="/AIdentifyAGE#TeethSet"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/AIdentifyAGE#hasTooth"/>
-        <Class abbreviatedIRI="obo:FMA_12516"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="/AIdentifyAGE#hasToothStage"/>
         <Class IRI="/AIdentifyAGE#ToothStage"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="/AIdentifyAGE#hasTreatment"/>
+        <ObjectProperty IRI="/AIdentifyAGE#hasTreatmentOption"/>
         <Class IRI="/AIdentifyAGE#TreatmentOption"/>
     </ObjectPropertyRange>
     <EquivalentDataProperties>
@@ -7559,11 +7502,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
-        <Literal xml:lang="en">Group of individuals involved in a medico-legal examination for age assessment purposes.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
         <AbbreviatedIRI>foaf:age</AbbreviatedIRI>
         <Literal xml:lang="en">Value reported by the individual (in years)</Literal>
     </AnnotationAssertion>
@@ -8021,16 +7959,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#ForensicExpertPerson</IRI>
         <Literal xml:lang="en">Forensic Expert Person</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <IRI>/AIdentifyAGE#ForensicExpertRole</IRI>
-        <Literal xml:lang="en">Role of the Forensic Expert</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/AIdentifyAGE#ForensicExpertRole</IRI>
-        <Literal xml:lang="en">Forensic Expert Role</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -9413,16 +9341,6 @@ Note: In the AIdentifyAGE project, legal age thresholds include 10, 12, 14, 16, 
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/AIdentifyAGE#upperQuartileAge</IRI>
         <Literal xml:lang="en">Upper Quartile Age</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147505757"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
-        <AnonymousIndividual nodeID="_:genid2147505758"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
         <AnnotationProperty abbreviatedIRI="obo:OHD_0000065"/>
