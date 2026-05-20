@@ -17,12 +17,6 @@
         <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/Location"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/LocationPeriodOrJurisdiction"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/date"/>
     </Declaration>
     <Declaration>
@@ -85,10 +79,6 @@
     <Declaration>
         <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
-    <SubClassOf>
-        <Class IRI="/Location"/>
-        <Class IRI="/LocationPeriodOrJurisdiction"/>
-    </SubClassOf>
     <ClassAssertion>
         <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
         <NamedIndividual IRI="/DCMIType"/>
@@ -269,46 +259,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/LCSH</IRI>
         <Literal xml:lang="en">LCSH</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="/issued"/>
-        <IRI>/Location</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/Location</IRI>
-        <Literal xml:lang="en">A spatial region or named place.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/Location</IRI>
-        <IRI>/</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Location</IRI>
-        <Literal xml:lang="en">Location</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="/issued"/>
-        <IRI>/LocationPeriodOrJurisdiction</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2008-01-14</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>/LocationPeriodOrJurisdiction</IRI>
-        <Literal xml:lang="en">A location, period of time, or jurisdiction.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>/LocationPeriodOrJurisdiction</IRI>
-        <IRI>/</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/LocationPeriodOrJurisdiction</IRI>
-        <Literal xml:lang="en">Location, Period, or Jurisdiction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="/issued"/>
