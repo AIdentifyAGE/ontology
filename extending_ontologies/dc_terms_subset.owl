@@ -14,9 +14,6 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Declaration>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="/date"/>
     </Declaration>
     <Declaration>
@@ -79,42 +76,6 @@
     <Declaration>
         <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <NamedIndividual IRI="/DCMIType"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <NamedIndividual IRI="/DDC"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <NamedIndividual IRI="/IMT"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <NamedIndividual IRI="/LCC"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <NamedIndividual IRI="/LCSH"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <NamedIndividual IRI="/MESH"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <NamedIndividual IRI="/NLM"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <NamedIndividual IRI="/TGN"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <NamedIndividual IRI="/UDC"/>
-    </ClassAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="/issued"/>
         <IRI>/DCMIType</IRI>
